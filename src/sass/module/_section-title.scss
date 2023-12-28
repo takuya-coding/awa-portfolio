@@ -1,0 +1,85 @@
+@use "global" as *;
+
+.section-title {
+    text-align: center;
+}
+
+.section-title__en {
+    font-family: $second-font-family;
+    font-weight: $regular;
+    font-size: rem(32);
+    line-height: 1.25;
+    color: $black;
+    @include mq("md") {
+        font-size: rem(40);
+        line-height: 1;
+    }
+}
+
+.section-title__en::first-letter {
+    text-transform: capitalize;
+    color: $green;
+}
+
+.section-title__ja {
+    font-family: $base-font-family;
+    font-weight: $regular;
+    font-size: rem(12);
+    line-height: 1.5;
+    color: $green;
+    margin-top: rem(4);
+    @include mq("md") {
+        margin-top: rem(8);
+    }
+}
+
+
+// blogタイトルの色違い
+.section-title__en.section-title__en--color {
+    color: $black;
+    @include mq("md") {
+        color: $white;
+    }
+}
+
+.section-title__en.section-title__en--color::first-letter {
+    color: $green;
+    @include mq("md") {
+        color: $gray;
+    }
+}
+
+.section-title__ja.section-title__ja--color {
+    color: $green;
+    @include mq("md") {
+        color: $white;
+    }
+}
+
+
+// common-contact英語タイトルの大きさ違い
+.section-title__en.section-title__en--size {
+    font-size: rem(80);
+    // line-height: 0.7;
+    // line-heightが1を下回ることはない（コーディングしづらくなる）
+    line-height: 1;
+    // filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    @include mq("md") {
+        // 指定しないとスタイル反映されないため記述
+        font-size: rem(80);
+        // line-height: 0.7;
+        // line-heightが1を下回ることはない（コーディングしづらくなる）
+        line-height: 1;
+    }
+}
+
+// common-contact日本語タイトルの縦方向配置違い
+.section-title__ja.section-title__ja--position {
+    line-height: 1;
+    margin-top: 0;
+    @include mq("md") {
+        line-height: 1;
+        margin-top: 0;
+    }
+}
+

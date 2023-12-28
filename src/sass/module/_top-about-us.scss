@@ -1,0 +1,46 @@
+@use "global" as *;
+
+.top-about-us__content {
+    // margin-top: rem(50);
+    margin-top: rem(54.5);
+    @include mq("md") {
+        margin-top: rem(120);
+    }
+}
+
+// サンゴのあしらい配置
+.top-about-us {
+    @include mq("md") {
+        position: relative;
+    }
+}
+
+.top-about-us::after {
+    display: none;
+    @include mq("md") {
+        display: inline-block;
+        width:rem(194);
+        height:rem(181);
+        -webkit-mask-image: url(../images/common/coral-reef-decoration.svg);
+        -webkit-mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-image: url(../images/common/coral-reef-decoration.svg);
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        mask-position: center;
+        background-color: $green;
+
+        position: absolute;
+        content: "";
+        bottom: rem(-90);
+        z-index: $layer-decoration;
+        // 画面幅広いときに広がりすぎないようにする
+        // right: calc(50% - min(44.2vw, 40rem));
+        // 画面狭いときに中に入りすぎないように調整
+        right: calc(50% - min(48vw, 39.8rem));
+        // あしらい画像サイズ可変する場合の例
+        width: clamp(rem(100), 13.5vw, rem(194));
+
+    }
+}

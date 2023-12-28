@@ -1,0 +1,46 @@
+@use "global" as *;
+
+// flex使った場合
+// .blog-cards {
+//     display: flex;
+//     flex-direction: column;
+//     gap: rem(40);
+//     // カード枚数が増えた場合、4枚目以降は折り返すように
+//     flex-wrap: wrap;
+//     align-items: center;
+//     @include mq("md") {
+//         flex-direction: row;
+//         align-items: stretch;
+//     }
+// }
+
+// grid使った場合
+.blog-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: rem(40);
+    @include mq("md") {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.blog-cards__item {
+    // max-width: rem(333);
+    width: 100%;
+
+    // テキスト量が変わってもカードの高さを揃えるために記述
+    display: flex;
+    // @include mq("md") {
+    //     width: calc(33.3% - rem(40) * 2 / 3);
+    // }
+}
+
+
+
+// ブログ一覧ページ用の記述（modifierでカードの並びを変更）
+.blog-cards.blog-cards--column2 {
+    @include mq("md") {
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(80) rem(40);
+    }
+}

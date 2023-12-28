@@ -1,0 +1,105 @@
+@use "global" as *;
+
+.wp-pagenavi {
+	clear: both;
+	text-align:center;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: rem(12);
+}
+
+.wp-pagenavi a, .wp-pagenavi span {
+	color: $green;
+	border: 1px solid $green;
+	padding: rem(8) rem(14);
+	// margin: 0 rem(6);
+	white-space: nowrap;
+	-webkit-transition: 0.2s ease-in-out;
+	-moz-transition: 0.2s ease-in-out;
+	-o-transition: 0.2s ease-in-out;
+	transition: 0.2s ease-in-out;
+	text-align: center;
+	text-decoration: none;
+    font-family: $third-font-family;
+    font-weight: bold;
+    font-size: rem(16);
+
+	// display: inline-block;
+	// max-width: rem(38);
+	// width: 100%;
+	// width: rem(38);
+	min-width: rem(38);
+	height: rem(38);
+
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	@include mq("md") {
+		width: rem(38);
+    }
+}
+
+.wp-pagenavi a:hover{
+	color: $white;
+	background-color: $green;
+	border-color: $green;
+    }
+
+.wp-pagenavi span.current{
+	color: $white;
+	background-color: $green;
+	border-color: $green;
+	font-weight: bold;
+    }
+
+.previouspostslink img,
+.nextpostslink img {
+	display: inline-flex;
+	align-items: center;
+    max-width: rem(8);
+    width: 100%;
+}
+
+.nextpostslink img {
+	transform: scaleX(-1);
+}
+
+.wp-pagenavi span {
+	// gapの残り差分を指定
+	margin-left: rem(28);
+}
+
+.nextpostslink {
+	// gapの残り差分を指定
+	margin-left: rem(28);
+}
+
+.wp-pagenavi a:nth-of-type(5),
+.wp-pagenavi a:nth-of-type(6) {
+	display: none;
+	@include mq("md") {
+		// display: inline-block;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+    }
+}
+
+.previouspostslink:hover img {
+    filter: brightness(0) invert(1);
+}
+
+.nextpostslink:hover img {
+    filter: brightness(0) invert(1);
+}
+
+
+
+// blog詳細ページのみ適用
+// .nextpostslink--margin {
+// 	// gapの残り差分を指定
+// 	margin-left: rem(70);
+// }

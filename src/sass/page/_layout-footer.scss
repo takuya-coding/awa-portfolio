@@ -1,0 +1,38 @@
+@use "global" as *;
+
+.layout-footer {
+    // margin-top: rem(100);
+    margin-top: rem(105);
+    @include mq("md") {
+        margin-top: rem(160);
+    }
+}
+
+
+// contactページ専用の余白
+.layout-footer.layout-footer--contact {
+    margin-top: rem(144);
+    @include mq("md") {
+        margin-top: rem(160);
+    }
+}
+
+
+// サンクスページ専用の余白
+.layout-footer.layout-footer--thanks {
+    margin-top: rem(144);
+    @include mq("md") {
+        margin-top: rem(120);
+    }
+}
+
+
+// 404ページのみ適用
+.layout-footer.layout-footer--404 {
+    margin-top: rem(0);
+    padding-top: rem(92.8);
+    @include mq("md") {
+        margin-top: rem(0);
+        padding-top: rem(80);
+    }
+}

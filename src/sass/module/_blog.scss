@@ -1,0 +1,103 @@
+@use "global" as *;
+
+.blog__inner.inner {
+    padding-right: rem(20);
+    padding-left: rem(20);
+    @include mq("md") {
+        max-width: $inner + strip-unit($padding-pc) * 2;
+        padding-right: $padding-pc;
+        padding-left: $padding-pc;
+    }
+}
+
+// blog詳細ページのみ適用（左右の余白違いをmodifierで調整）
+.blog__inner.blog__inner--padding.inner {
+    padding-right: $padding-sp;
+    padding-left: $padding-sp;
+    @include mq("md") {
+        max-width: $inner + strip-unit($padding-pc) * 2;
+        padding-right: $padding-pc;
+        padding-left: $padding-pc;
+    }
+}
+
+
+.blog__inner {
+    @include mq("md") {
+        display: flex;
+        column-gap: rem(80);
+        // サイドバーの高さがメインコンテンツに合わせて伸びてしまうのを防ぐ
+        align-items: flex-start;
+    }
+}
+
+.blog__main {
+    width: 100%;
+    @include mq("md") {
+        // gap80px分は除いて1000px
+        width: calc(calc(706 / 1000) * 100%);
+    }
+}
+
+.blog__main-pagination {
+    margin-top: rem(80);
+}
+
+.blog__sidebar {
+    margin: 0 auto;
+    margin-top: rem(80);
+    // 375pxからinnerの左右padding分の値を引いた値が335px
+    width: calc(calc(294 / 335) * 100%);
+    @include mq("md") {
+        margin-top: 0;
+        // gap80px分は除いて1000px
+        width: calc(calc(294 / 1000) * 100%);
+    }
+}
+
+// blog詳細ページのみ適用（左右の余白違いをmodifierで調整）
+.blog__sidebar.blog__sidebar--width {
+    // 375pxからinnerの左右padding分の値を引いた値が345px
+    width: calc(calc(294 / 345) * 100%);
+    @include mq("md") {
+        margin-top: 0;
+        // gap80px分は除いて1000px
+        width: calc(calc(294 / 1000) * 100%);
+    }
+}
+
+.blog {
+    position: relative;
+}
+
+.blog::before {
+    display: inline-block;
+    width: rem(120);
+    height: rem(55);
+    -webkit-mask-image: url(../images/common/right-facing-fishes-green-decoration.svg);
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-image: url(../images/common/right-facing-fishes-green-decoration.svg);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: $green;
+
+    position: absolute;
+    content: "";
+    top: rem(-23.9);
+    z-index: -10;
+    // 画面幅広いときに広がりすぎないようにする
+    // left: calc(50% - min(43vw, 38.75rem));
+    // 画面狭いときに中に入りすぎないように調整
+    left: calc(50% - min(50vw, 17.15rem));
+    // あしらい画像サイズ可変する場合の例
+    width: clamp(rem(150), 20.9vw, rem(301));
+    @include mq("md") {
+        top: rem(-68.7);
+        width:rem(301);
+        height:rem(138);
+        left: calc(50% - min(43vw, 38.75rem));
+    }
+}

@@ -1,0 +1,85 @@
+@use "global" as *;
+
+.top-voice {
+    @include mq("md") {
+        position: relative;
+    }
+}
+
+.top-voice__cards {
+    margin-top: rem(40);
+    @include mq("md") {
+        // margin-top: rem(30);
+        margin-top: rem(28.5);
+    }
+}
+
+.top-voice__button {
+    margin-top: rem(40);
+    // ボタン上のカードのズレをボタン上の余白で帳尻合わせる
+    // margin-top: rem(38.5);
+    text-align: center;
+    @include mq("md") {
+        // margin-top: rem(80);
+        margin-top: rem(79.5);
+    }
+}
+
+// 魚のあしらい配置
+.top-voice::before {
+    display: none;
+    @include mq("md") {
+        display: inline-block;
+        width:rem(301);
+        height:rem(138);
+        -webkit-mask-image: url(../images/common/right-facing-fishes-green-decoration.svg);
+        -webkit-mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-image: url(../images/common/right-facing-fishes-green-decoration.svg);
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        mask-position: center;
+        background-color: $green;
+
+        position: absolute;
+        content: "";
+        top: rem(-120);
+        z-index: $layer-decoration;
+        // 画面幅広いときに広がりすぎないようにする
+        // left: calc(50% - min(43vw, 38.75rem));
+        // 画面狭いときに中に入りすぎないように調整
+        left: calc(50% - min(48vw, 38.75rem));
+        // あしらい画像サイズ可変する場合の例
+        width: clamp(rem(150), 20.9vw, rem(301));
+    }
+}
+
+// タツノオトシゴのあしらい配置
+.top-voice::after {
+    display: none;
+    @include mq("md") {
+        display: inline-block;
+        width:rem(71);
+        height:rem(162);
+        -webkit-mask-image: url(../images/common/seahorse-decoration.svg);
+        -webkit-mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-image: url(../images/common/seahorse-decoration.svg);
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        mask-position: center;
+        background-color: $green;
+        position: absolute;
+        content: "";
+        bottom: rem(-70.5);
+        z-index: $layer-decoration;
+        // 画面幅広いときに広がりすぎないようにする
+        // right: calc(50% - min(37.5vw, 33.75rem));
+        // 画面狭いときに中に入りすぎないように調整
+        right: calc(50% - min(48vw, 33.75rem));
+        // あしらい画像サイズ可変する場合の例
+        width: clamp(rem(60), 4.93vw, rem(71));
+    }
+}

@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.sidebar-title {
+    font-family: $base-font-family;
+    font-weight: $regular;
+    font-size: rem(24);
+    color: $black;
+    line-height: 1;
+    border-left: 8px solid $green;
+    padding: rem(13) 0 rem(13) rem(74);
+    position: relative;
+}
+
+.sidebar-title::before {
+    position: absolute;
+    content: "";
+    // width: min(100%, rem(64));
+    // height: min(100%, rem(64));
+    width: clamp(rem(32), 39 / 294 * 100vw, rem(39));
+    height: 100%;
+    -webkit-mask-image: url(../images/common/information-tab-icon1.svg);
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-image: url(../images/common/information-tab-icon1.svg);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: $black;
+    top: 0;
+    // left: rem(18);
+    left: rem(21);
+}

@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.campaign-cards {
+    overflow: hidden;
+    // 右側だけinner幅から飛び出す
+    // margin-right: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    // campaign-card下部のbox-shadowが隠れてしまうためpadding-bottomを設定
+    padding-bottom: rem(10);
+}
+
+.campaign-cards__swiper {
+    overflow: visible;
+}

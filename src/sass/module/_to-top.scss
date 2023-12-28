@@ -1,0 +1,59 @@
+@use "global" as *;
+
+// footer手前で止まるようにするために記述（jQueryと連動）
+body {
+    position: relative;
+}
+
+.to-top {
+    width: rem(48);
+    height: rem(48);
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $green;
+    border-radius: 50%;
+    position: fixed;
+    z-index: $layer-to-top;
+    right: rem(15);
+    bottom: rem(15);
+    @include mq("md") {
+        width: rem(80);
+        height: rem(80);
+        right: rem(20);
+        bottom: rem(20);
+    }
+}
+
+.to-top::before {
+    position: absolute;
+    content: "";
+    top: 25%;
+    left: 43%;
+    width: rem(8.5);
+    border-top: 1px solid $green;
+    transform: translateX(-50%) rotate(-45deg);
+    border-radius: rem(5);
+    @include mq("md") {
+        // width: rem(14.5);
+        width: rem(9.7);
+        top: 31.2%;
+        left: 46.7%;
+    }
+}
+
+.to-top::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    width: rem(28);
+    height: rem(1);
+    border-top: 1px solid $green;
+    transform: translateY(-50%) rotate(90deg);
+    border-radius: rem(5);
+    @include mq("md") {
+        // width: rem(49);
+        width: rem(36.5);
+    }
+}

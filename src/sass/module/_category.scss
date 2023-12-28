@@ -1,0 +1,44 @@
+@use "global" as *;
+
+.category {
+    display: flex;
+    // gap: rem(16) rem(21);
+    gap: rem(14.4) 6.086%;
+    justify-content: center;
+    flex-wrap: wrap;
+    @include mq("md") {
+        justify-content: start;
+        gap: rem(24) rem(32);
+    }
+}
+
+.category__button {
+    display: inline-block;
+    font-family: $base-font-family;
+    font-size: rem(14);
+    color: $green;
+    line-height: 1;
+    padding: 0.714286em 1em;
+    max-width: rem(162);
+    width: 46.95%;
+    // width: 100%;
+    text-align: center;
+    border: 1px solid $green;
+    text-transform: uppercase;
+    background-color: $white;
+    // hover指定がない場合のaタグの透過処理
+    // transition: opacity 0.3s;
+	transition: 0.2s ease-in-out;
+}
+
+.category__button:hover {
+    // opacity: 0.8;
+    color: $white;
+	background-color: $green;
+	border-color: $green;
+}
+
+.category__button.is-active {
+    color: $white;
+    background-color: $green;
+}

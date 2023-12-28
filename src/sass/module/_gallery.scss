@@ -1,0 +1,221 @@
+@use "global" as *;
+
+.gallery {
+    position: relative;
+}
+
+// 魚のあしらい配置
+.gallery::before {
+    display: none;
+
+    @include mq("md") {
+        display: inline-block;
+        width:rem(301);
+        height:rem(138);
+        -webkit-mask-image: url(../images/common/left-facing-fishes-white-decoration.svg);
+        -webkit-mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-image: url(../images/common/left-facing-fishes-white-decoration.svg);
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        mask-position: center;
+        background-color: $green;
+        position: absolute;
+        content: "";
+        z-index: $layer-decoration;
+        // top: rem(-40);
+        top: rem(-80);
+        // 画面幅広いときに広がりすぎないようにする
+        // right: calc(50% - min(46.5vw, 41.875rem));
+        // 画面狭いときに中に入りすぎないように調整
+        // right: calc(50% - min(48vw, 41.875rem));
+        right: calc(50% - min(44.4vw, 41.875rem));
+        // あしらい画像サイズ可変する場合の例
+        width: clamp(rem(150), 20.9vw, rem(301));
+    }
+}
+
+.gallery__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: rem(8);
+    margin-top: rem(40);
+    @include mq("md") {
+        grid-auto-flow: dense;
+        // gapの値を差し引いた値
+        // grid-template-rows: repeat(4, rem(369));
+        // grid-template-rows: 1fr;
+
+        // 真ん中はgapの値を差し引いた値
+        // rem(80)指定だと画面幅狭くなると、縦長画像の下に余白ができてしまう
+        // grid-template-columns: 1fr rem(80) 1fr;
+        // 固定値ではなく、比率管理に変更：80px / 492px = 0.16
+        grid-template-columns: 1fr 0.163fr 1fr;
+        margin-top: rem(80);
+    }
+}
+
+// 横長画像用の設定
+.gallery__item {
+    cursor: pointer;
+    aspect-ratio: 345 / 219;
+    overflow: hidden;
+    @include mq("md") {
+        aspect-ratio: 580 / 369;
+        grid-row: span 1;
+        grid-column: span 2;
+    }
+}
+
+// .gallery__item:nth-child(6n),
+// .gallery__item:nth-child(6n + 1) {
+//     @include mq("md") {
+//         grid-row: span 2;
+//         grid-column: 1;
+//     }
+// }
+
+// 6の倍数の位置に配置される縦長画像用の設定
+.gallery__item:nth-child(6n) {
+    aspect-ratio: 345 / 523;
+    overflow: hidden;
+    @include mq("md") {
+        aspect-ratio: 492 / 746;
+        grid-row: span 2;
+        grid-column: 3 / 4;
+    }
+}
+
+// 6の倍数＋１の位置に配置される縦長画像用の設定
+.gallery__item:nth-child(6n + 1) {
+    aspect-ratio: 345 / 523;
+    overflow: hidden;
+    @include mq("md") {
+        aspect-ratio: 492 / 746;
+        grid-row: span 2;
+        grid-column: 1 / 2;
+    }
+}
+
+.gallery__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+// 以下、モーダルに関する記述
+// モーダル開いた際のグレー背景
+.gallery__modal {
+    position: fixed;
+    // $layer-to-top（トップに戻るボタン）よりも上に配置
+    z-index: 400;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(32, 32, 32, 0.8);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.gallery__modal.is-open {
+    visibility: visible;
+    opacity: 1;
+}
+
+// モーダル開いた際のグレー背景上側の画像
+.gallery__modal-img {
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    // z-index: 500;
+    // max-width: rem(920);
+    // width: 90%;
+    // height: 90%;
+    // @include mq("md") {
+    //     width: calc(calc(920 / 1440) * 100vw);
+    //     height: calc(calc(586 / 768) * 100vh);
+    // }
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 500;
+    max-width: 90%;
+    max-height: 90%;
+    // width: auto;
+    // height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    @include mq("md") {
+    max-width: calc(calc(920 / 1440) *100%);
+
+    }
+}
+
+// gallery__itemクラスがgallery__modal-img直下の子要素になった際に適用される（無いとモーダル画像表示崩れる）
+// .gallery__modal-img > .gallery__item {
+//     width: 100%;
+//     height: 100%;
+// }
+
+.gallery__modal-img img {
+    // width: 100%;
+    // height: 100%;
+    // // object-fit: cover;
+    // object-fit: contain;
+
+    width: 100%;
+    height: 100%;
+    // object-fit: contain;
+    display: block;
+    margin: 0 auto;
+
+    // width: auto;
+    // height: auto;
+    // max-width: 100%;
+    // max-height: 100%;
+    object-fit: cover;
+}
+
+// gallery__itemクラスがgallery__modal-img直下の子要素になった際に適用される
+.gallery__modal-img > .gallery__item {
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+
+
+// .gallery__modal-img {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     width: 100%;
+//     height: 100%;
+// }
+
+// .gallery__modal-img > .gallery__item {
+//     max-width: 100%;
+//     max-height: 100%;
+//     overflow: hidden;
+// }
+
+// .gallery__modal-img img {
+//     width: auto;
+//     // height: auto;
+//     max-width: 100%;
+//     max-height: 100%;
+//     // object-fit: contain;
+//     object-fit: cover;
+// }

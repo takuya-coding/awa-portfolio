@@ -1,0 +1,92 @@
+@use "global" as *;
+
+.sp-nav {
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+    // z-index: $layer-sp-nav;
+    width: 100vw;
+    height: 100vh;
+    background-color: $green;
+    transform: translateX(100%);
+    transition: ease 0.3s;
+
+    margin-top: rem(80);
+    // padding-top: rem(80);
+    overflow-y: scroll;
+    // ドロワーおよびメインコンテンツ両方のスクロールバーが表示されないように、ドロワー側のスクロールバーを非表示にする
+    /*IE(Internet Explorer)・Microsoft Edgeへの対応*/
+    -ms-overflow-style: none;
+    /*Firefoxへの対応*/
+    scrollbar-width: none;
+
+    @include mq("md") {
+        display: none;
+    }
+}
+
+// ドロワーおよびメインコンテンツ両方のスクロールバーが表示されないように、ドロワー側のスクロールバーを非表示にする
+/*Google Chrome、Safariへの対応*/
+.sp-nav::-webkit-scrollbar {
+    display: none;
+}
+
+.sp-nav.is-active {
+    transform: translateX(0);
+}
+
+.sp-nav__inner {
+    padding: 0 rem(15);
+}
+
+.sp-nav__items {
+    padding-top: rem(92);
+    // スクロールできるようにpadding-bottom記述
+    // 下部のメニューまでクリックできるよう大きめな値に設定する
+    padding-bottom: rem(200);
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    // column-gap: rem(7);
+    column-gap: rem(3.8);
+
+    padding-top: rem(12);
+}
+
+.sp-nav__item:not(:first-child) {
+    margin-top: rem(16);
+}
+
+.sp-nav__item > a {
+    display: block;
+    padding: rem(12) 0;
+    font-weight: $bold;
+    font-size: rem(16);
+    line-height: 1.125;
+    color: $white;
+}
+
+.sp-nav__item {
+    padding-left: rem(20);
+    position: relative;
+}
+
+.sp-nav__item::before {
+    position: absolute;
+    content:"";
+    // top: rem(15);
+    top: rem(11.8);
+    left: 0;
+    width: rem(18);
+    height: rem(18);
+    background-image: url(../images/common/starfish-icon.svg);
+    background-size: cover;
+}
+
+.sp-nav__lv2-item > a {
+    display: block;
+    padding: rem(12) 0;
+    font-size: rem(16);
+    line-height: 1.125;
+    color: $white;
+}

@@ -1,0 +1,16 @@
+@use "global" as *;
+
+.layout-common-contact {
+    margin-top: rem(80);
+    @include mq("md") {
+        margin-top: rem(140);
+    }
+}
+
+// 下層ページのみ適用
+.layout-common-contact.layout-common-contact--margin {
+    margin-top: rem(106);
+    @include mq("md") {
+        margin-top: rem(140);
+    }
+}

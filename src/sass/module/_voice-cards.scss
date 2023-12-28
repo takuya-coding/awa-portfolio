@@ -1,0 +1,42 @@
+@use "global" as *;
+
+// .voice-cards {
+//     display: flex;
+//     flex-direction: column;
+//     // gap: rem(40);
+//     gap: rem(36.5);
+//     // ポスト枚数が増えた場合、3枚目以降は折り返すように
+//     flex-wrap: wrap;
+//     align-items: center;
+//     @include mq("md") {
+//         flex-direction: row;
+//         gap: rem(40);
+//         align-items: stretch;
+//     }
+// }
+
+// .voice-cards__item {
+//     max-width: rem(345);
+//     width: 100%;
+//     @include mq("md") {
+//         max-width: rem(520);
+//         width: calc(50% - rem(40) / 2);
+//     }
+// }
+
+
+// 下層ページでも共通パーツとして使用する
+.voice-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: rem(40);
+    @include mq("md") {
+        grid-template-columns: 1fr 1fr;
+        gap: rem(80) rem(40);
+    }
+}
+
+.voice-cards__item {
+    // テキスト量が違ってもカード高さを揃えるために記述
+    display: flex;
+}

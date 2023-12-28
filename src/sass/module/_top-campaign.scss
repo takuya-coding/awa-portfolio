@@ -1,0 +1,99 @@
+@use "global" as *;
+
+.top-campaign__campaign-cards {
+    // margin-top: rem(-65);
+    margin-top: rem(27);
+    @include mq("md") {
+        // margin-top: rem(65);
+        margin-top: rem(41);
+    }
+}
+
+.top-campaign__button {
+    // margin-top: rem(40);
+    margin-top: rem(30.5);
+    text-align: center;
+    @include mq("md") {
+        margin-top: rem(70);
+    }
+}
+
+
+.top-campaign {
+    position: relative;
+    // campaign-cardsクラスに、margin-right: calc(50% - 50vw);を指定しており、横スクロールが発生するため、親要素にoverflow:hidden;を指定
+    overflow: hidden;
+}
+
+.top-campaign__swiper-controller {
+    @include mq("md") {
+        // max-width: rem(190);
+        max-width: rem(207.6);
+        width: 100%;
+        position: absolute;
+        top: rem(41);
+        right: 13.6vw;
+    }
+}
+
+.top-campaign__swiper-button-prev::after,
+.top-campaign__swiper-button-next::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    margin: auto;
+}
+
+.top-campaign__swiper-button-prev::after,
+.top-campaign__swiper-button-next::after {
+    display: none;
+    @include mq("md") {
+        width: rem(80);
+        height: rem(80);
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $green;
+        border-radius: 50%;
+    }
+}
+
+.top-campaign__swiper-button-prev::before,
+.top-campaign__swiper-button-next::before {
+    @include mq("md") {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: rem(42);
+        height: rem(8);
+        -webkit-mask-image: url(../images/common/round-button-arrow.svg);
+        -webkit-mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center center;
+        mask-image: url(../images/common/round-button-arrow.svg);
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        mask-position: center center;
+        background: $green;
+    }
+}
+
+.top-campaign__swiper-button-next::before {
+    @include mq("md") {
+        // 矢印の向き反転
+        transform: translate(-50%, -50%) scaleX(-1);
+    }
+}
+
+// // タブレットの青線表示対策
+.top-campaign__swiper-button-prev.swiper-button-prev:focus,
+.top-campaign__swiper-button-next.swiper-button-next:focus {
+    outline: none;
+}
+

@@ -1,0 +1,198 @@
+@use "global" as *;
+
+.about-us-content__img {
+    position: relative;
+    width: 100%;
+}
+
+.about-us-content__img-sub {
+    width: calc(calc(128 / 345)) * 100%;
+    height: auto;
+    position: absolute;
+    z-index: 1;
+    // top: -12.3%;
+    top: -14%;
+    left: 0;
+    @include mq("md") {
+        width: calc(calc(400 / 1080)) * 100%;
+        // top: -12.1%;
+    }
+}
+
+.about-us-content__img-sub img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-us-content__img-main {
+    width: calc(calc(281 / 345)) * 100%;
+    height: auto;
+    margin-left: auto;
+    @include mq("md") {
+        width: calc(calc(880 / 1080)) * 100%;
+    }
+}
+
+.about-us-content__img-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-us-content {
+    position: relative;
+}
+
+.about-us-content__body {
+    margin-top: rem(40);
+    @include mq("md") {
+        margin-top: 0;
+        position: absolute;
+        top: rem(121);
+        // left: 18.5%;
+        left: rem(200);
+        z-index: 2;
+        display: flex;
+        gap: rem(40);
+        // 画面幅縮小時に右側の余白確保
+        padding-right: rem(40);
+        // align-items: center;
+    }
+}
+
+// .about-us-content__body-wrapper {
+//     @include mq("md") {
+//         position: absolute;
+//         top: rem(-460);
+//         left: 18.5%;
+//         z-index: 2;
+//         display: flex;
+//         gap: rem(40);
+//         // 画面幅縮小時に右側の余白確保
+//         padding-right: rem(40);
+//     }
+// }
+
+.about-us-content__title {
+    font-family: $second-font-family;
+    font-weight: $regular;
+    font-size: rem(40);
+    line-height: 1;
+    color: $green;
+    @include mq("md") {
+        font-size: rem(80);
+        line-height: 1.25;
+        color: $white;
+    }
+}
+
+.about-us-content__title span {
+    text-transform: capitalize;
+}
+
+.about-us-content__unit {
+    margin-top: rem(16);
+    @include mq("md") {
+        max-width: rem(400);
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+.about-us-content__text {
+    font-size: rem(16);
+    line-height: 1.5;
+    @include mq("md") {
+        color: $white;
+    }
+}
+
+.about-us-content__button {
+    margin-top: rem(50);
+    text-align: center;
+    @include mq("md") {
+        // margin-top: rem(40);
+        margin-top: rem(38.5);
+    }
+}
+
+
+
+// 以下about-usページのスタイル
+.about-us-content__img-sub.about-us-content__img-sub--about-us {
+    display: none;
+    @include mq("md") {
+        display: block;
+        width: calc(calc(400 / 1080)) * 100%;
+        height: auto;
+        position: absolute;
+        z-index: 1;
+        top: -14%;
+        left: 0;
+    }
+}
+
+.about-us-content__img-main.about-us-content__img-main--about-us {
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    @include mq("md") {
+        width: calc(calc(880 / 1080)) * 100%;
+    }
+}
+
+// .about-us-content__body-about--us {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     z-index: 2;
+//     @include mq("md") {
+//         top: rem(121);
+//         // left: 18.5%;
+//         left: rem(200);
+//         display: flex;
+//         gap: rem(40);
+//         // 画面幅縮小時に右側の余白確保
+//         padding-right: rem(40);
+//     }
+// }
+
+.about-us-content__title.about-us-content__title--about-us {
+    position: absolute;
+    top: rem(23);
+    left: rem(24);
+    z-index: 2;
+    color: $white;
+    @include mq("md") {
+        top: rem(120.6);
+        left: rem(198.4);
+        // 画面幅縮小時に右側のテキストと被るのを防ぐ
+        font-size: clamp(rem(70), 80 / 1440 * 100vw, rem(80));
+    }
+}
+
+// .about-us-content__unit--about-us {
+//     // margin-top: rem(16);
+//     // margin-top: rem(164);
+//     margin-top: 45%;
+//     @include mq("md") {
+//         max-width: rem(400);
+//         width: 100%;
+//         margin-top: 0;
+//     }
+// }
+
+.about-us-content__text.about-us-content__text--about-us {
+    margin-top: rem(40);
+    @include mq("md") {
+        margin-top: 0;
+        position: absolute;
+        // top: rem(170);
+        top: rem(145);
+        right: rem(40);
+        z-index: 2;
+        max-width: rem(400);
+        width: 100%;
+    }
+}

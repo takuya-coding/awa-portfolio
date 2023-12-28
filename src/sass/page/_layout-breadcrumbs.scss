@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.layout-breadcrumbs {
+    // margin-top: rem(8);
+    margin-top: rem(6.4);
+
+// 改行した際、先頭にも余白がついてズレてしまうのを防ぐ（_breadcrumbs.scssに記述したmargin-leftを打ち消す）
+    margin-left: rem(-3.2);
+}
+
+
+
+// 404ページのみ適用
+.layout-breadcrumbs.layout-breadcrumbs--padding {
+    // headerの高さ+パンくず上の余白分
+    padding-top: rem(86.4);
+    margin-top: 0;
+    @include mq("md") {
+        // headerの高さ+パンくず上の余白分
+        padding-top: rem(96.4);
+    }
+}

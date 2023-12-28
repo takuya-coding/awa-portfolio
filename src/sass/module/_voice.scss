@@ -1,0 +1,46 @@
+@use "global" as *;
+
+.voice__cards {
+    // margin-top: rem(38.5);
+    margin-top: rem(37);
+}
+
+.voice__pagination {
+    margin-top: rem(80);
+}
+
+.voice {
+    position: relative;
+}
+
+.voice::before {
+    display: inline-block;
+    width: rem(120);
+    height: rem(55);
+    -webkit-mask-image: url(../images/common/right-facing-fishes-green-decoration.svg);
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-image: url(../images/common/right-facing-fishes-green-decoration.svg);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: $green;
+
+    position: absolute;
+    content: "";
+    top: rem(-23.9);
+    z-index: -10;
+    // 画面幅広いときに広がりすぎないようにする
+    // left: calc(50% - min(43vw, 38.75rem));
+    // 画面狭いときに中に入りすぎないように調整
+    left: calc(50% - min(50vw, 17.15rem));
+    // あしらい画像サイズ可変する場合の例
+    width: clamp(rem(150), 20.9vw, rem(301));
+    @include mq("md") {
+        top: rem(-68.7);
+        width:rem(301);
+        height:rem(138);
+        left: calc(50% - min(43vw, 38.75rem));
+    }
+}

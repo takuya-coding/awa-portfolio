@@ -1,0 +1,151 @@
+@use "global" as *;
+
+.blog-detail__time {
+    display: block;
+    font-family: $second-font-family;
+    font-weight: $regular;
+    font-size: rem(14);
+    line-height: 1.2857;
+    color: $black;
+}
+
+.blog-detail__title {
+    font-family: $base-font-family;
+    font-weight: $medium;
+    font-size: rem(24);
+    color: $black;
+    border-bottom: 1px solid $green;
+    padding-bottom: rem(4);
+    margin-top: rem(8);
+    @include mq("md") {
+        font-size: rem(32);
+        padding-bottom: 0;
+    }
+}
+
+.blog-detail__content > div  {
+    display: block;
+    aspect-ratio: 345 / 231;
+    // overflow: hidden;
+    margin-top: rem(24);
+    @include mq("md") {
+        aspect-ratio: 700 / 468;
+        // margin-top: rem(40);
+        margin-top: rem(38.5);
+    }
+}
+
+.blog-detail__article-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog-detail__article-area p {
+    font-family: $base-font-family;
+    font-weight: $regular;
+    font-size: rem(16);
+    line-height: 1.5;
+    color: $black;
+    margin-top: rem(24);
+    @include mq("md") {
+        margin-top: rem(40);
+    }
+}
+
+.blog-detail__article-area ul {
+    margin-top: rem(24);
+    @include mq("md") {
+        margin-top: rem(40);
+    }
+}
+
+.blog-detail__article-area li {
+    font-family: $base-font-family;
+    font-weight: $regular;
+    font-size: rem(16);
+    line-height: 1.5;
+    color: $black;
+
+    position: relative;
+    padding-left: rem(27);
+}
+
+.blog-detail__article-area li::before {
+    position: absolute;
+    content:"";
+    left: 0;
+    // top: 50%;
+    // transform: translateY(-50%);
+    // 箇条書きのところはテキスト量が増えてもアイコンが左上に配置されるようにする
+    top: rem(4);
+    width: rem(18);
+    height: rem(18);
+    // background-size: cover;
+
+    -webkit-mask-image: url(../images/common/starfish-icon.svg);
+	-webkit-mask-size: contain;
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+
+	mask-image: url(../images/common/starfish-icon.svg);
+	mask-size: contain;
+	mask-repeat: no-repeat;
+	mask-position: center;
+    background-color: $green;
+}
+
+.blog-detail__article-area li:not(:first-child) {
+    margin-top: rem(4);
+}
+
+.blog-detail__button-area {
+    margin-top: rem(40);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(82);
+    @include mq("md") {
+        margin-top: rem(80);
+    }
+}
+
+.blog-detail__button-prev a,
+.blog-detail__button-next a {
+    border: 1px solid $green;
+    padding: rem(8) rem(14);
+    text-align: center;
+    min-width: rem(38);
+    height: rem(38);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease-in-out;
+    @include mq("md") {
+        width: rem(38);
+    }
+}
+
+.blog-detail__button-prev a:hover,
+.blog-detail__button-next a:hover {
+    color: $white;
+    background-color: $green;
+    border-color: $green;
+}
+
+.blog-detail__button-prev img,
+.blog-detail__button-next img {
+    display: inline-flex;
+    align-items: center;
+    max-width: rem(8);
+    width: 100%;
+}
+
+.blog-detail__button-next img {
+    transform: scaleX(-1);
+}
+
+.blog-detail__button-prev:hover img,
+.blog-detail__button-next:hover img {
+    filter: brightness(0) invert(1);
+}

@@ -1,0 +1,120 @@
+@use "global" as *;
+
+.top-price {
+    background-color: $gray;
+    // padding: rem(80) 0;
+    padding-top: rem(80);
+    padding-bottom: rem(85);
+    @include mq("md") {
+        // padding: rem(100) 0;
+        padding-top: rem(100);
+        padding-bottom: rem(103);
+
+        position: relative;
+    }
+}
+
+.top-price__inner.inner {
+    // SP時のみtableの左右幅が合わないためinner幅にて微調整
+    padding-left: rem(14);
+    padding-right: rem(14);
+    @include mq("md") {
+        padding-right: $padding-pc;
+        padding-left: $padding-pc;
+    }
+}
+
+.top-price__wrapper {
+    // margin-top: rem(24);
+    margin-top: rem(28.5);
+    @include mq("md") {
+        margin-top: rem(38.5);
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        gap: rem(93);
+    }
+}
+
+.top-price__img {
+    aspect-ratio: 345 / 227;
+    overflow: hidden;
+
+    // エフェクト用コード
+    position: relative;
+
+    @include mq("md") {
+        aspect-ratio: 492 / 746;
+        max-width: calc(calc(492 / 984) * 100%);
+        // max-width: rem(492);
+        width: 100%;
+    }
+}
+
+// エフェクト用コード
+.top-price__img .color {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: $green;
+}
+
+.top-price__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    // エフェクト用コード
+    display: block;
+}
+
+.top-price__lists {
+    margin-top: rem(38.5);
+    @include mq("md") {
+        max-width: calc(calc(492 / 984) * 100%);
+        // max-width: rem(492);
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+.top-price__button {
+    margin-top: rem(40);
+    text-align: center;
+    @include mq("md") {
+        // margin-top: rem(80);
+        margin-top: rem(78.5);
+    }
+}
+
+// 魚のあしらい配置
+.top-price::after {
+    display: none;
+    @include mq("md") {
+        display: inline-block;
+        width:rem(437);
+        height:rem(201);
+        -webkit-mask-image: url(../images/common/left-facing-fishes-white-decoration.svg);
+        -webkit-mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-image: url(../images/common/left-facing-fishes-white-decoration.svg);
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        mask-position: center;
+        background-color: $green;
+        position: absolute;
+        content: "";
+        bottom: rem(58);
+        z-index: $layer-decoration;
+        // 画面幅広いときに広がりすぎないようにする
+        // left: calc(50% - min(43vw, 38.75rem));
+        // 画面狭いときに中に入りすぎないように調整
+        left: calc(50% - min(48vw, 38.75rem));
+        // あしらい画像サイズ可変する場合の例
+        width: clamp(rem(220), 30.3vw, rem(437));
+    }
+}

@@ -1,0 +1,87 @@
+@use "global" as *;
+
+.top-blog {
+    @include mq("md") {
+        padding-top: rem(100);
+        // 下記記述だと画面幅が変わった際、画像が伸び縮みしてしまうため背景画像設定用のクラスを設ける
+        // background-image: url(../images/common/blog-background.webp);
+        // background-size: 100% 60%;
+        // background-repeat: no-repeat;
+        position: relative;
+    }
+}
+
+// 背景画像設定用のクラス
+.top-blog__background-img {
+    @include mq("md") {
+        position: absolute;
+        top: 0;
+        left: 0;
+        // 100vwはスクロールバーの幅を含み、横スクロールが表示されてしまうので使わない
+        // width: 100vw;
+        width: 100%;
+        max-height: rem(500);
+        height: 100%;
+        background-image: url(../images/common/blog-background.webp);
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: -10;
+    }
+}
+
+.top-blog__inner.inner {
+    padding-right: rem(20);
+    padding-left: rem(20);
+    @include mq("md") {
+        padding-right: $padding-pc;
+        padding-left: $padding-pc;
+    }
+}
+
+.top-blog__cards {
+    // margin-top: rem(24);
+    margin-top: rem(28.5);
+    @include mq("md") {
+        margin-top: rem(80);
+    }
+}
+
+.top-blog__button {
+    // margin-top: rem(40);
+    margin-top: rem(38.5);
+    text-align: center;
+    @include mq("md") {
+        // margin-top: rem(80);
+        margin-top: rem(78.5);
+    }
+}
+
+// 魚のあしらい配置
+.top-blog::after {
+    display: none;
+    @include mq("md") {
+        display: inline-block;
+        width:rem(437);
+        height:rem(201);
+        -webkit-mask-image: url(../images/common/left-facing-fishes-white-decoration.svg);
+        -webkit-mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-image: url(../images/common/left-facing-fishes-white-decoration.svg);
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        mask-position: center;
+        background-color: $white;
+
+        position: absolute;
+        content: "";
+        top: rem(23.8);
+        z-index: $layer-decoration;
+        // 画面幅広いときに広がりすぎないようにする
+        // left: calc(50% - min(43vw, 38.75rem));
+        // 画面狭いときに中に入りすぎないように調整
+        left: calc(50% - min(48vw, 38.75rem));
+        // あしらい画像サイズ可変する場合の例
+        width: clamp(rem(220), 30.3vw, rem(437));
+    }
+}

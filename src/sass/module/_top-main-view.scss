@@ -1,0 +1,52 @@
+@use "global" as *;
+
+.top-main-view {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    // スマホ、タブレット横にした際、テキストが上に詰まって窮屈にならないように追記（height:100vhの場合のみ）
+    min-height: rem(320);
+    @include mq("md") {
+        min-height: rem(500);
+    }
+}
+
+.top-main-view__inner {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    z-index: 10;
+}
+
+.top-main-view__main-title {
+    font-family: $third-font-family;
+    font-weight: $regular;
+    font-size: rem(40);
+    letter-spacing: 0.54em;
+    // 最後の一文字の右側スペース分をpadding-leftで調整するのではなく、text-indent使う
+    // padding-left: 0.54em;
+    text-indent: 0.54em;
+    color: $white;
+    text-transform: uppercase;
+    line-height: 1.2;
+    @include mq("md") {
+        font-size: rem(80);
+        line-height: 1.25;
+    }
+}
+
+.top-main-view__sub-title {
+    font-family: $second-font-family;
+    font-weight: $regular;
+    font-size: rem(20);
+    color: $white;
+}
+
+.top-main-view__img img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}

@@ -34,7 +34,7 @@ html {
 /* Set core body defaults */
 body {
   min-height: 100vh;
-  text-rendering: optimizeSpeed;
+  text-rendering: optimizeLegibility;
   line-height: 1.5;
 }
 
@@ -94,10 +94,11 @@ textarea {
   resize: vertical;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
-  display: none;
-}
+// ショーゴさんの記事を参考にコメントアウト
+// input[type="checkbox"],
+// input[type="radio"] {
+//   display: none;
+// }
 
 input[type="submit"],
 input[type="button"],
@@ -109,4 +110,11 @@ select {
 
 select::-ms-expand {
   display: none;
+}
+
+/* ホバー */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s;
 }

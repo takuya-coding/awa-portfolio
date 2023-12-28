@@ -1,40 +1,96 @@
 /* リキッドレイアウト対応 */
 @use "global" as *;
 
-html {
-  //~375px
-  @media (max-width: 375px) {
-    font-size: vw(375, 16);
-  }
+@if $startFrom == sp {
+  //スマホファースト
+  html {
+    //~375px
+    @media (max-width: 375px) {
+      font-size: vw(375, 16);
+    }
 
-  //375px~787px
-  font-size: 16px;
-
-  @include mq("md") {
-    font-size: vw(strip-unit($inner), 16);
-  }
-
-  //inner~max-screen
-  @media (min-width: $inner) {
+    //375px~767px
     font-size: 16px;
-  }
-}
 
-/* pcの電話番号発信対応 */
-a[href^="tel:"] {
-  @include mq("md") {
-    pointer-events: none;
-  }
-}
+    @include mq("md") {
+      font-size: vw(strip-unit($inner), 16);
+    }
 
-/* ホバー */
-a {
-  text-decoration: none;
-  color: inherit;
-  transition: opacity 0.3s;
-  @include mq("md") {
-    &:hover {
-      opacity: 0.8;
+    //inner~max-screen
+    @media (min-width: $inner) {
+      font-size: 16px;
     }
   }
+} @else {
+  //PCファースト
+  html {
+    font-size: 16px;
+
+    @media (max-width: $inner) {
+      font-size: vw(strip-unit($inner), 16);
+    }
+
+    @include mq("md") {
+      font-size: 16px;
+    }
+
+    //~375px
+    @media (max-width: 375px) {
+      font-size: vw(375, 16);
+    }
+  }
+}
+
+
+// 以下追記
+
+// ほぼ共通の部分
+body {
+  font-family: $base-font-family;
+  font-weight: $regular;
+  color: $black;
+}
+
+// ドロワーメニュー展開時に背景のコンテンツをスクロールさせないための記述（jsにも記述あり）
+body.is-active {
+  height: 100%;
+  overflow: hidden;
+}
+
+// hover指定がない場合のaタグの透過処理
+// a {
+//   text-decoration: none;
+//   color: inherit;
+//   transition: opacity 0.3s;
+// }
+
+// a:hover {
+//   @include mq("md") {
+//     opacity: 0.8;
+//   }
+// }
+
+// コンテンツ量が少なく短いページでもfooterを最下部に表示するためのコード
+// （bodyタグ直下の子要素としてwrapクラスが付いたdivタグ記述）
+.wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+// 404ページのみ適用
+.wrap.wrap--404 {
+  background-color: $green;
+}
+
+main {
+  flex: 1;
+}
+
+
+
+// スマホを横にした際、文字サイズが勝手に拡大しないようにするためのコード
+body {
+  -moz-text-size-adjust:100%; //Firefox
+  -webkit-text-size-adjust: 100%; //Chrome, Safari, Opera
+  -ms-text-size-adjust:100%; //IE
 }

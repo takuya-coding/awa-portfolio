@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.sidebar-campaign-cards {
+    display: flex;
+    flex-direction: column;
+    // gap: rem(40);
+    gap: rem(38.4);
+    @include mq("md") {
+        gap: rem(41.6);
+    }
+}
+
+.sidebar-campaign-cards__item {
+    // max-width: rem(294);
+    // blog-sidebar__listクラスの方で幅を%管理するので、ここではwidth:100%とする
+    width: 100%;
+}

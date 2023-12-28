@@ -1,0 +1,79 @@
+@use "global" as *;
+
+// .pc-nav {
+//     display: none;
+//     @include mq("md") {
+//         display: block;
+//         height: rem(90);
+//     }
+// }
+
+.pc-nav__items {
+    height: inherit;
+    display: flex;
+    align-items: center;
+}
+
+.pc-nav__item {
+    height: inherit;
+}
+
+.pc-nav__item a {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    // レスポンシブ時におけるテキスト改行を防ぐのにブレイクポイントを増やさず対応
+    padding: 0 min(1.4vw, rem(20));
+
+    // hoverアニメーションの線の基点とするためrelativeを指定
+    position: relative;
+}
+
+.pc-nav__item a:hover {
+    color: $white;
+}
+
+.pc-nav__item a::after {
+    content: "";
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    /*線の形状*/
+    width: 80%;
+    height: rem(1);
+    background: $white;
+    /*アニメーションの指定*/
+    transition: all .3s;
+    transform: scale(0, 1);/*X方向0、Y方向1*/
+    transform-origin: center top;/*上部中央基点*/
+}
+
+// hoverの設定
+.pc-nav__item a:hover::after {
+    transform: scale(1, 1);/*X方向にスケール拡大*/
+}
+
+
+.pc-nav__item p {
+    font-family: $second-font-family;
+    font-weight: $regular;
+    font-size: rem(18);
+    line-height: 1;
+    color: $white;
+}
+
+.pc-nav__item p::first-letter {
+    text-transform: capitalize;
+}
+
+.pc-nav__item span {
+    display: block;
+    font-size: rem(10);
+    line-height: 1.5;
+    color: $white;
+    margin-top: rem(4);
+}

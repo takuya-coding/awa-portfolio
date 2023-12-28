@@ -1,0 +1,136 @@
+@use "global" as *;
+
+.common-nav {
+    color: $white;
+}
+
+// SP時2列表記
+.common-nav__items {
+    display: grid;
+    // grid-template-columns: repeat(2,1fr);
+    grid-template-columns: 1.1fr 1fr;
+    // column-gap: rem(7);
+    column-gap: rem(8.5);
+    margin-top: rem(-2);
+    @include mq("md") {
+    grid-template-columns: 1fr 1fr;
+    column-gap: rem(31);
+    margin-top: rem(11.5);
+    }
+}
+
+.common-nav__item:not(:first-child) {
+    margin-top: rem(16);
+}
+
+.common-nav__item > a {
+    display: block;
+    padding: rem(12) 0;
+    font-weight: $bold;
+    font-size: rem(16);
+    line-height: 1.125;
+    // color: $white;
+}
+
+.common-nav__item {
+    // padding-left: rem(20);
+    padding-left: rem(21.5);
+    position: relative;
+}
+
+.common-nav__item::before {
+    position: absolute;
+    content:"";
+    // top: rem(15);
+    top: rem(11.8);
+    left: 0;
+    width: rem(18);
+    height: rem(18);
+    background-image: url(../images/common/starfish-icon.svg);
+    background-size: cover;
+}
+
+.common-nav__lv2-item > a {
+    display: block;
+    padding: rem(12) 0;
+    font-size: rem(16);
+    line-height: 1.125;
+    // color: $white;
+    padding-left: rem(1);
+}
+
+// PC時はSP時の2列表記をさらに2列に分け、合計で4列表記にする
+.common-nav__item-wrap {
+    @include mq("md") {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        // column-gap: rem(7);
+        // column-gap: rem(32.5);
+        column-gap: rem(50);
+    }
+}
+
+.common-nav__item-wrap:nth-child(2) {
+    @include mq("md") {
+        column-gap: rem(18);
+    }
+}
+
+.common-nav__item-wrap-for-pc:nth-child(2) {
+    margin-top: rem(16);
+    @include mq("md") {
+        margin-top: 0;
+    }
+}
+
+
+
+
+// サイトマップページのみ適用
+.common-nav.common-nav--color {
+    color: $black;
+}
+
+.common-nav__item.common-nav__item--color::before {
+    -webkit-mask-image: url(../images/common/starfish-icon.svg);
+	-webkit-mask-size: contain;
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+
+	mask-image: url(../images/common/starfish-icon.svg);
+	mask-size: contain;
+	mask-repeat: no-repeat;
+	mask-position: center;
+
+    background-color: $black;
+}
+
+.common-nav__items.common-nav__items--gap {
+    // column-gap: rem(26);
+    // column-gap: calc(calc(27 / 345) * 100%);
+    // 320px画面幅でも改行しない程度に余白調整
+    column-gap: 6.4%;
+    @include mq("md") {
+        // column-gap: rem(128);
+        // column-gap: rem(64);
+        // ↓余白感見ながら微調整
+        column-gap: 6.3%;
+        margin-top: 0;
+    }
+}
+
+.common-nav__item-wrap.common-nav__item-wrap--gap {
+    @include mq("md") {
+        // column-gap: rem(142.8);
+        // column-gap: rem(64);
+        column-gap: calc(calc(144 / 1080) * 100%);
+    }
+}
+
+.common-nav__item-wrap.common-nav__item-wrap--gap:nth-child(2) {
+    @include mq("md") {
+        // column-gap: rem(112.4);
+        // column-gap: rem(64);
+        column-gap: calc(calc(144 / 1080) * 100%);
+    }
+}

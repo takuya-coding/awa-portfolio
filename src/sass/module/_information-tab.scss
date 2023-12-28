@@ -1,0 +1,91 @@
+@use "global" as *;
+
+.information-tab {
+    display: flex;
+    gap: rem(16) 5.507%;
+    // justify-content: center;
+    flex-wrap: wrap;
+    @include mq("md") {
+        gap: rem(24) 8.333%;
+    }
+}
+
+.information-tab__button {
+    display: inline-block;
+    font-family: $base-font-family;
+    font-size: rem(14);
+    color: $green;
+    // padding: 0.642857em 1.142857em;
+    padding: 0.642857em;
+    width: calc(calc(102 / 345) * 100%);
+    text-align: center;
+    background-color: $gray;
+    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.25);
+    // hover指定がない場合のaタグの透過処理
+    // transition: opacity 0.3s;
+    // ふわっと透過処理、ボタンクリック時に背景色がふわっと変わる処理を追加
+    transition: opacity 0.3s, background-color 0.5s;
+    @include mq("md") {
+        // font-size: rem(24);
+        font-size: clamp(rem(20), 24 /1440 * 100vw, rem(24));
+        padding: 1.125em;
+        padding: 1.125em 0.5em;
+        width: calc(calc(300 / 1080) * 100%);
+
+        position: relative;
+        // padding-left: rem(72);
+        // padding-left: rem(84);
+        padding-left: 3.5em;
+    }
+}
+
+.information-tab__button:hover {
+    opacity: 0.8;
+}
+
+.information-tab__button::before {
+    @include mq("md") {
+        position: absolute;
+        content: "";
+        // width: min(100%, rem(64));
+        // height: min(100%, rem(64));
+        width: clamp(rem(32), 64 / 1440 * 100vw, rem(64));
+        height: 100%;
+        -webkit-mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        mask-position: center;
+        background-color: $green;
+        top: 0;
+        // left: 0;
+        left: rem(18);
+    }
+}
+
+.information-tab__button:nth-child(1)::before {
+    -webkit-mask-image: url(../images/common/information-tab-icon1.svg);
+    mask-image: url(../images/common/information-tab-icon1.svg);
+}
+
+.information-tab__button:nth-child(2)::before {
+    -webkit-mask-image: url(../images/common/information-tab-icon2.svg);
+    mask-image: url(../images/common/information-tab-icon2.svg);
+}
+
+.information-tab__button:nth-child(3)::before {
+    -webkit-mask-image: url(../images/common/information-tab-icon3.svg);
+    mask-image: url(../images/common/information-tab-icon3.svg);
+}
+
+.information-tab__button.is-active {
+    color: $white;
+    background-color: $green;
+}
+
+.information-tab__button.is-active::before {
+    @include mq("md") {
+        background-color: $white;
+    }
+}

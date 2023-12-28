@@ -1,0 +1,75 @@
+@use "global" as *;
+
+.information-content__item {
+    display: none;
+    padding: rem(24);
+    border: 1px solid $green;
+}
+
+.information-content__item.is-active {
+    display: block;
+    // コンテンツをふわっと切り替える処理
+    animation: fade 0.5s ease;
+}
+
+// コンテンツをふわっと切り替えるアニメーション
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.information-content__item-wrap {
+    @include mq("md") {
+        display: flex;
+        align-items: center;
+        column-gap: rem(48);
+    }
+}
+
+.information-content__item-text {
+    @include mq("md") {
+        width: 50%;
+    }
+}
+
+.information-content__title {
+    font-family: $base-font-family;
+    font-weight: bold;
+    font-size: rem(24);
+    line-height: 1;
+    // padding-bottom: rem(8);
+    padding-bottom: rem(6.4);
+    border-bottom: 1px solid $green;
+}
+
+.information-content__text {
+    margin-top: rem(8);
+    font-family: $base-font-family;
+    font-weight: $regular;
+    font-size: rem(16);
+    line-height: 1.5;
+    color: $black2;
+}
+
+.information-content__item-img {
+    margin-top: rem(8);
+    aspect-ratio: 297 / 189;
+    overflow: hidden;
+    @include mq("md") {
+        margin-top: rem(-2);
+        aspect-ratio: 492 / 313;
+        width: 50%;
+    }
+}
+
+.information-content__item-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+

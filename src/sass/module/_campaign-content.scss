@@ -1,0 +1,31 @@
+@use "global" as *;
+
+.campaign-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    // row-gap: rem(40);
+    row-gap: rem(39.2);
+    justify-items: center;
+    @include mq("md") {
+        grid-template-columns: 1fr 1fr;
+        // gap: rem(81.6) rem(40);
+        gap: rem(78.4) rem(40);
+    }
+}
+
+.campaign-content__item {
+    // JSタブ切り替えのためのdisplay:none;
+    // display: none;
+    // flexじゃないとテキスト増減に対してcampaign-cardの高さが揃わない
+    display: flex;
+
+    // max-width: rem(280);
+    width: 100%;
+    @include mq("md") {
+        max-width: rem(520);
+    }
+}
+
+// .campaign-content__item.is-active {
+//     // display: block;
+// }

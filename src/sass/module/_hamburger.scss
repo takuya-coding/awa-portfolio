@@ -1,0 +1,60 @@
+@use "global" as *;
+
+.hamburger {
+    cursor: pointer;
+    padding: rem(5);
+    position: relative;
+    width: rem(42);
+    height: rem(34);
+    z-index: $layer-hamburger;
+
+    // ボタンの初期化コード
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.hamburger span {
+    position: absolute;
+    display: block;
+    width: rem(32);
+    height: rem(1);
+    background-color: $white;
+    transform: translateY(-50%);
+    border-radius: rem(4);
+    transition: transform ease 0.5s;
+}
+
+// クリック前
+.hamburger span:nth-of-type(1) {
+    top: 35%;
+}
+
+.hamburger span:nth-of-type(2) {
+    top: 50%;
+}
+
+.hamburger span:nth-of-type(3) {
+    top: 64%;
+}
+
+// クリック後
+.hamburger.is-active span:nth-of-type(1) {
+    transform: translateY(rem(11.5)) rotate(37.5deg);
+    // transform: rotate(37.5deg);
+    width: rem(40);
+    // top: 50%;
+    left: rem(0.8);
+}
+
+.hamburger.is-active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.hamburger.is-active span:nth-of-type(3) {
+    transform: translateY(rem(-11.5)) rotate(-37.5deg);
+    // transform: rotate(-37.5deg);
+    width: rem(40);
+    // top: 50%;
+    left: rem(0.8);
+}
