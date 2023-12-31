@@ -14,7 +14,8 @@
     <header class="header layout-header js-header">
         <div class="header__inner">
             <h1 class="header__logo js-header-logo">
-                <a href="index.html"><img src="./assets/images/common/logo.svg" alt="CodeUps"></a>
+                <a href="index.html"><img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/logo.svg"
+                        alt="CodeUps"></a>
             </h1>
             <button type="button" class="header__hamburger hamburger js-hamburger">
                 <span></span>

@@ -9,40 +9,40 @@
             <div class="top-main-view__slide swiper-slide">
                 <div class="top-main-view__img">
                     <picture>
-                        <source srcset="./assets/images/common/top-mv1-pc.webp" media="(min-width:768px)"
-                            type="image/webp" />
-                        <img src="./assets/images/common/top-mv1-sp.webp" alt="ウミガメがきれいな海の中を泳いでいる" width="375"
-                            height="667" decoding="async">
+                        <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/top-mv1-pc.webp"
+                            media="(min-width:768px)" type="image/webp" />
+                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/top-mv1-sp.webp"
+                            alt="ウミガメがきれいな海の中を泳いでいる" width="375" height="667" decoding="async">
                     </picture>
                 </div>
             </div>
             <div class="top-main-view__slide swiper-slide">
                 <div class="top-main-view__img">
                     <picture>
-                        <source srcset="./assets/images/common/top-mv2-pc.webp" media="(min-width:768px)"
-                            type="image/webp" />
-                        <img src="./assets/images/common/top-mv2-sp.webp" alt="2人のダイバーが海の中でウミガメに遭遇" width="375"
-                            height="667" decoding="async">
+                        <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/top-mv2-pc.webp"
+                            media="(min-width:768px)" type="image/webp" />
+                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/top-mv2-sp.webp"
+                            alt="2人のダイバーが海の中でウミガメに遭遇" width="375" height="667" decoding="async">
                     </picture>
                 </div>
             </div>
             <div class="top-main-view__slide swiper-slide">
                 <div class="top-main-view__img">
                     <picture>
-                        <source srcset="./assets/images/common/top-mv3-pc.webp" media="(min-width:768px)"
-                            type="image/webp" />
-                        <img src="./assets/images/common/top-mv3-sp.webp" alt="の上からダイビングスポットを見た際の景色" width="375"
-                            height="667" decoding="async">
+                        <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/top-mv3-pc.webp"
+                            media="(min-width:768px)" type="image/webp" />
+                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/top-mv3-sp.webp"
+                            alt="の上からダイビングスポットを見た際の景色" width="375" height="667" decoding="async">
                     </picture>
                 </div>
             </div>
             <div class="top-main-view__slide swiper-slide">
                 <div class="top-main-view__img">
                     <picture>
-                        <source srcset="./assets/images/common/top-mv4-pc.webp" media="(min-width:768px)"
-                            type="image/webp" />
-                        <img src="./assets/images/common/top-mv4-sp.webp" alt="美しいビーチと青い空" width="375" height="667"
-                            decoding="async">
+                        <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/top-mv4-pc.webp"
+                            media="(min-width:768px)" type="image/webp" />
+                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/top-mv4-sp.webp"
+                            alt="美しいビーチと青い空" width="375" height="667" decoding="async">
                     </picture>
                 </div>
             </div>
@@ -68,8 +68,8 @@
                     <div class="campaign-cards__swiper-wrapper swiper-wrapper">
                         <div class="campaign-cards__item campaign-card swiper-slide">
                             <div class="campaign-card__img">
-                                <img src="./assets/images/common/campaign-panel1.webp" alt="カラフルな熱帯魚が無数に泳いでいる"
-                                    width="280" height="188" decoding="async">
+                                <img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/campaign-panel1.webp"
+                                    alt="カラフルな熱帯魚が無数に泳いでいる" width="280" height="188" decoding="async">
                             </div>
                             <div class="campaign-card__body">
                                 <div class="campaign-card__category-wrap">
@@ -86,8 +86,8 @@
 
                         <div class="campaign-cards__item campaign-card swiper-slide">
                             <div class="campaign-card__img">
-                                <img src="./assets/images/common/campaign-panel2.webp" alt="美しい海の浅瀬付近にボートが浮かんでいる"
-                                    width="280" height="188" decoding="async">
+                                <img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/campaign-panel2.webp"
+                                    alt="美しい海の浅瀬付近にボートが浮かんでいる" width="280" height="188" decoding="async">
                             </div>
                             <div class="campaign-card__body">
                                 <div class="campaign-card__category-wrap">
@@ -104,8 +104,8 @@
 
                         <div class="campaign-cards__item campaign-card swiper-slide">
                             <div class="campaign-card__img">
-                                <img src="./assets/images/common/campaign-panel3.webp" alt="暗い海の中でたくさんのクラゲが幻想的に漂っている"
-                                    width="280" height="188" decoding="async">
+                                <img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/campaign-panel3.webp"
+                                    alt="暗い海の中でたくさんのクラゲが幻想的に漂っている" width="280" height="188" decoding="async">
                             </div>
                             <div class="campaign-card__body">
                                 <div class="campaign-card__category-wrap">
@@ -122,8 +122,8 @@
 
                         <div class="campaign-cards__item campaign-card swiper-slide">
                             <div class="campaign-card__img">
-                                <img src="./assets/images/common/campaign-panel4.webp" alt="水面から顔を出した３人のダイバー"
-                                    width="280" height="188" decoding="async">
+                                <img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/campaign-panel4.webp"
+                                    alt="水面から顔を出した３人のダイバー" width="280" height="188" decoding="async">
                             </div>
                             <div class="campaign-card__body">
                                 <div class="campaign-card__category-wrap">
@@ -158,12 +158,12 @@
             <div class="top-about-us__content about-us-content">
                 <div class="about-us-content__img">
                     <div class="about-us-content__img-sub">
-                        <img src="./assets/images/common/about-us1.webp" alt="青い空と屋根の上のシーサー" width="128" height="194"
-                            decoding="async">
+                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/about-us1.webp"
+                            alt="青い空と屋根の上のシーサー" width="128" height="194" decoding="async">
                     </div>
                     <div class="about-us-content__img-main">
-                        <img src="./assets/images/common/about-us2.webp" alt="二匹のチョウチョウウオが海の中を泳いでいる" width="281"
-                            height="186" decoding="async">
+                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/about-us2.webp"
+                            alt="二匹のチョウチョウウオが海の中を泳いでいる" width="281" height="186" decoding="async">
                     </div>
                 </div>
                 <div class="about-us-content__body">
@@ -190,8 +190,8 @@
             </div>
             <div class="top-information__flex">
                 <div class="top-information__img">
-                    <img src="./assets/images/common/information.webp" alt="魚がサンゴ礁の周りを泳いでいる" width="345" height="227"
-                        decoding="async" loading="lazy">
+                    <img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/information.webp"
+                        alt="魚がサンゴ礁の周りを泳いでいる" width="345" height="227" decoding="async" loading="lazy">
                 </div>
                 <div class="top-information__body">
                     <h3 class="top-information__body-title">ライセンス講習</h3>
@@ -216,8 +216,8 @@
             <div class="top-blog__cards blog-cards">
                 <a href="#" class="blog-cards__item blog-card">
                     <div class="blog-card__img">
-                        <img src="./assets/images/common/blog-card1.webp" alt="サンゴ礁" width="301" height="201"
-                            decoding="async" loading="lazy">
+                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/blog-card1.webp" alt="サンゴ礁"
+                            width="301" height="201" decoding="async" loading="lazy">
                     </div>
                     <div class="blog-card__body">
                         <time class="blog-card__time" datetime="2023-11-17">2023&#046;11&#046;17</time>
@@ -229,8 +229,8 @@
                 </a>
                 <a href="#" class="blog-cards__item blog-card">
                     <div class="blog-card__img">
-                        <img src="./assets/images/common/blog-card2.webp" alt="ウミガメ" width="301" height="201"
-                            decoding="async" loading="lazy">
+                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/blog-card2.webp" alt="ウミガメ"
+                            width="301" height="201" decoding="async" loading="lazy">
                     </div>
                     <div class="blog-card__body">
                         <time class="blog-card__time" datetime="2023-11-17">2023&#046;11&#046;17</time>
@@ -242,8 +242,8 @@
                 </a>
                 <a href="#" class="blog-cards__item blog-card">
                     <div class="blog-card__img">
-                        <img src="./assets/images/common/blog-card3.webp" alt="イソギンチャクの中から顔を出すカクレクマノミ" width="301"
-                            height="201" decoding="async" loading="lazy">
+                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/blog-card3.webp"
+                            alt="イソギンチャクの中から顔を出すカクレクマノミ" width="301" height="201" decoding="async" loading="lazy">
                     </div>
                     <div class="blog-card__body">
                         <time class="blog-card__time" datetime="2023-11-17">2023&#046;11&#046;17</time>
@@ -278,8 +278,8 @@
                                 <h3 class="voice-card__title">ここにタイトルが入ります。ここにタイトル</h3>
                             </div>
                             <div class="voice-card__img">
-                                <img src="./assets/images/common/voice-post1.webp" alt="帽子を被った笑顔の女性" width="151"
-                                    height="117" decoding="async" loading="lazy">
+                                <img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/voice-post1.webp"
+                                    alt="帽子を被った笑顔の女性" width="151" height="117" decoding="async" loading="lazy">
                             </div>
                         </div>
                         <p class="voice-card__text">
@@ -298,8 +298,8 @@
                                 <h3 class="voice-card__title">ここにタイトルが入ります。ここにタイトル</h3>
                             </div>
                             <div class="voice-card__img">
-                                <img src="./assets/images/common/voice-post2.webp" alt="グッドポーズをした男性" width="151"
-                                    height="117" decoding="async" loading="lazy">
+                                <img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/voice-post2.webp"
+                                    alt="グッドポーズをした男性" width="151" height="117" decoding="async" loading="lazy">
                             </div>
                         </div>
                         <p class="voice-card__text">
@@ -323,10 +323,10 @@
             <div class="top-price__wrapper">
                 <div class="top-price__img">
                     <picture>
-                        <source srcset="./assets/images/common/price-pc.webp" media="(min-width:768px)"
-                            type="image/webp" />
-                        <img src="./assets/images/common/price-sp.webp" alt="悠然と泳ぐウミガメ" width="345" height="227"
-                            decoding="async" loading="lazy">
+                        <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/price-pc.webp"
+                            media="(min-width:768px)" type="image/webp" />
+                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/price-sp.webp"
+                            alt="悠然と泳ぐウミガメ" width="345" height="227" decoding="async" loading="lazy">
                     </picture>
                 </div>
                 <div class="top-price__lists top-price-lists">
@@ -389,7 +389,7 @@
             <div class="common-contact__wrapper">
                 <div class="common-contact__shop-info">
                     <div class="common-contact__logo">
-                        <img src="./assets/images/common/logo.svg" alt="CodeUps">
+                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/logo.svg" alt="CodeUps">
                     </div>
                     <div class="common-contact__shop-info-wrapper">
                         <div class="common-contact__shop-info-text">
