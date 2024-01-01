@@ -5,9 +5,9 @@
             <h1 class="main-view__title main-view__title--uppercase">faq</h1>
             <div class="main-view__img">
                 <picture>
-                    <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/faq-mv-pc.webp"
+                    <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/faq-mv-pc.webp"
                         media="(min-width:768px)" type="image/webp" />
-                    <img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/faq-mv-sp.webp"
+                    <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/faq-mv-sp.webp"
                         alt="透き通るコバルトブルーの海と白い砂浜" width="375" height="460" decoding="async">
                 </picture>
             </div>
@@ -98,7 +98,8 @@
             <div class="common-contact__wrapper">
                 <div class="common-contact__shop-info">
                     <div class="common-contact__logo">
-                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/logo.svg" alt="CodeUps">
+                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/logo.svg"
+                            alt="CodeUps">
                     </div>
                     <div class="common-contact__shop-info-wrapper">
                         <div class="common-contact__shop-info-text">

@@ -5,9 +5,10 @@
             <h1 class="main-view__title">information</h1>
             <div class="main-view__img">
                 <picture>
-                    <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/information-mv-pc.webp"
+                    <source
+                        srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/information-mv-pc.webp"
                         media="(min-width:768px)" type="image/webp" />
-                    <img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/information-mv-sp.webp"
+                    <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/information-mv-sp.webp"
                         alt="岸壁付近を泳ぐダイバーと無数の黄色い熱帯魚" width="375" height="460" decoding="async">
                 </picture>
             </div>
@@ -50,7 +51,7 @@
                             </p>
                         </div>
                         <div class="information-content__item-img">
-                            <img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/information-tab-content1.webp"
+                            <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/information-tab-content1.webp"
                                 alt="きれいな海面に5人のダイバーが浮いている" width="297" height="189" decoding="async">
                         </div>
                     </div>
@@ -64,7 +65,7 @@
                             </p>
                         </div>
                         <div class="information-content__item-img">
-                            <img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/gallery5.webp"
+                            <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/gallery5.webp"
                                 alt="無数の魚がきれいな海の中を泳いでいる" width="297" height="189" decoding="async">
                         </div>
                     </div>
@@ -78,7 +79,7 @@
                             </p>
                         </div>
                         <div class="information-content__item-img">
-                            <img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/gallery3.webp"
+                            <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/gallery3.webp"
                                 alt="二匹のチョウチョウウオが海底付近を泳いでいる" width="297" height="189" decoding="async">
                         </div>
                     </div>
@@ -91,7 +92,8 @@
             <div class="common-contact__wrapper">
                 <div class="common-contact__shop-info">
                     <div class="common-contact__logo">
-                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/logo.svg" alt="CodeUps">
+                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/logo.svg"
+                            alt="CodeUps">
                     </div>
                     <div class="common-contact__shop-info-wrapper">
                         <div class="common-contact__shop-info-text">

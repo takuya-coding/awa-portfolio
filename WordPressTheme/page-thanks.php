@@ -5,9 +5,10 @@
             <h1 class="main-view__title">contact</h1>
             <div class="main-view__img">
                 <picture>
-                    <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/contact-mv-pc.webp"
+                    <source
+                        srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/contact-mv-pc.webp"
                         media="(min-width:768px)" type="image/webp" />
-                    <img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/contact-mv-sp.webp"
+                    <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/contact-mv-sp.webp"
                         alt="真上から眺めた激しく波が打ち寄せるコバルトブルーの海岸" width="375" height="460" decoding="async">
                 </picture>
             </div>

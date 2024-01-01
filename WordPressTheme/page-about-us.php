@@ -5,40 +5,28 @@
             <h1 class="main-view__title">about&nbsp;us</h1>
             <div class="main-view__img">
                 <picture>
-                    <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/aboutus-mv-pc.webp"
+                    <source
+                        srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/aboutus-mv-pc.webp"
                         media="(min-width:768px)" type="image/webp" />
-                    <img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/aboutus-mv-sp.webp"
+                    <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/aboutus-mv-sp.webp"
                         alt="青空とシーサー" width="375" height="460" decoding="async">
                 </picture>
             </div>
         </div>
     </div>
     <!-- breadcrumb -->
-    <div class="breadcrumbs layout-breadcrumbs">
-        <div class="breadcrumbs__inner inner">
-            <!-- Breadcrumb NavXT -->
-            <span>
-                <a href="index.html" class="home">
-                    <span>top</span>
-                </a>
-            </span>
-            <span>&gt;</span>
-            <span>
-                <span class="post post-page current-item">私たちについて</span>
-            </span>
-        </div>
-    </div>
+    <?php get_template_part('') ?>
 
     <div class="about-us layout-about-us">
         <div class="about-us__inner inner">
             <div class="about-us__content about-us-content">
                 <div class="about-us-content__img">
                     <div class="about-us-content__img-sub about-us-content__img-sub--about-us">
-                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/about-us1.webp"
+                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about-us1.webp"
                             alt="青い空と屋根の上のシーサー" width="400" height="606" decoding="async">
                     </div>
                     <div class="about-us-content__img-main about-us-content__img-main--about-us">
-                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/about-us2.webp"
+                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about-us2.webp"
                             alt="二匹のチョウチョウウオが海の中を泳いでいる" width="345" height="228" decoding="async">
                     </div>
                 </div>
@@ -64,27 +52,27 @@
             </div>
             <div class="gallery__list">
                 <div class="gallery__item js-modal-open">
-                    <img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/price-pc.webp"
+                    <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/price-pc.webp"
                         alt="無数のキンギョハナダイがサンゴ礁の周りを泳いでいる" width="345" height="523" decoding="async" loading="lazy">
                 </div>
                 <div class="gallery__item js-modal-open">
-                    <img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/gallery2.webp"
+                    <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/gallery2.webp"
                         alt="美しい海の浅瀬付近にボートが浮かんでいる" width="345" height="219" decoding="async" loading="lazy">
                 </div>
                 <div class="gallery__item js-modal-open">
-                    <img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/gallery3.webp"
+                    <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/gallery3.webp"
                         alt="二匹のチョウチョウウオが海底付近を泳いでいる" width="345" height="219" decoding="async" loading="lazy">
                 </div>
                 <div class="gallery__item js-modal-open">
-                    <img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/gallery4.webp"
+                    <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/gallery4.webp"
                         alt="一匹の黄色い魚が泳いでいる" width="345" height="219" decoding="async" loading="lazy">
                 </div>
                 <div class="gallery__item js-modal-open">
-                    <img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/gallery5.webp"
+                    <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/gallery5.webp"
                         alt="無数の魚がきれいな海の中を泳いでいる" width="345" height="219" decoding="async" loading="lazy">
                 </div>
                 <div class="gallery__item js-modal-open">
-                    <img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/gallery6.webp"
+                    <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/gallery6.webp"
                         alt="魚がサンゴ礁の周りを泳いでいる" width="345" height="524" decoding="async" loading="lazy">
                 </div>
             </div>
@@ -101,7 +89,8 @@
             <div class="common-contact__wrapper">
                 <div class="common-contact__shop-info">
                     <div class="common-contact__logo">
-                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/logo.svg" alt="CodeUps">
+                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/logo.svg"
+                            alt="CodeUps">
                     </div>
                     <div class="common-contact__shop-info-wrapper">
                         <div class="common-contact__shop-info-text">

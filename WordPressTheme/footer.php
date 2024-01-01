@@ -2,15 +2,15 @@
     <div class="footer__inner inner">
         <div class="footer__head">
             <div class="footer__logo">
-                <a href="#"><img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/logo.svg"
+                <a href="#"><img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/logo.svg"
                         alt="CodeUps"></a>
             </div>
             <div class="footer__icon">
                 <a href="#" class="footer__icon-facebook"><img
-                        src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/facebook.svg"
+                        src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/facebook.svg"
                         alt="facebookアイコン"></a>
                 <a href="#" class="footer__icon-instagram"><img
-                        src="<?php echo esc_url(get_theme_file_uri()); ?>/images/common/instagram.svg"
+                        src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/instagram.svg"
                         alt="instagramアイコン"></a>
             </div>
         </div>
