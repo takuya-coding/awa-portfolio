@@ -14,20 +14,8 @@
         </div>
     </div>
     <!-- breadcrumb -->
-    <div class="breadcrumbs layout-breadcrumbs">
-        <div class="breadcrumbs__inner inner">
-            <!-- Breadcrumb NavXT -->
-            <span>
-                <a href="index.html" class="home">
-                    <span>top</span>
-                </a>
-            </span>
-            <span>&gt;</span>
-            <span>
-                <span class="post post-page current-item">サイトマップ</span>
-            </span>
-        </div>
-    </div>
+    <?php get_template_part('template-parts/breadcrumb') ?>
+
 
     <div class="sitemap layout-sitemap">
         <div class="sitemap__content common-nav common-nav--color">

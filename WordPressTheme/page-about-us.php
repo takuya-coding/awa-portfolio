@@ -15,7 +15,7 @@
         </div>
     </div>
     <!-- breadcrumb -->
-    <?php get_template_part('') ?>
+    <?php get_template_part('template-parts/breadcrumb') ?>
 
     <div class="about-us layout-about-us">
         <div class="about-us__inner inner">

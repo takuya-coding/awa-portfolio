@@ -15,20 +15,8 @@
     </div>
 
     <!-- breadcrumb -->
-    <div class="breadcrumbs layout-breadcrumbs">
-        <div class="breadcrumbs__inner inner">
-            <!-- Breadcrumb NavXT -->
-            <span>
-                <a href="index.html" class="home">
-                    <span>top</span>
-                </a>
-            </span>
-            <span>&gt;</span>
-            <span>
-                <span class="post post-page current-item">よくある質問</span>
-            </span>
-        </div>
-    </div>
+    <?php get_template_part('template-parts/breadcrumb') ?>
+
 
     <section class="faq-accordion js-faq-accordion layout-faq-accordion">
         <div class="faq-accordion__inner inner">
