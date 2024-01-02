@@ -22,138 +22,32 @@
     <div class="blog layout-blog">
         <div class="blog__inner inner">
             <div class="blog__main">
+                <?php if (have_posts()) : ?>
                 <div class="blog__main-cards blog-cards blog-cards--column2">
-                    <a href="single.html" class="blog-cards__item blog-card">
+                    <?php while (have_posts()) : the_post(); ?>
+                    <a href="<?php the_permalink(); ?>" class="blog-cards__item blog-card">
                         <div class="blog-card__img">
-                            <img src="./assets/images/common/blog-card1.webp" alt="サンゴ礁" width="301" height="201"
-                                decoding="async">
+                            <?php if (has_post_thumbnail()) : ?>
+                            <?php the_post_thumbnail( 'full', array( 'width' => 301, 'height' => 201, 'decoding' => 'async', 'class' => '' ) ); ?>
+                            <?php else : ?>
+                            <img src="<?php echo esc_url(get_theme_file_uri( "/assets/images/common/noimage.webp" )); ?>"
+                                alt="NoImage画像" />
+                            <?php endif ; ?>
                         </div>
                         <div class="blog-card__body">
-                            <time class="blog-card__time" datetime="2023-11-17">2023&#046;11&#046;17</time>
-                            <h2 class="blog-card__title">ライセンス取得</h2>
+                            <time class="blog-card__time"
+                                datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
+                            <h2 class="blog-card__title"><?php the_title(); ?></h2>
                             <p class="blog-card__text">
                                 ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
                             </p>
                         </div>
                     </a>
-                    <a href="#" class="blog-cards__item blog-card">
-                        <div class="blog-card__img">
-                            <img src="./assets/images/common/blog-card2.webp" alt="ウミガメ" width="301" height="201"
-                                decoding="async">
-                        </div>
-                        <div class="blog-card__body">
-                            <time class="blog-card__time" datetime="2023-11-17">2023&#046;11&#046;17</time>
-                            <h2 class="blog-card__title">ウミガメと泳ぐ</h2>
-                            <p class="blog-card__text">
-                                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                            </p>
-                        </div>
-                    </a>
-                    <a href="#" class="blog-cards__item blog-card">
-                        <div class="blog-card__img">
-                            <img src="./assets/images/common/blog-card3.webp" alt="イソギンチャクの中から顔を出すカクレクマノミ" width="301"
-                                height="201" decoding="async">
-                        </div>
-                        <div class="blog-card__body">
-                            <time class="blog-card__time" datetime="2023-11-17">2023&#046;11&#046;17</time>
-                            <h2 class="blog-card__title">カクレクマノミ</h2>
-                            <p class="blog-card__text">
-                                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                            </p>
-                        </div>
-                    </a>
-                    <a href="#" class="blog-cards__item blog-card">
-                        <div class="blog-card__img">
-                            <img src="./assets/images/common/gallery4.webp" alt="一匹の黄色い魚が泳いでいる" width="301" height="201"
-                                decoding="async">
-                        </div>
-                        <div class="blog-card__body">
-                            <time class="blog-card__time" datetime="2023-11-17">2023&#046;11&#046;17</time>
-                            <h2 class="blog-card__title">ライセンス取得</h2>
-                            <p class="blog-card__text">
-                                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                            </p>
-                        </div>
-                    </a>
-                    <a href="#" class="blog-cards__item blog-card">
-                        <div class="blog-card__img">
-                            <img src="./assets/images/common/blog-card5.webp" alt="白と黒のまだら模様のウミウシが白い砂地の上を移動している"
-                                width="301" height="201" decoding="async" loading="lazy">
-                        </div>
-                        <div class="blog-card__body">
-                            <time class="blog-card__time" datetime="2023-11-17">2023&#046;11&#046;17</time>
-                            <h2 class="blog-card__title">ウミガメと泳ぐ</h2>
-                            <p class="blog-card__text">
-                                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                            </p>
-                        </div>
-                    </a>
-                    <a href="#" class="blog-cards__item blog-card">
-                        <div class="blog-card__img">
-                            <img src="./assets/images/common/campaign-panel3.webp" alt="暗い海の中でたくさんのクラゲが幻想的に漂っている"
-                                width="301" height="201" decoding="async" loading="lazy">
-                        </div>
-                        <div class="blog-card__body">
-                            <time class="blog-card__time" datetime="2023-11-17">2023&#046;11&#046;17</time>
-                            <h2 class="blog-card__title">カクレクマノミ</h2>
-                            <p class="blog-card__text">
-                                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                            </p>
-                        </div>
-                    </a>
-                    <a href="#" class="blog-cards__item blog-card">
-                        <div class="blog-card__img">
-                            <img src="./assets/images/common/blog-card3.webp" alt="イソギンチャクの中から顔を出すカクレクマノミ" width="301"
-                                height="201" decoding="async" loading="lazy">
-                        </div>
-                        <div class="blog-card__body">
-                            <time class="blog-card__time" datetime="2023-11-17">2023&#046;11&#046;17</time>
-                            <h2 class="blog-card__title">カクレクマノミ</h2>
-                            <p class="blog-card__text">
-                                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                            </p>
-                        </div>
-                    </a>
-                    <a href="#" class="blog-cards__item blog-card">
-                        <div class="blog-card__img">
-                            <img src="./assets/images/common/gallery4.webp" alt="一匹の黄色い魚が泳いでいる" width="301" height="201"
-                                decoding="async" loading="lazy">
-                        </div>
-                        <div class="blog-card__body">
-                            <time class="blog-card__time" datetime="2023-11-17">2023&#046;11&#046;17</time>
-                            <h2 class="blog-card__title">ライセンス取得</h2>
-                            <p class="blog-card__text">
-                                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                            </p>
-                        </div>
-                    </a>
-                    <a href="#" class="blog-cards__item blog-card">
-                        <div class="blog-card__img">
-                            <img src="./assets/images/common/blog-card5.webp" alt="白と黒のまだら模様のウミウシが白い砂地の上を移動している"
-                                width="301" height="201" decoding="async" loading="lazy">
-                        </div>
-                        <div class="blog-card__body">
-                            <time class="blog-card__time" datetime="2023-11-17">2023&#046;11&#046;17</time>
-                            <h2 class="blog-card__title">ウミガメと泳ぐ</h2>
-                            <p class="blog-card__text">
-                                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                            </p>
-                        </div>
-                    </a>
-                    <a href="#" class="blog-cards__item blog-card">
-                        <div class="blog-card__img">
-                            <img src="./assets/images/common/campaign-panel3.webp" alt="暗い海の中でたくさんのクラゲが幻想的に漂っている"
-                                width="301" height="201" decoding="async" loading="lazy">
-                        </div>
-                        <div class="blog-card__body">
-                            <time class="blog-card__time" datetime="2023-11-17">2023&#046;11&#046;17</time>
-                            <h2 class="blog-card__title">カクレクマノミ</h2>
-                            <p class="blog-card__text">
-                                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                            </p>
-                        </div>
-                    </a>
+                    <?php endwhile; ?>
                 </div>
+                <?php else : ?>
+                <p>記事が投稿されていません</p>
+                <?php endif; ?>
                 <div class="blog__main-pagination">
                     <!-- pagenavi -->
                     <div class="wp-pagenavi">
