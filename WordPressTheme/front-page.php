@@ -217,47 +217,42 @@
                 <p class="section-title__en section-title__en--color">blog</p>
                 <h2 class="section-title__ja section-title__ja--color">ブログ</h2>
             </div>
+
+            <?php
+            $args = array(
+                "post_type" => "post",
+                "posts_per_page" => 3
+            );
+            $the_query = new WP_Query($args);
+            ?>
+            <?php if ($the_query->have_posts()) : ?>
             <div class="top-blog__cards blog-cards">
-                <a href="#" class="blog-cards__item blog-card">
+                <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                <a href="<?php the_permalink(); ?>" class="blog-cards__item blog-card">
                     <div class="blog-card__img">
-                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/blog-card1.webp"
-                            alt="サンゴ礁" width="301" height="201" decoding="async" loading="lazy">
+                        <?php if (has_post_thumbnail()) : ?>
+                        <?php the_post_thumbnail( 'full', array( 'width' => 301, 'height' => 201, 'decoding' => 'async', 'loading' => 'lazy', 'class' => '' ) ); ?>
+                        <?php else : ?>
+                        <img src="<?php echo esc_url(get_theme_file_uri( "/assets/images/common/noimage.webp" )); ?>"
+                            alt="NoImage画像" />
+                        <?php endif ; ?>
                     </div>
                     <div class="blog-card__body">
-                        <time class="blog-card__time" datetime="2023-11-17">2023&#046;11&#046;17</time>
-                        <h3 class="blog-card__title">ライセンス取得</h3>
+                        <time class="blog-card__time"
+                            datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
+                        <h3 class="blog-card__title"><?php the_title(); ?></h3>
                         <p class="blog-card__text">
                             ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
                         </p>
                     </div>
                 </a>
-                <a href="#" class="blog-cards__item blog-card">
-                    <div class="blog-card__img">
-                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/blog-card2.webp"
-                            alt="ウミガメ" width="301" height="201" decoding="async" loading="lazy">
-                    </div>
-                    <div class="blog-card__body">
-                        <time class="blog-card__time" datetime="2023-11-17">2023&#046;11&#046;17</time>
-                        <h3 class="blog-card__title">ウミガメと泳ぐ</h3>
-                        <p class="blog-card__text">
-                            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                        </p>
-                    </div>
-                </a>
-                <a href="#" class="blog-cards__item blog-card">
-                    <div class="blog-card__img">
-                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/blog-card3.webp"
-                            alt="イソギンチャクの中から顔を出すカクレクマノミ" width="301" height="201" decoding="async" loading="lazy">
-                    </div>
-                    <div class="blog-card__body">
-                        <time class="blog-card__time" datetime="2023-11-17">2023&#046;11&#046;17</time>
-                        <h3 class="blog-card__title">カクレクマノミ</h3>
-                        <p class="blog-card__text">
-                            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                        </p>
-                    </div>
-                </a>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
             </div>
+            <?php else : ?>
+            <p>記事が投稿されていません</p>
+            <?php endif; ?>
+
             <div class="top-blog__button">
                 <a href="#" class="button">view&nbsp;more<span class="button__arrow"></span></a>
             </div>
