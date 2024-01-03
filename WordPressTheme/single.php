@@ -53,11 +53,29 @@
                     </div>
                     <ul class="blog-detail__button-area">
                         <!-- ここはWordPress化を意識したクラス名でなくて良い -->
-                        <li class="blog-detail__button-prev">
+                        <!-- <li class="blog-detail__button-prev">
                             <a href="#"><img src="./assets/images/common/pagenation-vector.svg" alt=""></a>
                         </li>
                         <li class="blog-detail__button-next">
                             <a href="#"><img src="./assets/images/common/pagenation-vector.svg" alt=""></a>
+                        </li> -->
+                        <li class="blog-detail__button-prev">
+                            <?php
+                            // 前の記事へのリンク
+                            $prev_link = get_previous_post_link('%link', '＜');
+                            if (!empty($prev_link)) {
+                                echo str_replace('<a href=', '<a class="detail__prev" href=', $prev_link);
+                            }
+                            ?>
+                        </li>
+                        <li class="blog-detail__button-next">
+                            <?php
+                            // 次の記事へのリンク
+                            $next_link = get_next_post_link('%link', '＞');
+                            if (!empty($next_link)) {
+                                echo str_replace('<a href=', '<a class="detail__next" href=', $next_link);
+                            }
+                            ?>
                         </li>
                     </ul>
                 </section>
