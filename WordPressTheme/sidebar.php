@@ -37,16 +37,38 @@
 
     <div class="blog-sidebar__item">
         <h2 class="blog-sidebar__item-title sidebar-title">口コミ</h2>
+        <?php
+        $args = array(
+            "post_type" => "post",
+            "posts_per_page" => 1,
+            "orderby" => "date",
+            "order" => "DESC",
+        );
+        $the_query = new WP_Query($args);
+        ?>
+        <?php if ($the_query->have_posts()) : ?>
+        <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
         <div class="blog-sidebar__item-voice sidebar-voice">
             <div class="sidebar-voice__img">
-                <img src="./assets/images/common/voice-post5.webp" alt="2人の笑顔の男女が腕を組んで、仲良くソファに座っている" width="294"
-                    height="218" decoding="async">
+                <!-- <img src="./assets/images/common/voice-post5.webp" alt="2人の笑顔の男女が腕を組んで、仲良くソファに座っている" width="294"
+                    height="218" decoding="async"> -->
+                <?php if (has_post_thumbnail()) : ?>
+                <?php the_post_thumbnail( 'full', array( 'width' => 294, 'height' => 218, 'decoding' => 'async', 'class' => '' ) ); ?>
+                <?php else : ?>
+                <img src="<?php echo esc_url(get_theme_file_uri( "/assets/images/common/noimage.webp" )); ?>"
+                    alt="NoImage画像" />
+                <?php endif ; ?>
             </div>
             <div class="sidebar-voice__body">
                 <div class="sidebar-voice__customer-info">30代&#040;カップル&#041;</div>
-                <h3 class="sidebar-voice__title">ここにタイトルが入ります。ここにタイトル</h3>
+                <h3 class="sidebar-voice__title"><?php the_title(); ?></h3>
             </div>
         </div>
+        <?php endwhile; ?>
+        <?php wp_reset_postdata(); ?>
+        <?php else : ?>
+        <p>記事が投稿されていません</p>
+        <?php endif; ?>
         <div class="blog-sidebar__item-button">
             <a href="#" class="button">view&nbsp;more<span class="button__arrow"></span></a>
         </div>
