@@ -1,38 +1,42 @@
 <aside class="blog__sidebar blog-sidebar">
     <div class="blog-sidebar__item">
         <h2 class="blog-sidebar__item-title sidebar-title">人気記事</h2>
+        <?php
+        $args = array(
+            'post_type' => 'post',
+            'meta_key' => 'post_views_count',
+            'orderby' => 'meta_value_num',
+            'posts_per_page' => 3,
+            'order'=>'DESC',
+        );
+        $the_view_query = new WP_Query( $args );
+        ?>
+        <?php if ($the_view_query->have_posts()): ?>
         <div class="blog-sidebar__item-cards sidebar-cards">
-            <a href="#" class="sidebar-cards__item sidebar-card">
+            <?php while($the_view_query->have_posts()): $the_view_query->the_post(); ?>
+            <a href="<?php the_permalink(); ?>" class="sidebar-cards__item sidebar-card">
                 <div class="sidebar-card__img">
-                    <img src="./assets/images/common/gallery4.webp" alt="一匹の黄色い魚が泳いでいる" width="121" height="90"
-                        decoding="async">
+                    <!-- <img src="./assets/images/common/gallery4.webp" alt="一匹の黄色い魚が泳いでいる" width="121" height="90"
+                        decoding="async"> -->
+                    <?php if (has_post_thumbnail()) : ?>
+                    <?php the_post_thumbnail( 'full', array( 'width' => 121, 'height' => 90, 'decoding' => 'async', 'class' => '' ) ); ?>
+                    <?php else : ?>
+                    <img src="<?php echo esc_url(get_theme_file_uri( "/assets/images/common/noimage.webp" )); ?>"
+                        alt="NoImage画像" />
+                    <?php endif ; ?>
                 </div>
                 <div class="sidebar-card__body">
-                    <time class="sidebar-card__time" datetime="2023-11-17">2023&#046;11&#046;17</time>
-                    <h3 class="sidebar-card__title">ライセンス取得</h3>
+                    <time class="sidebar-card__time"
+                        datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
+                    <h3 class="sidebar-card__title"><?php the_title(); ?></h3>
                 </div>
             </a>
-            <a href="#" class="sidebar-cards__item sidebar-card">
-                <div class="sidebar-card__img">
-                    <img src="./assets/images/common/blog-card2.webp" alt="ウミガメ" width="121" height="90"
-                        decoding="async">
-                </div>
-                <div class="sidebar-card__body">
-                    <time class="sidebar-card__time" datetime="2023-11-17">2023&#046;11&#046;17</time>
-                    <h3 class="sidebar-card__title">ウミガメと泳ぐ</h3>
-                </div>
-            </a>
-            <a href="#" class="sidebar-cards__item sidebar-card">
-                <div class="sidebar-card__img">
-                    <img src="./assets/images/common/blog-card3.webp" alt="イソギンチャクの中から顔を出すカクレクマノミ" width="121"
-                        height="90" decoding="async">
-                </div>
-                <div class="sidebar-card__body">
-                    <time class="sidebar-card__time" datetime="2023-11-17">2023&#046;11&#046;17</time>
-                    <h3 class="sidebar-card__title">カクレクマノミ</h3>
-                </div>
-            </a>
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
         </div>
+        <?php else : ?>
+        <p>記事が投稿されていません</p>
+        <?php endif; ?>
     </div>
 
     <div class="blog-sidebar__item">

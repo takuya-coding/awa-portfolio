@@ -68,6 +68,14 @@
                 </div>
             </div>
             <?php get_sidebar(); ?>
+
+            <!-- サイドバーに人気記事を表示させるためのコード -->
+            <?php
+            // 記事のビュー数を更新(ログイン中・クローラーは除外)
+            if (!is_user_logged_in() && !is_robots()) {
+                setPostViews(get_the_ID());
+            }
+            ?>
         </div>
     </div>
 
