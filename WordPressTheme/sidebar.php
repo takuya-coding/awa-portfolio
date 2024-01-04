@@ -76,15 +76,32 @@
 
     <div class="blog-sidebar__item">
         <h2 class="blog-sidebar__item-title sidebar-title">キャンペーン</h2>
+        <?php
+        $args = array(
+            "post_type" => "post",
+            "posts_per_page" => 2,
+            "orderby" => "date",
+            "order" => "DESC",
+        );
+        $the_query = new WP_Query($args);
+        ?>
+        <?php if ($the_query->have_posts()) : ?>
         <div class="blog-sidebar__item-campaign-cards sidebar-campaign-cards">
+            <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
             <div class="sidebar-campaign-cards__item">
                 <div class="campaign-card">
                     <div class="campaign-card__img campaign-card__img--sidebar">
-                        <img src="./assets/images/common/campaign-panel1.webp" alt="カラフルな熱帯魚が無数に泳いでいる" width="294"
-                            height="188" decoding="async" loading="lazy">
+                        <!-- <img src="./assets/images/common/campaign-panel1.webp" alt="カラフルな熱帯魚が無数に泳いでいる" width="294"
+                            height="188" decoding="async" loading="lazy"> -->
+                        <?php if (has_post_thumbnail()) : ?>
+                        <?php the_post_thumbnail( 'full', array( 'width' => 294, 'height' => 188, 'decoding' => 'async', 'loading' => 'lazy', 'class' => '' ) ); ?>
+                        <?php else : ?>
+                        <img src="<?php echo esc_url(get_theme_file_uri( "/assets/images/common/noimage.webp" )); ?>"
+                            alt="NoImage画像" />
+                        <?php endif ; ?>
                     </div>
                     <div class="campaign-card__body campaign-card__body--sidebar">
-                        <h3 class="campaign-card__title campaign-card__title--sidebar">ライセンス取得</h3>
+                        <h3 class="campaign-card__title campaign-card__title--sidebar"><?php the_title(); ?></h3>
                         <p class="campaign-card__text campaign-card__text--sidebar">全部コミコミ&#040;お一人様&#041;
                         </p>
                         <div class="campaign-card__price campaign-card__price--sidebar">
@@ -97,27 +114,12 @@
                     </div>
                 </div>
             </div>
-            <div class="sidebar-campaign-cards__item">
-                <div class="campaign-card">
-                    <div class="campaign-card__img campaign-card__img--sidebar">
-                        <img src="./assets/images/common/campaign-panel2.webp" alt="美しい海の浅瀬付近にボートが浮かんでいる" width="294"
-                            height="188" decoding="async" loading="lazy">
-                    </div>
-                    <div class="campaign-card__body campaign-card__body--sidebar">
-                        <h3 class="campaign-card__title campaign-card__title--sidebar">貸切体験ダイビング</h3>
-                        <p class="campaign-card__text campaign-card__text--sidebar">全部コミコミ&#040;お一人様&#041;
-                        </p>
-                        <div class="campaign-card__price campaign-card__price--sidebar">
-                            <p class="campaign-card__price-before campaign-card__price-before--sidebar">
-                                <del>&#165;24&#044;000</del>
-                            </p>
-                            <p class="campaign-card__price-after campaign-card__price-after--sidebar">
-                                &#165;18&#044;000</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
         </div>
+        <?php else : ?>
+        <p>記事が投稿されていません</p>
+        <?php endif; ?>
         <div class="blog-sidebar__item-button">
             <a href="#" class="button">view&nbsp;more<span class="button__arrow"></span></a>
         </div>
