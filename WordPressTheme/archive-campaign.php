@@ -14,20 +14,7 @@
         </div>
     </div>
     <!-- breadcrumb -->
-    <div class="breadcrumbs layout-breadcrumbs">
-        <div class="breadcrumbs__inner inner">
-            <!-- Breadcrumb NavXT -->
-            <span>
-                <a href="index.html" class="home">
-                    <span>top</span>
-                </a>
-            </span>
-            <span>&gt;</span>
-            <span>
-                <span class="post post-page current-item">キャンペーン</span>
-            </span>
-        </div>
-    </div>
+    <?php get_template_part('template-parts/breadcrumb') ?>
 
     <section class="campaign layout-campaign">
         <div class="campaign__inner inner">
@@ -38,18 +25,48 @@
                 <a href="" class="category__button">体験ダイビング</a>
             </div>
 
+            <?php
+            $args = array(
+                "post_type" => "works",
+                "posts_per_page" => 4
+            );
+            $the_query = new WP_Query($args);
+            ?>
+            <?php if ($the_query->have_posts()) : ?>
             <div class="campaign__content campaign-content">
+                <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
                 <div class="campaign-content__item">
                     <div class="campaign-card">
                         <div class="campaign-card__img">
-                            <img src="./assets/images/common/campaign-panel1.webp" alt="カラフルな熱帯魚が無数に泳いでいる" width="280"
-                                height="188" decoding="async">
+                            <!-- <img src="./assets/images/common/campaign-panel1.webp" alt="カラフルな熱帯魚が無数に泳いでいる" width="280"
+                                height="188" decoding="async"> -->
+                            <?php if (has_post_thumbnail()) : ?>
+                            <?php the_post_thumbnail( 'full', array( 'width' => 280, 'height' => 188, 'decoding' => 'async', 'class' => '' ) ); ?>
+                            <?php else : ?>
+                            <img src="<?php echo esc_url(get_theme_file_uri( "/assets/images/common/noimage.webp" )); ?>"
+                                alt="NoImage画像" />
+                            <?php endif ; ?>
                         </div>
                         <div class="campaign-card__body campaign-card__body--campaign">
                             <div class="campaign-card__category-wrap">
-                                <span class="campaign-card__category">ライセンス講習</span>
+                                <!-- <span class="campaign-card__category">ライセンス講習</span> -->
+                                <?php
+                                $taxonomy_terms = get_the_terms($post->ID, 'genre');
+                                if (!empty($taxonomy_terms)) {
+                                    $limit = 4;
+                                    $count = 0;
+                                    foreach ($taxonomy_terms as $taxonomy_term) {
+                                        if ($count < $limit) {
+                                            echo '<span class="campaign-card__category">' . esc_html($taxonomy_term->name) . '</span>';
+                                            $count++;
+                                        } else {
+                                            break;
+                                        }
+                                    }
+                                }
+                                ?>
                             </div>
-                            <h3 class="campaign-card__title campaign-card__title--campaign">ライセンス取得</h3>
+                            <h3 class="campaign-card__title campaign-card__title--campaign"><?php the_title(); ?></h3>
                             <p class="campaign-card__text campaign-card__text--campaign">全部コミコミ&#040;お一人様&#041;</p>
                             <div class="campaign-card__price campaign-card__price--campaign">
                                 <p class="campaign-card__price-before"><del>&#165;56&#044;000</del></p>
@@ -57,7 +74,7 @@
                             </div>
                             <div class="campaign-card__campaign-body">
                                 <p class="campaign-card__campaign-text">
-                                    ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+                                    <?php the_excerpt(); ?>
                                 </p>
                                 <div class="campaign-card__campaign-list">
                                     <time class="campaign-card__campaign-time"
@@ -72,106 +89,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="campaign-content__item">
-                    <div class="campaign-card">
-                        <div class="campaign-card__img">
-                            <img src="./assets/images/common/campaign-panel2.webp" alt="美しい海の浅瀬付近にボートが浮かんでいる"
-                                width="280" height="188" decoding="async">
-                        </div>
-                        <div class="campaign-card__body campaign-card__body--campaign">
-                            <div class="campaign-card__category-wrap">
-                                <span class="campaign-card__category">体験ダイビング</span>
-                            </div>
-                            <h3 class="campaign-card__title campaign-card__title--campaign">貸切体験ダイビング</h3>
-                            <p class="campaign-card__text campaign-card__text--campaign">全部コミコミ&#040;お一人様&#041;</p>
-                            <div class="campaign-card__price campaign-card__price--campaign">
-                                <p class="campaign-card__price-before"><del>&#165;24&#044;000</del></p>
-                                <p class="campaign-card__price-after">&#165;18&#044;000</p>
-                            </div>
-                            <div class="campaign-card__campaign-body">
-                                <p class="campaign-card__campaign-text">
-                                    ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                                </p>
-                                <div class="campaign-card__campaign-list">
-                                    <time class="campaign-card__campaign-time"
-                                        datetime="P122D">2023&#047;6&#047;1&#045;9&#047;30</time>
-                                    <p class="campaign-card__campaign-message">ご予約&#0183;お問い合わせはコチラ</p>
-                                    <div class="campaign-card__campaign-button">
-                                        <a href="#" class="button">contact&nbsp;us<span
-                                                class="button__arrow"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="campaign-content__item">
-                    <div class="campaign-card">
-                        <div class="campaign-card__img">
-                            <img src="./assets/images/common/campaign-panel3.webp" alt="暗い海の中でたくさんのクラゲが幻想的に漂っている"
-                                width="280" height="188" decoding="async">
-                        </div>
-                        <div class="campaign-card__body campaign-card__body--campaign">
-                            <div class="campaign-card__category-wrap">
-                                <span class="campaign-card__category">体験ダイビング</span>
-                            </div>
-                            <h3 class="campaign-card__title campaign-card__title--campaign">ナイトダイビング</h3>
-                            <p class="campaign-card__text campaign-card__text--campaign">全部コミコミ&#040;お一人様&#041;</p>
-                            <div class="campaign-card__price campaign-card__price--campaign">
-                                <p class="campaign-card__price-before"><del>&#165;10&#044;000</del></p>
-                                <p class="campaign-card__price-after">&#165;8&#044;000</p>
-                            </div>
-                            <div class="campaign-card__campaign-body">
-                                <p class="campaign-card__campaign-text">
-                                    ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                                </p>
-                                <div class="campaign-card__campaign-list">
-                                    <time class="campaign-card__campaign-time"
-                                        datetime="P122D">2023&#047;6&#047;1&#045;9&#047;30</time>
-                                    <p class="campaign-card__campaign-message">ご予約&#0183;お問い合わせはコチラ</p>
-                                    <div class="campaign-card__campaign-button">
-                                        <a href="#" class="button">contact&nbsp;us<span
-                                                class="button__arrow"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="campaign-content__item">
-                    <div class="campaign-card">
-                        <div class="campaign-card__img">
-                            <img src="./assets/images/common/campaign-panel4.webp" alt="水面から顔を出した３人のダイバー" width="280"
-                                height="188" decoding="async">
-                        </div>
-                        <div class="campaign-card__body campaign-card__body--campaign">
-                            <div class="campaign-card__category-wrap">
-                                <span class="campaign-card__category">ファンダイビング</span>
-                            </div>
-                            <h3 class="campaign-card__title campaign-card__title--campaign">貸切ファンダイビング</h3>
-                            <p class="campaign-card__text campaign-card__text--campaign">全部コミコミ&#040;お一人様&#041;</p>
-                            <div class="campaign-card__price campaign-card__price--campaign">
-                                <p class="campaign-card__price-before"><del>&#165;20&#044;000</del></p>
-                                <p class="campaign-card__price-after">&#165;16&#044;000</p>
-                            </div>
-                            <div class="campaign-card__campaign-body">
-                                <p class="campaign-card__campaign-text">
-                                    ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                                </p>
-                                <div class="campaign-card__campaign-list">
-                                    <time class="campaign-card__campaign-time"
-                                        datetime="P122D">2023&#047;6&#047;1&#045;9&#047;30</time>
-                                    <p class="campaign-card__campaign-message">ご予約&#0183;お問い合わせはコチラ</p>
-                                    <div class="campaign-card__campaign-button">
-                                        <a href="#" class="button">contact&nbsp;us<span
-                                                class="button__arrow"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
             </div>
+            <?php else : ?>
+            <p>記事が投稿されていません</p>
+            <?php endif; ?>
 
             <div class="campaign__pagination">
                 <!-- pagenavi -->
