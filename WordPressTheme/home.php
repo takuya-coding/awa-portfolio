@@ -39,7 +39,7 @@
                                 datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
                             <h2 class="blog-card__title"><?php the_title(); ?></h2>
                             <p class="blog-card__text">
-                                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+                                <?php the_excerpt(); ?>
                             </p>
                         </div>
                     </a>

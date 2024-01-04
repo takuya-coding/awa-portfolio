@@ -242,7 +242,7 @@
                             datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
                         <h3 class="blog-card__title"><?php the_title(); ?></h3>
                         <p class="blog-card__text">
-                            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+                            <?php echo get_the_excerpt(); ?>
                         </p>
                     </div>
                 </a>
