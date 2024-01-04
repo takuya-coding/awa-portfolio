@@ -132,20 +132,18 @@
             <div class="sidebar-archive__accordion js-accordion-item">
                 <p class="sidebar-archive__year js-accordion-year">2023</p>
                 <ul class="sidebar-archive__list js-accordion-list">
-                    <li class="sidebar-archive__month"><a href="#">3月</a></li>
-                    <li class="sidebar-archive__month"><a href="#">2月</a></li>
-                    <li class="sidebar-archive__month"><a href="#">1月</a></li>
+                    <?php wp_get_archives('type=monthly&limit=3'); ?>
                 </ul>
             </div>
 
-            <div class="sidebar-archive__accordion js-accordion-item">
+            <!-- <div class="sidebar-archive__accordion js-accordion-item">
                 <p class="sidebar-archive__year js-accordion-year">2022</p>
                 <ul class="sidebar-archive__list">
                     <li class="sidebar-archive__month"><a href="#">3月</a></li>
                     <li class="sidebar-archive__month"><a href="#">2月</a></li>
                     <li class="sidebar-archive__month"><a href="#">1月</a></li>
                 </ul>
-            </div>
+            </div> -->
         </div>
     </div>
 </aside>

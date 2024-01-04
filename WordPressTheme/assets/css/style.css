@@ -2525,7 +2525,7 @@ tbody {
 	text-indent: 1em;
 }
 
-.sidebar-archive__month a {
+.sidebar-archive__list a {
 	display: inline-block;
 	padding-left: 0.5rem;
 	position: relative;
@@ -2533,7 +2533,7 @@ tbody {
 	width: 100%;
 }
 
-.sidebar-archive__month a::before {
+.sidebar-archive__list a::before {
 	-webkit-clip-path: polygon(0 0, 0 100%, 100% 50%);
 	background-color: #408F95;
 	clip-path: polygon(0 0, 0 100%, 100% 50%);
@@ -2547,8 +2547,6 @@ tbody {
 	transform: translateY(-50%);
 	width: 1.2125rem;
 }
-
-/* オープン時にアニメーションを設定 */
 
 .sidebar-campaign-cards {
 	display: flex;
@@ -4309,7 +4307,7 @@ tbody {
 	margin-top: 0;
 }
 
-.sidebar-archive__month a:hover {
+.sidebar-archive__list a:hover {
 	opacity: 0.8;
 }
 

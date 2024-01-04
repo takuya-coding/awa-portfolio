@@ -50,7 +50,17 @@
     display: none;
 }
 
-.sidebar-archive__month a {
+// .sidebar-archive__month a {
+//     display: inline-block;
+//     width: 100%;
+//     padding-left: rem(8);
+//     position: relative;
+//     // hover指定がない場合のaタグの透過処理
+//     transition: opacity 0.3s;
+// }
+
+// WordPress化に伴い、CSS当て直し
+.sidebar-archive__list a {
     display: inline-block;
     width: 100%;
     padding-left: rem(8);
@@ -59,7 +69,22 @@
     transition: opacity 0.3s;
 }
 
-.sidebar-archive__month a::before {
+// .sidebar-archive__month a::before {
+//     content: "";
+//     margin: auto;
+//     position: absolute;
+//     top: 50%;
+//     left: rem(5);
+//     transform: translateY(-50%);
+//     display: inline-block;
+//     clip-path: polygon(0 0, 0 100%, 100% 50%);
+//     background-color: $green;
+//     width: rem(19.4);
+//     height: rem(22.4);
+// }
+
+// WordPress化に伴い、CSS当て直し
+.sidebar-archive__list a::before {
     content: "";
     margin: auto;
     position: absolute;
@@ -71,131 +96,18 @@
     background-color: $green;
     width: rem(19.4);
     height: rem(22.4);
+
 }
 
-.sidebar-archive__month a:hover {
+// .sidebar-archive__month a:hover {
+//     @include mq("md") {
+//         opacity: 0.8;
+//     }
+// }
+
+// WordPress化に伴い、CSS当て直し
+.sidebar-archive__list a:hover {
     @include mq("md") {
         opacity: 0.8;
     }
 }
-
-
-
-
-
-
-// 以下、details,summaryタグ使用した場合のコード
-
-// .sidebar-archive__details:not(:first-child) {
-//     margin-top: rem(7.4);
-// }
-
-// .sidebar-archive__summary {
-//     cursor: pointer;
-//     // hover指定がない場合のaタグの透過処理
-//     transition: opacity 0.3s;
-
-//     // Chrome,Safari以外でデフォルトの矢印を消す
-//     display: block;
-
-//     // 矢印アイコン分の余白
-//     padding-left: rem(32);
-//     position: relative;
-// }
-
-// Chrome,Safariでデフォルトの矢印を消す
-// .sidebar-archive__summary::-webkit-details-marker {
-//     display: none;
-// }
-
-// 矢印カスタマイズ
-// .sidebar-archive__summary::before {
-//     content: "";
-//     margin: auto;
-//     position: absolute;
-//     top: 50%;
-//     left: rem(5);
-//     transform: translateY(-50%);
-//     display: inline-block;
-//     clip-path: polygon(0 0, 0 100%, 100% 50%);
-//     background-color: $green;
-//     width: rem(19.4);
-//     height: rem(22.4);
-//     transition: 0.4s;
-// }
-
-// アコーディオン開閉時の矢印の挙動
-// .sidebar-archive__details[open] .sidebar-archive__summary::before {
-//     top: 27%;
-//     left: rem(5);
-//     transform: rotate(90deg);
-// }
-
-// // 矢印をカスタマイズ（spanタグ使う場合）
-// .sidebar-archive__summary span {
-//     display: inline-block;
-//     clip-path: polygon(0 0, 0 100%, 100% 50%);
-//     background-color: $green;
-//     width: rem(13);
-//     height: rem(16);
-//     transition: 0.4s;
-//     margin-right: rem(8);
-// }
-
-// // アコーディオン開閉時の矢印の挙動（spanタグ使う場合）
-// .sidebar-archive__list[open] .sidebar-archive__summary span {
-//     transform: rotate(90deg);
-// }
-
-// .sidebar-archive__summary:hover {
-//     @include mq("md") {
-//         opacity: 0.8;
-//     }
-// }
-
-/* オープン時にアニメーションを設定 */
-// .sidebar-archive__details[open] .sidebar-archive__list {
-//     animation: fadeIn 0.5s ease;
-//   }
-//   @keyframes fadeIn {
-//     0% {
-//       opacity: 0; /* 透明 */
-//       transform: translateY(-10px); /* 上から表示 */
-//     }
-//     100% {
-//       opacity: 1;
-//       transform: none;
-//     }
-//   }
-
-// .sidebar-archive__list {
-//     text-indent: 1em;
-//     margin-top: rem(4);
-// }
-
-// .sidebar-archive__item a {
-//     display: inline-block;
-//     width: 100%;
-//     padding-left: rem(8);
-//     position: relative;
-// }
-
-// .sidebar-archive__item a::before {
-//     content: "";
-//     margin: auto;
-//     position: absolute;
-//     top: 50%;
-//     left: rem(5);
-//     transform: translateY(-50%);
-//     display: inline-block;
-//     clip-path: polygon(0 0, 0 100%, 100% 50%);
-//     background-color: $green;
-//     width: rem(19.4);
-//     height: rem(22.4);
-// }
-
-// .sidebar-archive__item a:hover {
-//     @include mq("md") {
-//         opacity: 0.8;
-//     }
-// }
