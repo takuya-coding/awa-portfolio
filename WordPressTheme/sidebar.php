@@ -122,48 +122,6 @@
                     <li class="sidebar-archive__month"><a href="#">1月</a></li>
                 </ul>
             </div>
-
-            <!-- <details class="sidebar-archive__details js-sidebar-accordion is-opened" open>
-                      <summary class="sidebar-archive__summary js-sidebar-accordion-title">2023</summary>
-                      <ul class="sidebar-archive__list">
-                        <li class="sidebar-archive__item"><a href="#">3月</a></li>
-                        <li class="sidebar-archive__item"><a href="#">2月</a></li>
-                        <li class="sidebar-archive__item"><a href="#">1月</a></li>
-                      </ul>
-                    </details>
-
-                    <details class="sidebar-archive__details">
-                      <summary class="sidebar-archive__summary">2022</summary>
-                      <ul class="sidebar-archive__list">
-                        <li class="sidebar-archive__item"><a href="#">3月</a></li>
-                        <li class="sidebar-archive__item"><a href="#">2月</a></li>
-                        <li class="sidebar-archive__item"><a href="#">1月</a></li>
-                      </ul>
-                    </details> -->
         </div>
     </div>
-
-    <!-- details,summaryタグ使用した場合 -->
-    <!-- <div class="blog-sidebar__item">
-                  <h2 class="blog-sidebar__item-title sidebar-title">アーカイブ</h2>
-                  <div class="blog-sidebar__item-archive sidebar-archive">
-                    <details class="sidebar-archive__details" open>
-                      <summary class="sidebar-archive__summary">2023</summary>
-                      <ul class="sidebar-archive__list">
-                        <li class="sidebar-archive__item"><a href="#">3月</a></li>
-                        <li class="sidebar-archive__item"><a href="#">2月</a></li>
-                        <li class="sidebar-archive__item"><a href="#">1月</a></li>
-                      </ul>
-                    </details>
-
-                    <details class="sidebar-archive__details">
-                      <summary class="sidebar-archive__summary">2022</summary>
-                      <ul class="sidebar-archive__list">
-                        <li class="sidebar-archive__item"><a href="#">3月</a></li>
-                        <li class="sidebar-archive__item"><a href="#">2月</a></li>
-                        <li class="sidebar-archive__item"><a href="#">1月</a></li>
-                      </ul>
-                    </details>
-                  </div>
-                 </div> -->
 </aside>
