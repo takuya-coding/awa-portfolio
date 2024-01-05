@@ -36,6 +36,7 @@ add_action('wp_enqueue_scripts', 'my_script_init');
 
 
 
+// サイドバーの人気記事表示の記述
 // 記事のPVを取得
 function getPostViews($postID) {
     $count_key = 'post_views_count';
@@ -70,3 +71,17 @@ function getPostViews($postID) {
   }
   remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
   
+
+
+// campaingページに表示する最大投稿数を変更するための記述
+  function custom_posts_per_page($query)
+  {
+      if (!is_admin() && $query->is_main_query()) {
+          // カスタム投稿のスラッグを記述
+          if (is_post_type_archive('campaign')) {
+              // 表示件数を指定
+              $query->set('posts_per_page', 4);
+          }
+      }
+  }
+  add_action('pre_get_posts', 'custom_posts_per_page');

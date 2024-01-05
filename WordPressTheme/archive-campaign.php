@@ -98,7 +98,7 @@
 
             <div class="campaign__pagination">
                 <!-- pagenavi -->
-                <div class="wp-pagenavi">
+                <!-- <div class="wp-pagenavi">
                     <a class="previouspostslink" rel="prev" href="#"><img
                             src="./assets/images/common/pagenation-vector.svg" alt=""></a>
                     <span class='current'>1</span>
@@ -109,7 +109,10 @@
                     <a class="page larger" href="#">6</a>
                     <a class="nextpostslink" rel="next" href="#"><img src="./assets/images/common/pagenation-vector.svg"
                             alt=""></a>
-                </div>
+                </div> -->
+                <?php if (function_exists('wp_pagenavi')) {
+                        wp_pagenavi();
+                        } ?>
             </div>
         </div>
     </section>
