@@ -51,7 +51,7 @@
                             <div class="campaign-card__category-wrap">
                                 <!-- <span class="campaign-card__category">ライセンス講習</span> -->
                                 <?php
-                                $taxonomy_terms = get_the_terms($post->ID, 'genre');
+                                $taxonomy_terms = get_the_terms($post->ID, 'campaign_category');
                                 if (!empty($taxonomy_terms)) {
                                     $limit = 4;
                                     $count = 0;

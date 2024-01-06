@@ -27,7 +27,7 @@
                     $current_term_id = get_queried_object()->term_id;
                     $terms = get_terms(array(
                         // 表示するタクソノミースラッグを記述
-                        'taxonomy' => 'genre',
+                        'taxonomy' => 'campaign_category',
                         'orderby' => 'name',
                         'order'   => 'ASC',
                         // 表示するタームの数を指定
@@ -67,16 +67,16 @@
 
             <?php
             // タクソノミーのスラッグを指定
-            $genre_slug = get_query_var('genre');
+            $campaign_category_slug = get_query_var('campaign_category');
             $args = array(
                 // カスタム投稿のスラッグを指定
                 "post_type" => "campaign",
                 'tax_query' => array(
                     array(
                         // タクソノミーのスラッグを指定
-                        'taxonomy' => 'genre',
+                        'taxonomy' => 'campaign_category',
                         'field'    => 'slug',
-                        'terms'    => $genre_slug,
+                        'terms'    => $campaign_category_slug,
                     ),
                 ),
             );
@@ -101,7 +101,7 @@
                             <div class="campaign-card__category-wrap">
                                 <!-- <span class="campaign-card__category">ライセンス講習</span> -->
                                 <?php
-                                $taxonomy_terms = get_the_terms($post->ID, 'genre');
+                                $taxonomy_terms = get_the_terms($post->ID, 'campaign_category');
                                 if (!empty($taxonomy_terms)) {
                                     $limit = 4;
                                     $count = 0;
