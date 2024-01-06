@@ -58,11 +58,14 @@
             </div>
 
             <?php
+            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
             $args = array(
-                "post_type" => "campaign",
-                "posts_per_page" => 4
+                'post_type' => 'campaign',
+                'posts_per_page' => 4,
+                'paged' => $paged
             );
             $the_query = new WP_Query($args);
+            
             ?>
             <?php if ($the_query->have_posts()) : ?>
             <div class="campaign__content campaign-content">
@@ -85,7 +88,7 @@
                                 <?php
                                 $taxonomy_terms = get_the_terms($post->ID, 'campaign_category');
                                 if (!empty($taxonomy_terms)) {
-                                    $limit = 4;
+                                    $limit = 5;
                                     $count = 0;
                                     foreach ($taxonomy_terms as $taxonomy_term) {
                                         if ($count < $limit) {
@@ -144,7 +147,7 @@
                 </div> -->
                 <?php if (function_exists('wp_pagenavi')) {
                         wp_pagenavi();
-                        } ?>
+                } ?>
             </div>
         </div>
     </section>
