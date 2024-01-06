@@ -19,10 +19,42 @@
     <section class="campaign layout-campaign">
         <div class="campaign__inner inner">
             <div class="campaign__category category">
-                <a href="" class="category__button is-active">all</a>
+                <!-- <a href="" class="category__button is-active">all</a>
                 <a href="" class="category__button">ライセンス講習</a>
                 <a href="" class="category__button">ファンダイビング</a>
-                <a href="" class="category__button">体験ダイビング</a>
+                <a href="" class="category__button">体験ダイビング</a> -->
+                <?php
+                $current_term_id = get_queried_object_id();
+                $terms = get_terms(array(
+                    'taxonomy' => 'campaign_category',
+                    'orderby' => 'name',
+                    'order'   => 'ASC',
+                    'number'  => 5
+                ));
+
+                $home_class = is_post_type_archive('campaign') ? 'is-active' : '';
+                $home_link = sprintf(
+                    '<a class="category__button %s" href="%s" alt="%s">all</a>',
+                    $home_class,
+                    esc_url(home_url('/campaign')),
+                    esc_attr(__('View all posts', 'textdomain'))
+                );
+                echo sprintf(esc_html__('%s', 'textdomain'), $home_link);
+
+                if ($terms) {
+                    foreach ($terms as $term) {
+                        $term_class = ($current_term_id === $term->term_id) ? 'is-active' : '';
+                        $term_link = sprintf(
+                            '<a class="category__button %s" href="%s" alt="%s">%s</a>',
+                            $term_class,
+                            esc_url(get_term_link($term)),
+                            esc_attr(sprintf(__('View all posts in %s', 'textdomain'), $term->name)),
+                            esc_html($term->name)
+                        );
+                        echo sprintf(esc_html__('%s', 'textdomain'), $term_link);
+                    }
+                }
+            ?>
             </div>
 
             <?php
