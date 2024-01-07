@@ -57,6 +57,7 @@
             ?>
             </div>
 
+            <!-- ページネーションが上手く機能しなかったため一部コード修正 -->
             <?php
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
             $args = array(
@@ -65,7 +66,6 @@
                 'paged' => $paged
             );
             $the_query = new WP_Query($args);
-            
             ?>
             <?php if ($the_query->have_posts()) : ?>
             <div class="campaign__content campaign-content">
@@ -101,19 +101,34 @@
                                 }
                                 ?>
                             </div>
-                            <h3 class="campaign-card__title campaign-card__title--campaign"><?php the_title(); ?></h3>
+                            <h3 class="campaign-card__title campaign-card__title--campaign">
+                                <?php the_field('campaign_title'); ?></h3>
                             <p class="campaign-card__text campaign-card__text--campaign">全部コミコミ&#040;お一人様&#041;</p>
                             <div class="campaign-card__price campaign-card__price--campaign">
-                                <p class="campaign-card__price-before"><del>&#165;56&#044;000</del></p>
-                                <p class="campaign-card__price-after">&#165;46&#044;000</p>
+                                <!-- <p class="campaign-card__price-before"><del>&#165;56&#044;000</del></p> -->
+                                <p class="campaign-card__price-before">
+                                    <del><?php the_field('campaign_regular-price'); ?></del>
+                                </p>
+                                <!-- <p class="campaign-card__price-after">&#165;46&#044;000</p> -->
+                                <p class="campaign-card__price-after"><?php the_field('campaign_campaign-price'); ?></p>
                             </div>
                             <div class="campaign-card__campaign-body">
                                 <p class="campaign-card__campaign-text">
-                                    <?php the_excerpt(); ?>
+                                    <?php the_field('campaign_text'); ?>
                                 </p>
                                 <div class="campaign-card__campaign-list">
+                                    <!-- <time class="campaign-card__campaign-time"
+                                        datetime="P122D">2023&#047;6&#047;1&#045;9&#047;30</time> -->
+
+                                    <?php
+                                    $campaign_period = get_field('campaign_period');
+                                    ?>
+                                    <?php if($campaign_period): ?>
                                     <time class="campaign-card__campaign-time"
-                                        datetime="P122D">2023&#047;6&#047;1&#045;9&#047;30</time>
+                                        datetime="P122D"><?php echo $campaign_period['campaign_period_start']; ?>&#045;<?php echo $campaign_period['campaign_period_end']; ?></time>
+                                    <?php else: ?>
+                                    <p>期間未定</p>
+                                    <?php endif; ?>
                                     <p class="campaign-card__campaign-message">ご予約&#0183;お問い合わせはコチラ</p>
                                     <div class="campaign-card__campaign-button">
                                         <a href="#" class="button">contact&nbsp;us<span
