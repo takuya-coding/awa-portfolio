@@ -106,11 +106,22 @@
                                 }
                                 ?>
                                 </div>
-                                <h3 class="campaign-card__title"><?php the_title(); ?></h3>
+                                <?php if( get_field('campaign_title')): ?>
+                                <h3 class="campaign-card__title"><?php the_field('campaign_title'); ?></h3>
+                                <?php endif; ?>
                                 <p class="campaign-card__text">全部コミコミ&#040;お一人様&#041;</p>
                                 <div class="campaign-card__price">
-                                    <p class="campaign-card__price-before"><del>&#165;56&#044;000</del></p>
-                                    <p class="campaign-card__price-after">&#165;46&#044;000</p>
+                                    <!-- <p class="campaign-card__price-before"><del>&#165;56&#044;000</del></p> -->
+                                    <?php if( get_field('campaign_regular-price')): ?>
+                                    <p class="campaign-card__price-before">
+                                        <del><?php the_field('campaign_regular-price'); ?></del>
+                                    </p>
+                                    <?php endif; ?>
+                                    <!-- <p class="campaign-card__price-after">&#165;46&#044;000</p> -->
+                                    <?php if( get_field('campaign_campaign-price')): ?>
+                                    <p class="campaign-card__price-after"><?php the_field('campaign_campaign-price'); ?>
+                                    </p>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>
