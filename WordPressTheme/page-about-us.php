@@ -76,6 +76,18 @@
                         alt="魚がサンゴ礁の周りを泳いでいる" width="345" height="524" decoding="async" loading="lazy">
                 </div>
             </div>
+            <?php if (CFS()->get('gallery_group')): ?>
+            <div class="gallery__list">
+                <?php
+                $fields = CFS()->get('gallery_group');
+                foreach( $fields as $field ):
+                ?>
+                <div class="gallery__item js-modal-open">
+                    <img src="<?php echo esc_url($field['gallery_img']); ?>" alt="" decoding="async" loading="lazy">
+                </div>
+                <?php endforeach; ?>
+            </div>
+            <?php endif; ?>
         </div>
 
         <div class="gallery__modal js-modal">
