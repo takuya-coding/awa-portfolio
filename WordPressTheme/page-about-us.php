@@ -79,15 +79,20 @@
             <?php if (CFS()->get('gallery_group')): ?>
             <div class="gallery__list">
                 <?php
-                $fields = CFS()->get('gallery_group');
+                $fields = CFS()->get('gallery_group');//画像のグループを取得
                 foreach( $fields as $field ):
-                ?>
+                    $url = esc_url($field['gallery_img']);//画像のURLを取得
+                    $image_id = attachment_url_to_postid($url);//画像のURLからIDを取得
+                    $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);//IDからaltを取得
+                    ?>
                 <div class="gallery__item js-modal-open">
-                    <img src="<?php echo esc_url($field['gallery_img']); ?>" alt="" decoding="async" loading="lazy">
+                    <img src="<?php echo $url; ?>" alt="<?php echo esc_attr($image_alt); ?>" decoding="async"
+                        loading="lazy">
                 </div>
                 <?php endforeach; ?>
             </div>
             <?php endif; ?>
+
         </div>
 
         <div class="gallery__modal js-modal">
