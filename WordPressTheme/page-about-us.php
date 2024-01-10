@@ -50,32 +50,6 @@
                 <p class="section-title__en">gallery</p>
                 <h2 class="section-title__ja">フォト</h2>
             </div>
-            <div class="gallery__list">
-                <div class="gallery__item js-modal-open">
-                    <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/price-pc.webp"
-                        alt="無数のキンギョハナダイがサンゴ礁の周りを泳いでいる" width="345" height="523" decoding="async" loading="lazy">
-                </div>
-                <div class="gallery__item js-modal-open">
-                    <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/gallery2.webp"
-                        alt="美しい海の浅瀬付近にボートが浮かんでいる" width="345" height="219" decoding="async" loading="lazy">
-                </div>
-                <div class="gallery__item js-modal-open">
-                    <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/gallery3.webp"
-                        alt="二匹のチョウチョウウオが海底付近を泳いでいる" width="345" height="219" decoding="async" loading="lazy">
-                </div>
-                <div class="gallery__item js-modal-open">
-                    <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/gallery4.webp"
-                        alt="一匹の黄色い魚が泳いでいる" width="345" height="219" decoding="async" loading="lazy">
-                </div>
-                <div class="gallery__item js-modal-open">
-                    <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/gallery5.webp"
-                        alt="無数の魚がきれいな海の中を泳いでいる" width="345" height="219" decoding="async" loading="lazy">
-                </div>
-                <div class="gallery__item js-modal-open">
-                    <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/gallery6.webp"
-                        alt="魚がサンゴ礁の周りを泳いでいる" width="345" height="524" decoding="async" loading="lazy">
-                </div>
-            </div>
             <?php if (CFS()->get('gallery_group')): ?>
             <div class="gallery__list">
                 <?php
