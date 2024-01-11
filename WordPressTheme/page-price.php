@@ -50,65 +50,6 @@
             <!-- 外側のループ -->
             <?php endforeach; ?>
             <?php endif; ?>
-            <!-- <div class="price-table-list__item price-table">
-                <table class="price-table__table">
-                    <tr class="price-table__tr">
-                        <th rowspan="4" class="price-table__th"><span>体験ダイビング</span></th>
-                        <td class="price-table__td-content">ビーチ体験ダイビング<br class="u-mobile">&#040;半日&#041;</td>
-                        <td class="price-table__td-price">&#165;7&#044;000</td>
-                    </tr>
-                    <tr class="price-table__tr">
-                        <td class="price-table__td-content">ビーチ体験ダイビング<br class="u-mobile">&#040;1日&#041;</td>
-                        <td class="price-table__td-price">&#165;14&#044;000</td>
-                    </tr>
-                    <tr class="price-table__tr">
-                        <td class="price-table__td-content">ボート体験ダイビング<br class="u-mobile">&#040;半日&#041;</td>
-                        <td class="price-table__td-price">&#165;10&#044;000</td>
-                    </tr>
-                    <tr class="price-table__tr">
-                        <td class="price-table__td-content">ボート体験ダイビング<br class="u-mobile">&#040;1日&#041;</td>
-                        <td class="price-table__td-price">&#165;18&#044;000</td>
-                    </tr>
-                </table>
-            </div> -->
-            <!-- <div class="price-table-list__item price-table">
-                <table class="price-table__table">
-                    <tr class="price-table__tr">
-                        <th rowspan="4" class="price-table__th"><span>ファンダイビング</span></th>
-                        <td class="price-table__td-content">ビーチダイビング<br class="u-mobile">&#040;2ダイブ&#041;</td>
-                        <td class="price-table__td-price">&#165;14&#044;000</td>
-                    </tr>
-                    <tr class="price-table__tr">
-                        <td class="price-table__td-content">ボートダイビング<br class="u-mobile">&#040;2ダイブ&#041;</td>
-                        <td class="price-table__td-price">&#165;18&#044;000</td>
-                    </tr>
-                    <tr class="price-table__tr">
-                        <td class="price-table__td-content">スペシャルダイビング<br class="u-mobile">&#040;2ダイブ&#041;</td>
-                        <td class="price-table__td-price">&#165;24&#044;000</td>
-                    </tr>
-                    <tr class="price-table__tr">
-                        <td class="price-table__td-content">ナイトダイビング<br class="u-mobile">&#040;1ダイブ&#041;</td>
-                        <td class="price-table__td-price">&#165;10&#044;000</td>
-                    </tr>
-                </table>
-            </div> -->
-            <!-- <div class="price-table-list__item price-table">
-                <table class="price-table__table">
-                    <tr class="price-table__tr">
-                        <th rowspan="3" class="price-table__th"><span>スペシャルダイビング</span></th>
-                        <td class="price-table__td-content">貸切ダイビング<br class="u-mobile">&#040;2ダイブ&#041;</td>
-                        <td class="price-table__td-price">&#165;24&#044;000</td>
-                    </tr>
-                    <tr class="price-table__tr">
-                        <td class="price-table__td-content">1日ダイビング<br class="u-mobile">&#040;3ダイブ&#041;</td>
-                        <td class="price-table__td-price">&#165;32&#044;000</td>
-                    </tr>
-                    <tr class="price-table__tr">
-                        <td class="price-table__td-content">ナイトダイビング<br class="u-mobile">&#040;2ダイブ&#041;</td>
-                        <td class="price-table__td-price">&#165;14&#044;000</td>
-                    </tr>
-                </table>
-            </div> -->
         </div>
     </div>
 
