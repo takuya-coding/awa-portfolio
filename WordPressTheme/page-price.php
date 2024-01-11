@@ -29,11 +29,12 @@
                     <?php $fields_child = $field['price_table']; ?>
                     <?php if(is_array($fields_child)): ?>
                     <!-- 内側のループ -->
+                    <?php $rowCount = count($fields_child); // 内側のループの要素数をカウント ?>
                     <?php $index = 0; // カウンター変数を初期化 ?>
                     <?php foreach($fields_child as $field_child):?>
                     <tr class="price-table__tr">
                         <?php if($index == 0): // 配列の最初の要素のみthタグを挿入 ?>
-                        <th rowspan="3" class="price-table__th">
+                        <th rowspan="<?php echo $rowCount; ?>" class="price-table__th">
                             <span><?php echo $field['category_title']; ?></span>
                         </th>
                         <?php endif; ?>
