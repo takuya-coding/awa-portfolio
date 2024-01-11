@@ -17,66 +17,24 @@
     <!-- breadcrumb -->
     <?php get_template_part('template-parts/breadcrumb') ?>
 
-
     <section class="faq-accordion js-faq-accordion layout-faq-accordion">
         <div class="faq-accordion__inner inner">
             <div class="faq-accordion__container">
+                <?php if(CFS()->get('faq_group')): // FAQグループが存在する場合 ?>
+                <?php
+                $fields = CFS()->get('faq_group'); // FAQグループを取得
+                foreach($fields as $field): // ループ処理
+                ?>
                 <div class="faq-accordion__item js-faq-accordion-item">
-                    <h2 class="faq-accordion__title js-faq-accordion-title">ここに質問が入ります。</h2>
+                    <h2 class="faq-accordion__title js-faq-accordion-title"><?php echo $field['question_text']; ?></h2>
                     <div class="faq-accordion__content js-faq-accordion-content">
                         <p class="faq-accordion__text">
-                            ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります
+                            <?php echo $field['answer_text']; ?>
                         </p>
                     </div>
                 </div>
-                <div class="faq-accordion__item js-faq-accordion-item">
-                    <h2 class="faq-accordion__title js-faq-accordion-title">ここに質問が入ります。</h2>
-                    <div class="faq-accordion__content js-faq-accordion-content">
-                        <p class="faq-accordion__text">
-                            ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります
-                        </p>
-                    </div>
-                </div>
-                <div class="faq-accordion__item js-faq-accordion-item">
-                    <h2 class="faq-accordion__title js-faq-accordion-title">ここに質問が入ります。</h2>
-                    <div class="faq-accordion__content js-faq-accordion-content">
-                        <p class="faq-accordion__text">
-                            ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります
-                        </p>
-                    </div>
-                </div>
-                <div class="faq-accordion__item js-faq-accordion-item">
-                    <h2 class="faq-accordion__title js-faq-accordion-title">ここに質問が入ります。</h2>
-                    <div class="faq-accordion__content js-faq-accordion-content">
-                        <p class="faq-accordion__text">
-                            ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります
-                        </p>
-                    </div>
-                </div>
-                <div class="faq-accordion__item js-faq-accordion-item">
-                    <h2 class="faq-accordion__title js-faq-accordion-title">ここに質問が入ります。</h2>
-                    <div class="faq-accordion__content js-faq-accordion-content">
-                        <p class="faq-accordion__text">
-                            ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります
-                        </p>
-                    </div>
-                </div>
-                <div class="faq-accordion__item js-faq-accordion-item">
-                    <h2 class="faq-accordion__title js-faq-accordion-title">ここに質問が入ります。</h2>
-                    <div class="faq-accordion__content js-faq-accordion-content">
-                        <p class="faq-accordion__text">
-                            ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります
-                        </p>
-                    </div>
-                </div>
-                <div class="faq-accordion__item js-faq-accordion-item">
-                    <h2 class="faq-accordion__title js-faq-accordion-title">ここに質問が入ります。</h2>
-                    <div class="faq-accordion__content js-faq-accordion-content">
-                        <p class="faq-accordion__text">
-                            ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります
-                        </p>
-                    </div>
-                </div>
+                <?php endforeach; ?>
+                <?php endif; ?>
             </div>
         </div>
     </section>
