@@ -20,24 +20,32 @@
 
     <div class="price-table-list layout-price-table-list">
         <div class="price-table-list__inner inner">
+            <?php $fields = CFS()->get('price_group'); ?>
+            <?php if(is_array($fields)): ?>
+            <!-- 外側のループ -->
+            <?php foreach($fields as $field): ?>
             <div class="price-table-list__item price-table">
                 <table class="price-table__table">
+                    <?php $fields_child = $field['price_table']; ?>
+                    <?php if(is_array($fields_child)): ?>
+                    <!-- 内側のループ -->
+                    <?php foreach($fields_child as $field_child):?>
                     <tr class="price-table__tr">
-                        <th rowspan="3" class="price-table__th"><span>ライセンス講習</span></th>
-                        <td class="price-table__td-content">オープンウォーター<br class="u-mobile">ダイバーコース</td>
-                        <td class="price-table__td-price">&#165;50&#044;000</td>
+                        <th rowspan="3" class="price-table__th">
+                            <span><?php echo $field['category_title']; ?></span>
+                        </th>
+                        <td class="price-table__td-content"><?php echo $field_child['course_title']; ?></td>
+                        <td class="price-table__td-price"><?php echo $field_child['course_price']; ?></td>
                     </tr>
-                    <tr class="price-table__tr">
-                        <td class="price-table__td-content">アドバンスド<br class="u-mobile">オープンウォーターコース</td>
-                        <td class="price-table__td-price">&#165;60&#044;000</td>
-                    </tr>
-                    <tr class="price-table__tr">
-                        <td class="price-table__td-content">レスキュー＋EFRコース</td>
-                        <td class="price-table__td-price">&#165;70&#044;000</td>
-                    </tr>
+                    <?php endforeach; ?>
+                    <!-- 内側のループ -->
+                    <?php endif; ?>
                 </table>
             </div>
-            <div class="price-table-list__item price-table">
+            <!-- 外側のループ -->
+            <?php endforeach; ?>
+            <?php endif; ?>
+            <!-- <div class="price-table-list__item price-table">
                 <table class="price-table__table">
                     <tr class="price-table__tr">
                         <th rowspan="4" class="price-table__th"><span>体験ダイビング</span></th>
@@ -57,8 +65,8 @@
                         <td class="price-table__td-price">&#165;18&#044;000</td>
                     </tr>
                 </table>
-            </div>
-            <div class="price-table-list__item price-table">
+            </div> -->
+            <!-- <div class="price-table-list__item price-table">
                 <table class="price-table__table">
                     <tr class="price-table__tr">
                         <th rowspan="4" class="price-table__th"><span>ファンダイビング</span></th>
@@ -78,8 +86,8 @@
                         <td class="price-table__td-price">&#165;10&#044;000</td>
                     </tr>
                 </table>
-            </div>
-            <div class="price-table-list__item price-table">
+            </div> -->
+            <!-- <div class="price-table-list__item price-table">
                 <table class="price-table__table">
                     <tr class="price-table__tr">
                         <th rowspan="3" class="price-table__th"><span>スペシャルダイビング</span></th>
@@ -95,19 +103,7 @@
                         <td class="price-table__td-price">&#165;14&#044;000</td>
                     </tr>
                 </table>
-            </div>
-            <!-- <tr class="price-table__tr">
-                  <th colspan="2" class="price-table__th">ライセンス講習</th>
-                </tr>
-                <tr class="price-table__tr">
-                  <td class="price-table__td-content">オープンウォーター<br class="u-mobile">ダイバーコース</td><td class="price-table__td-price">&#165;50&#044;000</td>
-                </tr>
-                <tr class="price-table__tr">
-                  <td class="price-table__td-content">アドバンスドオープンウォーターコース</td><td class="price-table__td-price">&#165;60&#044;000</td>
-                </tr>
-                <tr class="price-table__tr">
-                  <td class="price-table__td-content">レスキュー＋EFRコース</td><td class="price-table__td-price">&#165;70&#044;000</td>
-                </tr> -->
+            </div> -->
         </div>
     </div>
 
