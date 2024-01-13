@@ -1230,7 +1230,9 @@ a {
 	padding: 0.25rem 1rem;
 }
 
-.contact__item-input {
+.wpcf7-form-control-wrap[data-name=name1],
+.wpcf7-form-control-wrap[data-name=email],
+.wpcf7-form-control-wrap[data-name=tel] {
 	width: 100%;
 }
 
@@ -1377,7 +1379,7 @@ a {
 	outline-offset: 0;
 }
 
-.contact__item-textarea {
+.wpcf7-form-control-wrap[data-name=textarea] {
 	margin-top: 1.1rem;
 	width: 100%;
 }
@@ -3884,7 +3886,9 @@ html {
 	width: 31.4285714286%;
 }
 
-.contact__item-input {
+.wpcf7-form-control-wrap[data-name=name1],
+.wpcf7-form-control-wrap[data-name=email],
+.wpcf7-form-control-wrap[data-name=tel] {
 	width: 68.5714285714%;
 }
 
@@ -3912,7 +3916,7 @@ html {
 	width: 68.5714285714%;
 }
 
-.contact__item-textarea {
+.wpcf7-form-control-wrap[data-name=textarea] {
 	margin-top: 0;
 	width: 68.5714285714%;
 }

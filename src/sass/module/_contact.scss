@@ -105,13 +105,22 @@
     margin-left: rem(8);
 }
 
-.contact__item-input {
+// .contact__item-input {
+//     width: 100%;
+//     @include mq("md") {
+//         width: calc(480 / 700 * 100%);
+//     }
+// }
+
+// Contact Form 7導入に伴うクラス名変更
+.wpcf7-form-control-wrap[data-name="name1"],
+.wpcf7-form-control-wrap[data-name="email"],
+.wpcf7-form-control-wrap[data-name="tel"] {
     width: 100%;
     @include mq("md") {
         width: calc(480 / 700 * 100%);
     }
 }
-
 
 // お名前、メールアドレス、電話番号
     [type="text"],
@@ -441,7 +450,18 @@
 
 
 // お問い合わせ内容
-.contact__item-textarea {
+// .contact__item-textarea {
+//     width: 100%;
+//     // margin-top: rem(16);
+//     margin-top: rem(17.6);
+//     @include mq("md") {
+//         width: calc(480 / 700 * 100%);
+//         margin-top: 0;
+//     }
+// }
+
+// Contact Form 7導入に伴うクラス名変更
+.wpcf7-form-control-wrap[data-name="textarea"] {
     width: 100%;
     // margin-top: rem(16);
     margin-top: rem(17.6);
