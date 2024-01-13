@@ -1280,7 +1280,7 @@ a {
 	z-index: -1;
 }
 
-.wpcf7-list-item > label {
+#your-check .wpcf7-list-item > label {
 	cursor: pointer;
 	display: inline-block;
 	padding: 0.11875rem 0;
@@ -1288,7 +1288,7 @@ a {
 	position: relative;
 }
 
-.wpcf7-list-item-label {
+.wpcf7-form-control-wrap[data-name=check] .wpcf7-list-item-label {
 	color: #000;
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1rem;
@@ -1297,7 +1297,7 @@ a {
 
 /* Custom Checkbox Design */
 
-.wpcf7-list-item-label::before {
+.wpcf7-form-control-wrap[data-name=check] .wpcf7-list-item-label::before {
 	border: 1px solid #408F95;
 	content: "";
 	display: inline-block;
@@ -1311,7 +1311,7 @@ a {
 
 /* Custom Checkbox Checked State */
 
-[type=checkbox]:checked + .wpcf7-list-item-label::after {
+#your-check [type=checkbox]:checked + .wpcf7-list-item-label::after {
 	border: solid #C94800;
 	border-width: 0 2px 2px 0;
 	content: "";
@@ -1326,7 +1326,7 @@ a {
 
 /* Focus State */
 
-[type=checkbox]:focus + .wpcf7-list-item-label::before {
+#your-check [type=checkbox]:focus + .wpcf7-list-item-label::before {
 	outline: 1px solid #408F95; /* Outline color when focused */
 }
 
@@ -1404,7 +1404,7 @@ textarea {
 	width: 100%;
 }
 
-.contact__accept-check {
+.wpcf7-form-control-wrap[data-name=accept] {
 	display: inline-block;
 	text-align: left;
 	width: 81.7391304348%;
@@ -1416,7 +1416,7 @@ textarea {
 	z-index: -1;
 }
 
-.contact__accept-check-label {
+.wpcf7-acceptance label {
 	cursor: pointer;
 	display: inline-block;
 	padding-left: 1.375rem; /* カスタムチェックボックスにスペースを確保 */
@@ -1425,7 +1425,7 @@ textarea {
 
 /* Custom Checkbox Design */
 
-.contact__accept-check-text::before {
+.wpcf7-form-control-wrap[data-name=accept] .wpcf7-list-item-label::before {
 	border: 1px solid #408F95;
 	content: "";
 	display: inline-block;
@@ -1438,7 +1438,7 @@ textarea {
 
 /* Custom Checkbox Checked State */
 
-[type=checkbox]:checked + .contact__accept-check-text::after {
+[type=checkbox]:checked + .wpcf7-list-item-label::after {
 	border: solid #C94800;
 	border-width: 0 2px 2px 0;
 	content: "";
@@ -1453,11 +1453,11 @@ textarea {
 
 /* Focus State */
 
-[type=checkbox]:focus + .contact__accept-check-text::before {
+[type=checkbox]:focus + .wpcf7-list-item-label::before {
 	outline: 1px solid #408F95; /* Outline color when focused */
 }
 
-.contact__accept-check-text {
+.wpcf7-form-control-wrap[data-name=accept] .wpcf7-list-item-label {
 	color: #000;
 	display: inline-block;
 	font-family: "Noto Sans JP", sans-serif;
@@ -1467,7 +1467,7 @@ textarea {
 	margin-left: 0.5rem;
 }
 
-.contact__accept-check-text > a {
+.wpcf7-form-control-wrap[data-name=accept] .wpcf7-list-item-label > a {
 	-webkit-text-decoration: underline;
 	color: #408F95;
 	text-decoration: underline;
@@ -3906,7 +3906,7 @@ html {
 	margin-top: 0;
 }
 
-.wpcf7-list-item > label {
+#your-check .wpcf7-list-item > label {
 	padding: 0.09375rem 0;
 	padding-left: 1.375rem;
 }
@@ -3925,20 +3925,20 @@ html {
 	padding-top: 4.8rem;
 }
 
-.contact__accept-check {
+.wpcf7-form-control-wrap[data-name=accept] {
 	text-align: center;
 	width: 100%;
 }
 
-.contact__accept-check-text::before {
+.wpcf7-form-control-wrap[data-name=accept] .wpcf7-list-item-label::before {
 	top: 0.125rem;
 }
 
-.contact__accept-check-text {
+.wpcf7-form-control-wrap[data-name=accept] .wpcf7-list-item-label {
 	margin-left: 1rem;
 }
 
-.contact__accept-check-text > a:hover {
+.wpcf7-form-control-wrap[data-name=accept] .wpcf7-list-item-label > a:hover {
 	opacity: 0.8;
 }
 
