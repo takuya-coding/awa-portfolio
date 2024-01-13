@@ -154,13 +154,30 @@
 
 
 // お問い合わせ項目
-.contact__item-check {
+// .contact__item-check {
+//     @include mq("md") {
+//         width: calc(480 / 700 * 100%);
+//     }
+// }
+
+// Contact Form 7導入に伴うクラス名変更
+.wpcf7-form-control-wrap[data-name="check"] {
     @include mq("md") {
         width: calc(480 / 700 * 100%);
     }
 }
 
-.contact__item-checkbox {
+// .contact__item-checkbox {
+//     display: flex;
+//     flex-direction: column;
+//     margin-top: rem(16);
+//     @include mq("md") {
+//         margin-top: 0;
+//     }
+// }
+
+// Contact Form 7導入に伴うクラス名変更
+.wpcf7-checkbox {
     display: flex;
     flex-direction: column;
     margin-top: rem(16);
@@ -175,7 +192,20 @@
         z-index: -1;
     }
 
-.contact__item-check-label {
+// .contact__item-check-label {
+//     position: relative;
+//     display: inline-block;
+//     padding: rem(1.9) 0;
+//     padding-left: rem(22); /* カスタムチェックボックスにスペースを確保 */
+//     cursor: pointer;
+//     @include mq("md") {
+//         padding: rem(1.5) 0;
+//         padding-left: rem(22);
+//     }
+// }
+
+// Contact Form 7導入に伴うクラス名変更
+.wpcf7-list-item > label {
     position: relative;
     display: inline-block;
     padding: rem(1.9) 0;
@@ -187,7 +217,15 @@
     }
 }
 
-.contact__item-check-text {
+// .contact__item-check-text {
+//     font-family: $base-font-family;
+//     font-weight: $regular;
+//     font-size: rem(16);
+//     color: $black2;
+// }
+
+// Contact Form 7導入に伴うクラス名変更
+.wpcf7-list-item-label {
     font-family: $base-font-family;
     font-weight: $regular;
     font-size: rem(16);
@@ -195,7 +233,20 @@
 }
 
 /* Custom Checkbox Design */
-.contact__item-check-text::before {
+// .contact__item-check-text::before {
+//     content:"";
+//     display: inline-block;
+//     width: rem(14);
+//     height: rem(14);
+//     border: 1px solid $green;
+//     position: absolute;
+//     left: 0;
+//     top: 50%;
+//     transform: translateY(-50%);
+// }
+
+// Contact Form 7導入に伴うクラス名変更
+.wpcf7-list-item-label::before {
     content:"";
     display: inline-block;
     width: rem(14);
@@ -212,7 +263,23 @@
 //     border-color: #3498db; /* Border color when checked */
 //   }
 
-[type="checkbox"]:checked + .contact__item-check-text::after {
+// [type="checkbox"]:checked + .contact__item-check-text::after {
+//   content: "";
+//   display: block;
+//   //width: 5px;
+//   width: rem(5);
+//   //height: 10px;
+//   height: rem(10);
+//   border: solid $red;
+//   border-width: 0 2px 2px 0;
+//   position: absolute;
+//   top: 50%;
+//   left: rem(4.5);  /* Adjusted position */
+//   transform: translateY(-50%) rotate(45deg);
+// }
+
+// Contact Form 7導入に伴うクラス名変更
+[type="checkbox"]:checked + .wpcf7-list-item-label::after {
   content: "";
   display: block;
   //width: 5px;
@@ -233,7 +300,12 @@
 //     outline: 2px solid $red; /* Outline color when focused */
 //   }
 
-[type="checkbox"]:focus + .contact__item-check-text::before {
+// [type="checkbox"]:focus + .contact__item-check-text::before {
+//     outline: 1px solid $green; /* Outline color when focused */
+//   }
+
+// Contact Form 7導入に伴うクラス名変更
+[type="checkbox"]:focus + .wpcf7-list-item-label::before {
     outline: 1px solid $green; /* Outline color when focused */
   }
 
@@ -241,7 +313,20 @@
 
 // キャンペーン
 /* Style for the select box container */
-.contact__item-select-container {
+// .contact__item-select-container {
+//     position: relative;
+//     display: inline-block;
+//     width: 100%; /* Set a width */
+//     // margin-bottom: 20px;
+//     margin-top: rem(16);
+//     @include mq("md") {
+//         width: calc(480 / 700 * 100%);
+//         margin-top: 0;
+//     }
+//   }
+
+// Contact Form 7導入に伴うクラス名変更
+.wpcf7-form-control-wrap[data-name="category"] {
     position: relative;
     display: inline-block;
     width: 100%; /* Set a width */
@@ -254,7 +339,23 @@
   }
 
 /* Style for the select box */
-.contact__item-select-box {
+// .contact__item-select-box {
+//     // padding: rem(12) rem(8);
+//     padding: rem(10.4) rem(8);
+//     border: 1px solid $green;
+//     outline: none;
+//     -webkit-appearance: none;
+//     -moz-appearance: none;
+//     appearance: none;
+//     width: 100%; /* Make it fill the container */
+//     font-family: $base-font-family;
+//     font-weight: $regular;
+//     font-size: rem(12);
+//     color: $black2;
+//   }
+
+// Contact Form 7導入に伴うクラス名変更
+.wpcf7-select {
     // padding: rem(12) rem(8);
     padding: rem(10.4) rem(8);
     border: 1px solid $green;
@@ -270,7 +371,29 @@
   }
 
 /* Arrow icon using a pseudo-element */
-.contact__item-select-container::after {
+// .contact__item-select-container::after {
+//     content: "";
+//     position: absolute;
+//     top: 50%;
+//     right: rem(8);
+//     width: 0;
+//     height: 0;
+//     transform: translateY(-50%);
+//     // border使った三角形
+//     // border-left: 5px solid transparent;
+//     // border-right: 5px solid transparent;
+//     // border-top: 5px solid #000;
+    
+//     // clip-path使った三角形
+//     background-color: $green;
+//     width: rem(12);
+//     // height: rem(12);
+//     height: calc(rem(12) / 2 * tan(60deg));
+//     clip-path: polygon(0 0, 100% 0%, 50% 100%);
+//   }
+
+// Contact Form 7導入に伴うクラス名変更
+.wpcf7-form-control-wrap[data-name="category"]::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -300,7 +423,15 @@
 //     outline-offset: 0;
 //   }
 
-.contact__item-select-box:focus {
+// .contact__item-select-box:focus {
+//     // border-color: #3498db; /* Border color when focused */
+//     outline: 1px solid $green;
+//     /* 自由な色に変更可能 */
+//     outline-offset: 0;
+//   }
+
+// Contact Form 7導入に伴うクラス名変更
+.wpcf7-select:focus {
     // border-color: #3498db; /* Border color when focused */
     outline: 1px solid $green;
     /* 自由な色に変更可能 */
