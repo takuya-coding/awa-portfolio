@@ -810,5 +810,9 @@ textarea {
 
 
 
-
+// WordPress化に伴うコード追記
+// 送信ボタンのレイアウト崩れを防ぐため、以下のコードを追記
+.wpcf7-spinner {
+    display: none !important; //確実に非表示にする
+}
 

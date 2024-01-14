@@ -1575,6 +1575,10 @@ textarea {
 	z-index: -1;
 }
 
+.wpcf7-spinner {
+	display: none !important;
+}
+
 .faq-accordion {
 	position: relative;
 }
