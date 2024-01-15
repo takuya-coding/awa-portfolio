@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <main>
-    <div class="main-view">
+    <!-- <div class="main-view">
         <div class="main-view__inner">
             <h1 class="main-view__title">campaign</h1>
             <div class="main-view__img">
@@ -12,9 +12,11 @@
                 </picture>
             </div>
         </div>
-    </div>
+    </div> -->
+    <!-- main-view -->
+    <?php get_template_part('template-parts/main-view'); ?>
     <!-- breadcrumb -->
-    <?php get_template_part('template-parts/breadcrumb') ?>
+    <?php get_template_part('template-parts/breadcrumb'); ?>
 
     <section class="campaign layout-campaign">
         <div class="campaign__inner inner">

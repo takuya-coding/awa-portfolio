@@ -1,22 +1,9 @@
 <?php get_header(); ?>
 <main>
-    <div class="main-view">
-        <div class="main-view__inner">
-            <h1 class="main-view__title">information</h1>
-            <div class="main-view__img">
-                <picture>
-                    <source
-                        srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/information-mv-pc.webp"
-                        media="(min-width:768px)" type="image/webp" />
-                    <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/information-mv-sp.webp"
-                        alt="岸壁付近を泳ぐダイバーと無数の黄色い熱帯魚" width="375" height="460" decoding="async">
-                </picture>
-            </div>
-        </div>
-    </div>
+    <!-- main-view -->
+    <?php get_template_part('template-parts/main-view'); ?>
     <!-- breadcrumb -->
-    <?php get_template_part('template-parts/breadcrumb') ?>
-
+    <?php get_template_part('template-parts/breadcrumb'); ?>
 
     <div class="information layout-information">
         <div class="information__inner inner">

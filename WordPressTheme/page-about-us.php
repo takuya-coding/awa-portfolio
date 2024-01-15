@@ -1,22 +1,9 @@
 <?php get_header(); ?>
 <main>
-    <div class="main-view">
-        <div class="main-view__inner">
-            <h1 class="main-view__title">about&nbsp;us</h1>
-            <div class="main-view__img">
-                <picture>
-                    <source
-                        srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/aboutus-mv-pc.webp"
-                        media="(min-width:768px)" type="image/webp" />
-                    <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/aboutus-mv-sp.webp"
-                        alt="青空とシーサー" width="375" height="460" decoding="async">
-                </picture>
-            </div>
-        </div>
-    </div>
+    <!-- main-view -->
     <?php get_template_part('template-parts/main-view'); ?>
     <!-- breadcrumb -->
-    <?php get_template_part('template-parts/breadcrumb') ?>
+    <?php get_template_part('template-parts/breadcrumb'); ?>
 
     <div class="about-us layout-about-us">
         <div class="about-us__inner inner">
