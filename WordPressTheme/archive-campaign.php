@@ -176,6 +176,9 @@
         </div>
     </section>
 
+    <!-- contact-section -->
+    <?php get_template_part('template-parts/section-contact'); ?>
+
     <section class="common-contact layout-common-contact layout-common-contact--margin" id="contact">
         <div class="common-contact__inner inner">
             <div class="common-contact__wrapper">
