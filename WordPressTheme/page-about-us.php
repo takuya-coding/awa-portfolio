@@ -14,6 +14,7 @@
             </div>
         </div>
     </div>
+    <?php get_template_part('template-parts/main-view'); ?>
     <!-- breadcrumb -->
     <?php get_template_part('template-parts/breadcrumb') ?>
 
