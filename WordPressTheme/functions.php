@@ -89,6 +89,21 @@ function getPostViews($postID) {
   add_action('pre_get_posts', 'custom_posts_per_page');
 
 
+  
+// voiceページに表示する最大投稿数を変更するための記述
+  function custom_posts_per_page($query)
+  {
+      if (!is_admin() && $query->is_main_query()) {
+          // カスタム投稿のスラッグを記述
+          if (is_post_type_archive('voice')) {
+              // 表示件数を指定
+              $query->set('posts_per_page', 6);
+          }
+      }
+  }
+  add_action('pre_get_posts', 'custom_posts_per_page');
+
+
 
 
 // Contact Form 7で自動挿入されるPタグ、brタグを削除
