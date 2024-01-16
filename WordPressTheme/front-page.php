@@ -254,20 +254,48 @@
                 <p class="section-title__en">voice</p>
                 <h2 class="section-title__ja">お客様の声</h2>
             </div>
+            <?php
+            $args = array(
+                "post_type" => "voice",
+                "posts_per_page" => 2
+            );
+            $the_query = new WP_Query($args);
+            ?>
+            <?php if ($the_query->have_posts()) : ?>
             <div class="top-voice__cards voice-cards">
+                <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
                 <div class="voice-cards__item">
                     <div class="voice-card">
                         <div class="voice-card__head">
                             <div class="voice-card__info">
                                 <div class="voice-card__meta">
                                     <span class="voice-card__customer-info">20代(女性)</span>
-                                    <span class="voice-card__category">ライセンス講習</span>
+                                    <!-- <span class="voice-card__category">ライセンス講習</span> -->
+                                    <?php
+                                    $taxonomy_terms = get_the_terms($post->ID, 'voice_category');
+                                    if (!empty($taxonomy_terms)) {
+                                    $limit = 4;
+                                    $count = 0;
+                                    foreach ($taxonomy_terms as $taxonomy_term) {
+                                        if ($count < $limit) {
+                                            echo '<span class="voice-card__category">' . esc_html($taxonomy_term->name) . '</span>';
+                                            $count++;
+                                        } else {
+                                            break;
+                                        }
+                                    }
+                                }
+                                ?>
                                 </div>
-                                <h3 class="voice-card__title">ここにタイトルが入ります。ここにタイトル</h3>
+                                <h3 class="voice-card__title"><?php the_title(); ?></h3>
                             </div>
                             <div class="voice-card__img">
-                                <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/voice-post1.webp"
-                                    alt="帽子を被った笑顔の女性" width="151" height="117" decoding="async" loading="lazy">
+                                <?php if (has_post_thumbnail()) : ?>
+                                <?php the_post_thumbnail( 'full', array( 'width' => 151, 'height' => 117, 'decoding' => 'async', 'loading' => 'lazy', 'class' => '' ) ); ?>
+                                <?php else : ?>
+                                <img src="<?php echo esc_url(get_theme_file_uri( "/assets/images/common/noimage.webp" )); ?>"
+                                    alt="NoImage画像" />
+                                <?php endif ; ?>
                             </div>
                         </div>
                         <p class="voice-card__text">
@@ -275,27 +303,12 @@
                         </p>
                     </div>
                 </div>
-                <div class="voice-cards__item">
-                    <div class="voice-card">
-                        <div class="voice-card__head">
-                            <div class="voice-card__info">
-                                <div class="voice-card__meta">
-                                    <span class="voice-card__customer-info">20代(男性)</span>
-                                    <span class="voice-card__category">ファンダイビング</span>
-                                </div>
-                                <h3 class="voice-card__title">ここにタイトルが入ります。ここにタイトル</h3>
-                            </div>
-                            <div class="voice-card__img">
-                                <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/voice-post2.webp"
-                                    alt="グッドポーズをした男性" width="151" height="117" decoding="async" loading="lazy">
-                            </div>
-                        </div>
-                        <p class="voice-card__text">
-                            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。
-                        </p>
-                    </div>
-                </div>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
             </div>
+            <?php else : ?>
+            <p>記事が投稿されていません</p>
+            <?php endif; ?>
             <div class="top-voice__button">
                 <a href="#" class="button">view&nbsp;more<span class="button__arrow"></span></a>
             </div>
