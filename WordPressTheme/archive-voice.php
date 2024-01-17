@@ -21,16 +21,50 @@
     <section class="voice layout-voice">
         <div class="voice__inner inner">
             <div class="voice__category category">
-                <a href="" class="category__button is-active">all</a>
+                <!-- <a href="" class="category__button is-active">all</a>
                 <a href="" class="category__button">ライセンス講習</a>
                 <a href="" class="category__button">ファンダイビング</a>
-                <a href="" class="category__button">体験ダイビング</a>
+                <a href="" class="category__button">体験ダイビング</a> -->
+                <?php
+                $current_term_id = get_queried_object_id(); // 現在のタームIDを取得
+                $terms = get_terms(array(
+                    'taxonomy' => 'voice_category',
+                    'orderby'  => 'name',
+                    'order'    => 'ASC',
+                    'number'   => 5
+                ));
+
+                $home_class = (is_post_type_archive('voice')) ? 'is-active' : ''; // 'voice' がカスタム投稿タイプの場合
+                $home_link = sprintf(
+                    '<a class="category__button %s" href="%s" alt="%s">all</a>',
+                    $home_class,
+                    esc_url(home_url('/voice')),
+                    esc_attr(__('View all posts', 'textdomain'))
+                );
+                echo sprintf(esc_html__('%s', 'textdomain'), $home_link);
+
+                if ($terms) {
+                    foreach ($terms as $term) {
+                        $term_class = ($current_term_id === $term->term_id) ? 'is-active' : '';
+                        $term_link = sprintf(
+                            '<a class="category__button %s" href="%s" alt="%s">%s</a>',
+                            $term_class,
+                            esc_url(get_term_link($term)),
+                            esc_attr(sprintf(__('View all posts in %s', 'textdomain'), $term->name)),
+                            esc_html($term->name)
+                        );
+                        echo sprintf(esc_html__('%s', 'textdomain'), $term_link);
+                    }
+                }
+                ?>
             </div>
 
             <?php
+            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
             $args = array(
-                "post_type" => "voice",
-                "posts_per_page" => 6
+                'post_type' => 'voice',
+                'posts_per_page' => 6,
+                'paged' => $paged
             );
             $the_query = new WP_Query($args);
             ?>
