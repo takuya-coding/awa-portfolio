@@ -1,18 +1,5 @@
 <?php get_header(); ?>
 <main>
-    <!-- <div class="main-view">
-        <div class="main-view__inner">
-            <h1 class="main-view__title">voice</h1>
-            <div class="main-view__img">
-                <picture>
-                    <source srcset="./assets/images/common/voice-mv-pc.webp" media="(min-width:768px)"
-                        type="image/webp" />
-                    <img src="./assets/images/common/voice-mv-sp.webp" alt="きれいな海面に5人のダイバーが浮いている" width="375"
-                        height="460" decoding="async">
-                </picture>
-            </div>
-        </div>
-    </div> -->
     <!-- main-view -->
     <?php get_template_part('template-parts/main-view'); ?>
     <!-- breadcrumb -->
