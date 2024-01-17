@@ -10,7 +10,8 @@ if (!is_page('404')) {
             // 条件によって異なるタイトルを表示
             if (is_page('about-us')) {
                 echo 'about&nbsp;us';
-            } elseif (is_post_type_archive('campaign')) {
+            // campaignページおよびサブカテゴリ（タクソノミー）のチェック
+            } elseif (is_post_type_archive('campaign') || is_tax('campaign_category')) {
                 echo 'campaign';
             } elseif (is_page('information')) {
                 echo 'information';
@@ -18,7 +19,8 @@ if (!is_page('404')) {
                 echo 'blog';
             } elseif (is_single()) {
                 echo 'blog';
-            } elseif (is_post_type_archive('voice')) {
+            // voiceページおよびサブカテゴリ（タクソノミー）のチェック
+            } elseif (is_post_type_archive('voice') || is_tax('voice_category')) {
                 echo 'voice';
             } elseif (is_page('price')) {
                 echo 'price';
@@ -46,7 +48,8 @@ if (!is_page('404')) {
                 if (is_page('about-us')) {
                     echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/aboutus-mv-pc.webp" media="(min-width:768px)" type="image/webp" />';
                     echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/aboutus-mv-sp" alt="青空とシーサー" width="375" height="460" decoding="async">';
-                } elseif (is_post_type_archive('campaign')) {
+                // campaignページおよびサブカテゴリ（タクソノミー）のチェック
+                } elseif (is_post_type_archive('campaign') || is_tax('campaign_category')) {
                     echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/campaign-mv-pc.webp" media="(min-width:768px)" type="image/webp" />';
                     echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/campaign-mv-sp.webp" alt="二匹のチョウチョウウオが海の中を泳いでいる" width="375" height="460" decoding="async">';
                 } elseif (is_page('information')) {
@@ -58,7 +61,8 @@ if (!is_page('404')) {
                 } elseif (is_single()) {
                     echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/blog-mv-pc.webp" media="(min-width:768px)" type="image/webp" />';
                     echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/blog-mv-sp.webp" alt="魚のトルネード" width="375" height="460" decoding="async">';
-                } elseif (is_post_type_archive('voice')) {
+                // voiceページおよびサブカテゴリ（タクソノミー）のチェック
+                } elseif (is_post_type_archive('voice') || is_tax('voice_category')) {
                     echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/voice-mv-pc.webp" media="(min-width:768px)" type="image/webp" />';
                     echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/voice-mv-sp.webp" alt="きれいな海面に5人のダイバーが浮いている" width="375" height="460" decoding="async">';
                 } elseif (is_page('price')) {
