@@ -82,7 +82,7 @@
         <h2 class="blog-sidebar__item-title sidebar-title">キャンペーン</h2>
         <?php
         $args = array(
-            "post_type" => "post",
+            "post_type" => "campaign",
             "posts_per_page" => 2,
             "orderby" => "date",
             "order" => "DESC",
@@ -105,15 +105,27 @@
                         <?php endif ; ?>
                     </div>
                     <div class="campaign-card__body campaign-card__body--sidebar">
-                        <h3 class="campaign-card__title campaign-card__title--sidebar"><?php the_title(); ?></h3>
+                        <?php if( get_field('campaign_title')): ?>
+                        <h3 class="campaign-card__title campaign-card__title--sidebar">
+                            <?php the_field('campaign_title'); ?></h3>
+                        <?php endif; ?>
                         <p class="campaign-card__text campaign-card__text--sidebar">全部コミコミ&#040;お一人様&#041;
                         </p>
                         <div class="campaign-card__price campaign-card__price--sidebar">
-                            <p class="campaign-card__price-before campaign-card__price-before--sidebar">
+                            <!-- <p class="campaign-card__price-before campaign-card__price-before--sidebar">
                                 <del>&#165;56&#044;000</del>
+                            </p> -->
+                            <?php if( get_field('campaign_regular-price')): ?>
+                            <p class="campaign-card__price-before campaign-card__price-before--sidebar">
+                                <del><?php the_field('campaign_regular-price'); ?></del>
                             </p>
+                            <?php endif; ?>
+                            <!-- <p class="campaign-card__price-after campaign-card__price-after--sidebar">
+                                &#165;46&#044;000</p> -->
+                            <?php if( get_field('campaign_campaign-price')): ?>
                             <p class="campaign-card__price-after campaign-card__price-after--sidebar">
-                                &#165;46&#044;000</p>
+                                <?php the_field('campaign_campaign-price'); ?></p>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
