@@ -3,7 +3,7 @@
     <!-- main-view -->
     <?php get_template_part('template-parts/main-view'); ?>
     <!-- breadcrumb -->
-    <?php get_template_part('template-parts/breadcrumb') ?>
+    <?php get_template_part('template-parts/breadcrumb'); ?>
 
 
     <!-- blogページ（blog一覧ページ、blog詳細ページ）としてのレイアウトを共通化する -->
