@@ -43,7 +43,7 @@
         <h2 class="blog-sidebar__item-title sidebar-title">口コミ</h2>
         <?php
         $args = array(
-            "post_type" => "post",
+            "post_type" => "voice",
             "posts_per_page" => 1,
             "orderby" => "date",
             "order" => "DESC",
