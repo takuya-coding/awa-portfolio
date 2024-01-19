@@ -2120,7 +2120,7 @@ textarea {
 	margin-top: 2rem;
 }
 
-.legal-document__list-ol.legal-document__list-ol--margin {
+.legal-document ol {
 	margin-top: 2rem;
 }
 
@@ -2138,7 +2138,7 @@ textarea {
 	margin-top: 0;
 }
 
-.legal-document ul > .legal-document li::before {
+.legal-document ul li::before {
 	background-color: #0D2936;
 	border-radius: 100%;
 	content: "";

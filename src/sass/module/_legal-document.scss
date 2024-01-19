@@ -159,8 +159,14 @@
 
 
 // 利用規約ページのみ適用
-.legal-document__list-ol.legal-document__list-ol--margin {
+// .legal-document__list-ol.legal-document__list-ol--margin {
+//     margin-top: rem(32);
+// }
+
+// WordPress化のタイミングで追記
+.legal-document ol {
     margin-top: rem(32);
+
 }
 
 
@@ -213,7 +219,7 @@
 // }
 
 // WordPress化に伴い、セレクタ当て直し
-.legal-document ul > .legal-document li::before {
+.legal-document ul li::before {
     position: relative;
     content:"";
     display: inline-block;
