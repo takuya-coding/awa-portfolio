@@ -145,21 +145,40 @@
         <h2 class="blog-sidebar__item-title sidebar-title">アーカイブ</h2>
         <div class="blog-sidebar__item-archive sidebar-archive">
 
-            <div class="sidebar-archive__accordion js-accordion-item">
-                <p class="sidebar-archive__year js-accordion-year">2023</p>
-                <ul class="sidebar-archive__list js-accordion-list">
-                    <?php wp_get_archives('type=monthly&limit=3'); ?>
-                </ul>
-            </div>
+            <!-- 年別に分けて月のアーカイブリストを表示するためのコード -->
+            <?php
+            $year_prev = null;
+            $months = $wpdb->get_results("SELECT DISTINCT MONTH( post_date ) AS month,
+                                    YEAR( post_date ) AS year
+                                    FROM $wpdb->posts
+                                    WHERE post_status = 'publish' and post_date <= now()
+                                    and post_type = 'post'
+                                    GROUP BY month, year
+                                    ORDER BY post_date DESC");
 
-            <!-- <div class="sidebar-archive__accordion js-accordion-item">
-                <p class="sidebar-archive__year js-accordion-year">2022</p>
-                <ul class="sidebar-archive__list">
-                    <li class="sidebar-archive__month"><a href="#">3月</a></li>
-                    <li class="sidebar-archive__month"><a href="#">2月</a></li>
-                    <li class="sidebar-archive__month"><a href="#">1月</a></li>
-                </ul>
-            </div> -->
-        </div>
+            foreach($months as $month) :
+                $year_current = $month->year;
+                if ($year_current != $year_prev){
+                    if ($year_prev != null){ ?>
+            </ul>
+        </div> <!-- Closing tags for the list and accordion item -->
+        <?php } ?>
+        <div class="sidebar-archive__accordion js-accordion-item">
+            <p class="sidebar-archive__year js-accordion-year"><?php echo $month->year; ?></p>
+            <ul class="sidebar-archive__list js-accordion-list">
+                <?php
+            } ?>
+                <li class="sidebar-archive__month">
+                    <a
+                        href="<?php echo get_site_url(); ?>/<?php echo $month->year; ?>/<?php echo str_pad($month->month, 2, '0', STR_PAD_LEFT); ?>/">
+                        <?php echo date("n", mktime(0, 0, 0, $month->month, 1, $year_current)) ?>月
+                    </a>
+                </li>
+                <?php $year_prev = $year_current;
+            endforeach; ?>
+            </ul>
+        </div> <!-- Closing tags for the final list and accordion item -->
+
+    </div>
     </div>
 </aside>
