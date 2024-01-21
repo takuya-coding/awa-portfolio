@@ -817,3 +817,32 @@ textarea {
 .wpcf7-spinner {
     display: none !important; //確実に非表示にする
 }
+
+
+
+// 送信成功した時に『送信ボタン下』に表示されるメッセージを非表示（thanksページに遷移するため不要）
+.wpcf7-form.sent .wpcf7-response-output {
+    display: none;
+  }
+
+
+
+// 送信ボタンを押したときのみバリデーションメッセージを表示する
+// 必須項目未入力の時に『項目下』に表示されるメッセージを非表示
+.wpcf7-form-control-wrap .wpcf7-not-valid-tip {
+    display: none;
+}
+
+
+
+// .wpcf7-not-valid {
+//     border: 2px solid red; /* 境界線を赤く太くする */
+//     background-color: #ffcccc; /* 背景色を薄い赤にする */
+// }
+
+.is-show {
+    border: 2px solid blue; /* 青い境界線 */
+    background-color: #d6e0ff; /* 薄い青色の背景 */
+}
+
+

@@ -437,4 +437,13 @@ jQuery(function ($) {
       $(this).toggleClass("is-open", 400);
     });
   });
+  $('input[type="submit"]').click(function () {
+    // .wpcf7-formクラスを持つフォーム内のすべての入力フィールドをチェック
+    $('.wpcf7-form').find('input, textarea, select').each(function () {
+      if (!$(this).val()) {
+        // 値が空の場合、is-showクラスを追加
+        $(this).addClass('is-show');
+      }
+    });
+  });
 });
