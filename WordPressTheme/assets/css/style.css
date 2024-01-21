@@ -1587,9 +1587,27 @@ textarea {
 	display: none;
 }
 
-.is-show {
-	background-color: #d6e0ff; /* 薄い青色の背景 */
-	border: 2px solid blue; /* 青い境界線 */
+input.is-show,
+textarea.is-show,
+select.is-show {
+	background-color: rgba(201, 72, 0, 0.2); /* 薄い色の背景 */
+	border: 2px solid #C94800; /* 境界線 */
+}
+
+.wpcf7-form-control-wrap[data-name=check].is-show .wpcf7-not-valid-tip {
+	display: block;
+}
+
+input.is-show[type=text]::-moz-placeholder,
+input.is-show[type=email]::-moz-placeholder,
+input.is-show[type=tel]::-moz-placeholder {
+	color: white; /* プレースホルダーの色を白色に変更 */
+}
+
+input.is-show[type=text]::placeholder,
+input.is-show[type=email]::placeholder,
+input.is-show[type=tel]::placeholder {
+	color: white; /* プレースホルダーの色を白色に変更 */
 }
 
 .faq-accordion {

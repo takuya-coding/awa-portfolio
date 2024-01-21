@@ -820,12 +820,12 @@ textarea {
 
 
 
+// 以下コードは送信ボタンを押した際の挙動を変更するためのコード
+
 // 送信成功した時に『送信ボタン下』に表示されるメッセージを非表示（thanksページに遷移するため不要）
 .wpcf7-form.sent .wpcf7-response-output {
     display: none;
   }
-
-
 
 // 送信ボタンを押したときのみバリデーションメッセージを表示する
 // 必須項目未入力の時に『項目下』に表示されるメッセージを非表示
@@ -833,16 +833,26 @@ textarea {
     display: none;
 }
 
-
-
-// .wpcf7-not-valid {
-//     border: 2px solid red; /* 境界線を赤く太くする */
-//     background-color: #ffcccc; /* 背景色を薄い赤にする */
-// }
-
-.is-show {
-    border: 2px solid blue; /* 青い境界線 */
-    background-color: #d6e0ff; /* 薄い青色の背景 */
+// 送信ボタンを押した際、未入力部分にはis-showクラスが付与され、枠線の色が変わる（jQueryの記述と連動）
+input.is-show,
+textarea.is-show,
+select.is-show {
+    border: 2px solid #C94800; /* 境界線 */
+    background-color: rgba(201, 72, 0, 0.2); /* 薄い色の背景 */
 }
+
+// チェックボックスのみバリデーションメッセージを表示して対応（jQueryの記述と連動）
+.wpcf7-form-control-wrap[data-name="check"].is-show .wpcf7-not-valid-tip {
+    display: block;
+}
+
+// バリデーション時placeholderの色を変更
+input.is-show[type="text"]::placeholder,
+input.is-show[type="email"]::placeholder,
+input.is-show[type="tel"]::placeholder {
+    color: white; /* プレースホルダーの色を白色に変更 */
+}
+
+
 
 

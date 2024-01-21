@@ -437,12 +437,47 @@ jQuery(function ($) {
       $(this).toggleClass("is-open", 400);
     });
   });
+
+  // コンタクトフォームのバリデーション（すべての項目に対応）
+  // $('input[type="submit"]').click(function() {
+  //   // .wpcf7-formクラスを持つフォーム内のすべての入力フィールドをチェック
+  //   $('.wpcf7-form').find('input, textarea, select').each(function() {
+  //       if (!$(this).val()) {
+  //           // 値が空の場合、is-showクラスを追加
+  //           $(this).addClass('is-show');
+  //       }
+  //   });
+
+  //   // 特定のデータ属性を持つ.wpcf7-form-control-wrapに対してクラスを追加
+  //   $('.wpcf7-form-control-wrap[data-name="check"]').each(function() {
+  //       if ($(this).find('input:checked').length === 0) {
+  //           // チェックされた項目がない場合、is-showクラスを追加
+  //           $(this).addClass('is-show');
+  //       }
+  //   });
+  // });
+
+  // コンタクトフォームのバリデーション（必須項目のみ対応）
   $('input[type="submit"]').click(function () {
-    // .wpcf7-formクラスを持つフォーム内のすべての入力フィールドをチェック
-    $('.wpcf7-form').find('input, textarea, select').each(function () {
+    // .wpcf7-formクラスを持つフォーム内の必須のinput, textarea, selectフィールドをチェック
+    $('.wpcf7-form').find('input[aria-required="true"], textarea[aria-required="true"], select[aria-required="true"]').each(function () {
       if (!$(this).val()) {
-        // 値が空の場合、is-showクラスを追加
+        // 値が空で必須の場合、is-showクラスを追加
         $(this).addClass('is-show');
+      } else {
+        // 値が入力されている場合、is-showクラスを削除
+        $(this).removeClass('is-show');
+      }
+    });
+
+    // 特定のデータ属性を持つ.wpcf7-form-control-wrap（必須の場合）に対してクラスを追加
+    $('.wpcf7-form-control-wrap[data-name="check"]').each(function () {
+      if ($(this).find('input[aria-required="true"]:checked').length === 0) {
+        // チェックされた項目がなく、必須の場合、is-showクラスを追加
+        $(this).addClass('is-show');
+      } else {
+        // チェック項目がある場合、is-showクラスを削除
+        $(this).removeClass('is-show');
       }
     });
   });
