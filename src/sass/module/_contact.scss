@@ -833,7 +833,7 @@ textarea {
     display: none;
 }
 
-// 送信ボタンを押した際、未入力部分にはis-showクラスが付与され、枠線の色が変わる（jQueryの記述と連動）
+// 送信ボタンを押した際、未入力部分にはis-showクラスが付与され、枠線の色と背景色が変わる（jQueryの記述と連動）
 input.is-show,
 textarea.is-show,
 select.is-show {
