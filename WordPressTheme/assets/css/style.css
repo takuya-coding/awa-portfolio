@@ -1610,6 +1610,15 @@ input.is-show[type=tel]::placeholder {
 	color: white; /* プレースホルダーの色を白色に変更 */
 }
 
+.wpcf7 form .wpcf7-response-output {
+	border: none;
+	color: #C94800;
+	font-family: "Noto Sans JP", sans-serif;
+	font-size: 0.875rem;
+	font-weight: 400;
+	text-align: center;
+}
+
 .faq-accordion {
 	position: relative;
 }

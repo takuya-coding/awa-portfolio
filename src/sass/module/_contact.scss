@@ -837,7 +837,7 @@ textarea {
 input.is-show,
 textarea.is-show,
 select.is-show {
-    border: 2px solid #C94800; /* 境界線 */
+    border: 2px solid $red; /* 境界線 */
     background-color: rgba(201, 72, 0, 0.2); /* 薄い色の背景 */
 }
 
@@ -851,6 +851,16 @@ input.is-show[type="text"]::placeholder,
 input.is-show[type="email"]::placeholder,
 input.is-show[type="tel"]::placeholder {
     color: white; /* プレースホルダーの色を白色に変更 */
+}
+
+// 送信エラーメッセージのデザイン変更
+.wpcf7 form .wpcf7-response-output {
+    border: none;
+    font-family: $base-font-family;
+    font-weight: $regular;
+    font-size: rem(14);
+    color: $red;
+    text-align: center;
 }
 
 
