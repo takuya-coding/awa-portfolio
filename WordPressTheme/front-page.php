@@ -6,50 +6,28 @@
             <p class="top-main-view__sub-title">into&nbsp;the&nbsp;ocean</p>
         </div>
         <div class="top-main-view__wrapper swiper-wrapper">
+            <?php if (CFS()->get('mv_slider')): ?>
+            <?php
+                $fields = CFS()->get('mv_slider');//画像のグループを取得
+                foreach( $fields as $field ):
+                    $pc_url = esc_url($field['pc_img']);//画像のURLを取得
+                    $pc_image_id = attachment_url_to_postid($pc_url);//画像のURLからIDを取得
+                    $pc_image_alt = get_post_meta($pc_image_id, '_wp_attachment_image_alt', true);//IDからaltを取得
+                    $sp_url = esc_url($field['sp_img']);//画像のURLを取得
+                    $sp_image_id = attachment_url_to_postid($sp_url);//画像のURLからIDを取得
+                    $sp_image_alt = get_post_meta($sp_image_id, '_wp_attachment_image_alt', true);//IDからaltを取得
+                    ?>
             <div class="top-main-view__slide swiper-slide">
                 <div class="top-main-view__img">
                     <picture>
-                        <source
-                            srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/top-mv1-pc.webp"
-                            media="(min-width:768px)" type="image/webp" />
-                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/top-mv1-sp.webp"
-                            alt="ウミガメがきれいな海の中を泳いでいる" width="375" height="667" decoding="async">
+                        <source srcset="<?php echo $pc_url; ?>" media="(min-width:768px)" type="image/webp" />
+                        <img src="<?php echo $sp_url; ?>" alt="<?php echo esc_attr($pc_image_alt); ?>" width="375"
+                            height="667" decoding="async">
                     </picture>
                 </div>
             </div>
-            <div class="top-main-view__slide swiper-slide">
-                <div class="top-main-view__img">
-                    <picture>
-                        <source
-                            srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/top-mv2-pc.webp"
-                            media="(min-width:768px)" type="image/webp" />
-                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/top-mv2-sp.webp"
-                            alt="2人のダイバーが海の中でウミガメに遭遇" width="375" height="667" decoding="async">
-                    </picture>
-                </div>
-            </div>
-            <div class="top-main-view__slide swiper-slide">
-                <div class="top-main-view__img">
-                    <picture>
-                        <source
-                            srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/top-mv3-pc.webp"
-                            media="(min-width:768px)" type="image/webp" />
-                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/top-mv3-sp.webp"
-                            alt="の上からダイビングスポットを見た際の景色" width="375" height="667" decoding="async">
-                    </picture>
-                </div>
-            </div>
-            <div class="top-main-view__slide swiper-slide">
-                <div class="top-main-view__img">
-                    <picture>
-                        <source
-                            srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/top-mv4-pc.webp"
-                            media="(min-width:768px)" type="image/webp" />
-                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/top-mv4-sp.webp"
-                            alt="美しいビーチと青い空" width="375" height="667" decoding="async">
-                    </picture>
-                </div>
-            </div>
+            <?php endforeach; ?>
+            <?php endif; ?>
         </div>
     </div>
 
