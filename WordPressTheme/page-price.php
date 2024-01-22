@@ -35,8 +35,8 @@
                     <?php endif; ?>
                 </table>
             </div>
-            <!-- 外側のループ -->
             <?php endforeach; ?>
+            <!-- 外側のループ -->
             <?php endif; ?>
         </div>
     </div>

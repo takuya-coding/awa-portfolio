@@ -309,18 +309,31 @@
                     </picture>
                 </div>
                 <div class="top-price__lists top-price-lists">
+                    <?php $fields = CFS()->get('price_group'); ?>
+                    <?php if(is_array($fields)): ?>
+                    <!-- 外側のループ -->
+                    <?php foreach($fields as $field): ?>
                     <div class="top-price-lists__list top-price-list">
-                        <h3 class="top-price-list__title">ライセンス講習</h3>
+                        <h3 class="top-price-list__title"><?php echo $field['category_title']; ?></h3>
                         <dl class="top-price-list__content">
-                            <dt class="top-price-list__course">オープンウォーターダイバーコース</dt>
-                            <dd class="top-price-list__price">&#165;50&#044;000</dd>
-                            <dt class="top-price-list__course">アドバンスドオープンウォーターコース</dt>
-                            <dd class="top-price-list__price">&#165;60&#044;000</dd>
-                            <dt class="top-price-list__course">レスキュー＋EFRコース</dt>
-                            <dd class="top-price-list__price">&#165;70&#044;000</dd>
+                            <?php $fields_child = $field['price_table']; ?>
+                            <?php if(is_array($fields_child)): ?>
+                            <!-- 内側のループ -->
+                            <?php foreach($fields_child as $field_child):?>
+                            <dt class="top-price-list__course"><?php echo $field_child['course_title']; ?></dt>
+                            <dd class="top-price-list__price"><?php echo $field_child['course_price']; ?></dd>
+                            <?php endforeach; ?>
+                            <!-- 内側のループ -->
+                            <?php endif; ?>
                         </dl>
                     </div>
-                    <div class="top-price-lists__list top-price-list">
+                    <!-- 外側のループ -->
+                    <?php endforeach; ?>
+                    <?php endif; ?>
+
+
+
+                    <!-- <div class="top-price-lists__list top-price-list">
                         <h3 class="top-price-list__title">体験ダイビング</h3>
                         <dl class="top-price-list__content">
                             <dt class="top-price-list__course">ビーチ体験ダイビング&#040;半日&#041;</dt>
@@ -354,7 +367,7 @@
                             <dt class="top-price-list__course">1日ダイビング&#040;3ダイブ&#041;</dt>
                             <dd class="top-price-list__price">&#165;32&#044;000</dd>
                         </dl>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="top-price__button">
