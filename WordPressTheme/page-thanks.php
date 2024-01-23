@@ -3,26 +3,7 @@
     <!-- main-view -->
     <?php get_template_part('template-parts/main-view'); ?>
     <!-- breadcrumb -->
-    <div class="breadcrumbs layout-breadcrumbs">
-        <div class="breadcrumbs__inner inner">
-            <!-- Breadcrumb NavXT -->
-            <span>
-                <a href="index.html" class="home">
-                    <span>top</span>
-                </a>
-            </span>
-            <span>&gt;</span>
-            <span>
-                <a href="page-contact.html" class="post-root post post-post">
-                    <span>お問い合わせ</span>
-                </a>
-            </span>
-            <span>&gt;</span>
-            <span>
-                <span class="post post-page current-item">送信完了</span>
-            </span>
-        </div>
-    </div>
+    <?php get_template_part('template-parts/breadcrumb') ?>
 
     <div class="thanks layout-thanks">
         <div class="thanks__inner inner">

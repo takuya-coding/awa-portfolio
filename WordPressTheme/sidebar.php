@@ -74,7 +74,8 @@
         <p>記事が投稿されていません</p>
         <?php endif; ?>
         <div class="blog-sidebar__item-button">
-            <a href="#" class="button">view&nbsp;more<span class="button__arrow"></span></a>
+            <a href="<?php echo esc_url(home_url("/voice")) ?>" class="button">view&nbsp;more<span
+                    class="button__arrow"></span></a>
         </div>
     </div>
 
@@ -137,7 +138,8 @@
         <p>記事が投稿されていません</p>
         <?php endif; ?>
         <div class="blog-sidebar__item-button">
-            <a href="#" class="button">view&nbsp;more<span class="button__arrow"></span></a>
+            <a href="<?php echo esc_url(home_url("/campaign")) ?>" class="button">view&nbsp;more<span
+                    class="button__arrow"></span></a>
         </div>
     </div>
 

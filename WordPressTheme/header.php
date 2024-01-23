@@ -18,7 +18,7 @@
     <header class="header layout-header js-header">
         <div class="header__inner">
             <h1 class="header__logo js-header-logo">
-                <a href="index.html"><img
+                <a href="<?php echo esc_url(home_url("/")) ?>"><img
                         src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/logo.svg"
                         alt="CodeUps"></a>
             </h1>
@@ -32,34 +32,43 @@
                     <ul class="sp-nav__items">
                         <li class="sp-nav__item-wrap">
                             <div class="sp-nav__item">
-                                <a href="archive-campaign.html">キャンペーン</a>
+                                <a href="<?php echo esc_url(home_url("/campaign")) ?>">キャンペーン</a>
                                 <ul class="sp-nav__lv2-items">
-                                    <li class="sp-nav__lv2-item"><a href="archive-campaign.html">ライセンス講習</a></li>
-                                    <li class="sp-nav__lv2-item"><a href="archive-campaign.html">ファンダイビング</a></li>
-                                    <li class="sp-nav__lv2-item"><a href="archive-campaign.html">体験ダイビング</a></li>
+                                    <li class="sp-nav__lv2-item"><a
+                                            href="<?php echo esc_url(home_url("/campaign_category/license-course")) ?>">ライセンス講習</a>
+                                    </li>
+                                    <li class="sp-nav__lv2-item"><a
+                                            href="<?php echo esc_url(home_url("/campaign_category/fun-diving")) ?>">ファンダイビング</a>
+                                    </li>
+                                    <li class="sp-nav__lv2-item"><a
+                                            href="<?php echo esc_url(home_url("/campaign_category/trial-diving")) ?>">体験ダイビング</a>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="sp-nav__item">
-                                <a href="page-about.html">私たちについて</a>
+                                <a href="<?php echo esc_url(home_url("/about-us")) ?>">私たちについて</a>
                             </div>
                             <div class="sp-nav__item">
-                                <a href="page-diving-info.html">ダイビング情報</a>
+                                <a href="<?php echo esc_url(home_url("/information")) ?>">ダイビング情報</a>
                                 <ul class="sp-nav__lv2-items">
                                     <li class="sp-nav__lv2-item"><a
-                                            href="page-diving-info.html?active-tab=tab-1">ライセンス講習</a></li>
+                                            href="<?php echo esc_url(add_query_arg('active-tab', 'tab-1', home_url('/information'))); ?>">ライセンス講習</a>
+                                    </li>
                                     <li class="sp-nav__lv2-item"><a
-                                            href="page-diving-info.html?active-tab=tab-2">ファンダイビング</a></li>
+                                            href="<?php echo esc_url(add_query_arg('active-tab', 'tab-2', home_url('/information'))); ?>">ファンダイビング</a>
+                                    </li>
                                     <li class="sp-nav__lv2-item"><a
-                                            href="page-diving-info.html?active-tab=tab-3">体験ダイビング</a></li>
+                                            href="<?php echo esc_url(add_query_arg('active-tab', 'tab-3', home_url('/information'))); ?>">体験ダイビング</a>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="sp-nav__item">
-                                <a href="home.html">ブログ</a>
+                                <a href="<?php echo esc_url(home_url("/blog")) ?>">ブログ</a>
                             </div>
                         </li>
                         <li class="sp-nav__item-wrap">
                             <div class="sp-nav__item">
-                                <a href="archive-voices.html">お客様の声</a>
+                                <a href="<?php echo esc_url(home_url("/voice")) ?>">お客様の声</a>
                             </div>
                             <div class="sp-nav__item">
                                 <a href="page-price.html">料金一覧</a>
@@ -71,19 +80,19 @@
                                 </ul>
                             </div>
                             <div class="sp-nav__item">
-                                <a href="page-faq.html">よくある質問</a>
+                                <a href="<?php echo esc_url(home_url("/faq")) ?>">よくある質問</a>
                             </div>
                             <div class="sp-nav__item">
-                                <a href="page-sitemap.html">サイトマップ</a>
+                                <a href="<?php echo esc_url(home_url("/sitemap")) ?>">サイトマップ</a>
                             </div>
                             <div class="sp-nav__item">
-                                <a href="page-privacy-policy.html">プライバシー<br>ポリシー</a>
+                                <a href="<?php echo esc_url(home_url("/privacy-policy")) ?>">プライバシー<br>ポリシー</a>
                             </div>
                             <div class="sp-nav__item">
-                                <a href="page-terms.html">利用規約</a>
+                                <a href="<?php echo esc_url(home_url("/terms-of-service")) ?>">利用規約</a>
                             </div>
                             <div class="sp-nav__item">
-                                <a href="page-contact.html">お問い合わせ</a>
+                                <a href="<?php echo esc_url(home_url("/contact")) ?>">お問い合わせ</a>
                             </div>
                         </li>
                     </ul>
@@ -92,42 +101,42 @@
             <nav class="header__pc-nav pc-nav">
                 <ul class="pc-nav__items">
                     <li class="pc-nav__item">
-                        <a href="archive-campaign.html">
+                        <a href="<?php echo esc_url(home_url("/campaign")) ?>">
                             <p>campaign</p><span>キャンペーン</span>
                         </a>
                     </li>
                     <li class="pc-nav__item">
-                        <a href="page-about.html">
+                        <a href="<?php echo esc_url(home_url("/about-us")) ?>">
                             <p>about&nbsp;us</p><span>私たちについて</span>
                         </a>
                     </li>
                     <li class="pc-nav__item">
-                        <a href="page-diving-info.html">
+                        <a href="<?php echo esc_url(home_url("/information")) ?>">
                             <p>information</p><span>ダイビング情報</span>
                         </a>
                     </li>
                     <li class="pc-nav__item">
-                        <a href="home.html">
+                        <a href="<?php echo esc_url(home_url("/blog")) ?>">
                             <p>blog</p><span>ブログ</span>
                         </a>
                     </li>
                     <li class="pc-nav__item">
-                        <a href="archive-voices.html">
+                        <a href="<?php echo esc_url(home_url("/voice")) ?>">
                             <p>voice</p><span>お客様の声</span>
                         </a>
                     </li>
                     <li class="pc-nav__item">
-                        <a href="page-price.html">
+                        <a href="<?php echo esc_url(home_url("/price")) ?>">
                             <p>price</p><span>料金一覧</span>
                         </a>
                     </li>
                     <li class="pc-nav__item">
-                        <a href="page-faq.html">
+                        <a href="<?php echo esc_url(home_url("/faq")) ?>">
                             <p>FAQ</p><span>よくある質問</span>
                         </a>
                     </li>
                     <li class="pc-nav__item">
-                        <a href="page-contact.html">
+                        <a href="<?php echo esc_url(home_url("/contact")) ?>">
                             <p>contact</p><span>お問い合わせ</span>
                         </a>
                     </li>
