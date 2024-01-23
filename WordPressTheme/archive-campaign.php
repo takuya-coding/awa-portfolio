@@ -127,8 +127,8 @@
                                     <?php endif; ?>
                                     <p class="campaign-card__campaign-message">ご予約&#0183;お問い合わせはコチラ</p>
                                     <div class="campaign-card__campaign-button">
-                                        <a href="#" class="button">contact&nbsp;us<span
-                                                class="button__arrow"></span></a>
+                                        <a href="<?php echo esc_url(home_url("/contact")) ?>"
+                                            class="button">contact&nbsp;us<span class="button__arrow"></span></a>
                                     </div>
                                 </div>
                             </div>

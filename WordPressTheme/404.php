@@ -21,7 +21,8 @@
             <h1 class="page-404__title">404</h1>
             <p class="page-404__text">申し訳ありません。<br>お探しのページが見つかりません。</p>
             <div class="page-404__404-button">
-                <a href="index.html" class="button button--color">page&nbsp;<span>top</span><span
+                <a href="<?php echo esc_url(home_url("/")) ?>"
+                    class="button button--color">page&nbsp;<span>top</span><span
                         class="button__arrow button__arrow--color"></span></a>
             </div>
         </div>
