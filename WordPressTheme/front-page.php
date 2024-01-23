@@ -309,7 +309,8 @@
                     </picture>
                 </div>
                 <div class="top-price__lists top-price-lists">
-                    <?php $fields = CFS()->get('price_group'); ?>
+                    <!-- 料金一覧ページのページIDを指定することで、カスタムフィールドの値をトップページにも出力 -->
+                    <?php $fields = CFS()->get('price_group', 15); ?>
                     <?php if(is_array($fields)): ?>
                     <!-- 外側のループ -->
                     <?php foreach($fields as $field): ?>
@@ -330,44 +331,6 @@
                     <!-- 外側のループ -->
                     <?php endforeach; ?>
                     <?php endif; ?>
-
-
-
-                    <!-- <div class="top-price-lists__list top-price-list">
-                        <h3 class="top-price-list__title">体験ダイビング</h3>
-                        <dl class="top-price-list__content">
-                            <dt class="top-price-list__course">ビーチ体験ダイビング&#040;半日&#041;</dt>
-                            <dd class="top-price-list__price">&#165;7&#044;000</dd>
-                            <dt class="top-price-list__course">ビーチ体験ダイビング&#040;1日&#041;</dt>
-                            <dd class="top-price-list__price">&#165;14&#044;000</dd>
-                            <dt class="top-price-list__course">ボート体験ダイビング&#040;半日&#041;</dt>
-                            <dd class="top-price-list__price">&#165;10&#044;000</dd>
-                            <dt class="top-price-list__course">ボート体験ダイビング&#040;1日&#041;</dt>
-                            <dd class="top-price-list__price">&#165;18&#044;000</dd>
-                        </dl>
-                    </div>
-                    <div class="top-price-lists__list top-price-list">
-                        <h3 class="top-price-list__title">ファンダイビング</h3>
-                        <dl class="top-price-list__content">
-                            <dt class="top-price-list__course">ビーチダイビング&#040;2ダイブ&#041;</dt>
-                            <dd class="top-price-list__price">&#165;14&#044;000</dd>
-                            <dt class="top-price-list__course">ボートダイビング&#040;2ダイブ&#041;</dt>
-                            <dd class="top-price-list__price">&#165;18&#044;000</dd>
-                            <dt class="top-price-list__course">スペシャルダイビング&#040;2ダイブ&#041;</dt>
-                            <dd class="top-price-list__price">&#165;24&#044;000</dd>
-                            <dt class="top-price-list__course">ナイトダイビング&#040;1ダイブ&#041;</dt>
-                            <dd class="top-price-list__price">&#165;10&#044;000</dd>
-                        </dl>
-                    </div>
-                    <div class="top-price-lists__list top-price-list">
-                        <h3 class="top-price-list__title">スペシャルダイビング</h3>
-                        <dl class="top-price-list__content">
-                            <dt class="top-price-list__course">貸切ダイビング&#040;2ダイブ&#041;</dt>
-                            <dd class="top-price-list__price">&#165;24&#044;000</dd>
-                            <dt class="top-price-list__course">1日ダイビング&#040;3ダイブ&#041;</dt>
-                            <dd class="top-price-list__price">&#165;32&#044;000</dd>
-                        </dl>
-                    </div> -->
                 </div>
             </div>
             <div class="top-price__button">
