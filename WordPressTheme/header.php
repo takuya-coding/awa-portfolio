@@ -17,11 +17,20 @@
     <?php wp_body_open(); ?>
     <header class="header layout-header js-header">
         <div class="header__inner">
+            <!-- トップページの場合はh1タグ、それ以外はdivタグを出力 -->
+            <?php if (is_front_page()) : ?>
             <h1 class="header__logo js-header-logo">
                 <a href="<?php echo esc_url(home_url("/")) ?>"><img
                         src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/logo.svg"
                         alt="CodeUps"></a>
             </h1>
+            <?php else : ?>
+            <div class="header__logo js-header-logo">
+                <a href="<?php echo esc_url(home_url("/")) ?>"><img
+                        src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/logo.svg"
+                        alt="CodeUps"></a>
+            </div>
+            <?php endif; ?>
             <button type="button" class="header__hamburger hamburger js-hamburger">
                 <span></span>
                 <span></span>
