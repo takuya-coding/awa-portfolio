@@ -76,7 +76,8 @@
     // テキスト量が増えてもcampaign-cardの高さを揃えるための記述
     // flex-grow: 1;
     // 伸びるだけじゃなく縮むようにもする（campaign-card__campaign-bodyと1:1で伸び縮みするように）
-    flex: 1 1 auto;
+    // WordPress化時点でコメントアウトした
+    // flex: 1 1 auto;
     @include mq("md") {
         padding-bottom: rem(8);
     }

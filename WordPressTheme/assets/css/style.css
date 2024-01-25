@@ -828,7 +828,6 @@ a {
 
 .campaign-card__title {
 	border-bottom: 1px solid #408F95;
-	flex: 1 1 auto;
 	font-size: 1rem;
 	font-weight: 500;
 	line-height: 1.5;
