@@ -80,12 +80,16 @@
                                 <a href="<?php echo esc_url(home_url("/voice")) ?>">お客様の声</a>
                             </div>
                             <div class="sp-nav__item">
-                                <a href="page-price.html">料金一覧</a>
+                                <a href="<?php echo esc_url(home_url("/price")) ?>">料金一覧</a>
                                 <ul class="sp-nav__lv2-items">
-                                    <li class="sp-nav__lv2-item"><a href="page-price.html">ライセンス講習</a></li>
-                                    <li class="sp-nav__lv2-item"><a href="page-price.html">体験ダイビング</a></li>
-                                    <li class="sp-nav__lv2-item"><a href="page-price.html">ファンダイビング</a></li>
-                                    <li class="sp-nav__lv2-item"><a href="page-price.html">スペシャルダイビング</a></li>
+                                    <li class="sp-nav__lv2-item"><a
+                                            href="<?php echo esc_url(home_url("/price")) ?>">ライセンス講習</a></li>
+                                    <li class="sp-nav__lv2-item"><a
+                                            href="<?php echo esc_url(home_url("/price")) ?>">体験ダイビング</a></li>
+                                    <li class="sp-nav__lv2-item"><a
+                                            href="<?php echo esc_url(home_url("/price")) ?>">ファンダイビング</a></li>
+                                    <li class="sp-nav__lv2-item"><a
+                                            href="<?php echo esc_url(home_url("/price")) ?>">スペシャルダイビング</a></li>
                                 </ul>
                             </div>
                             <div class="sp-nav__item">
