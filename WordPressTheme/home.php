@@ -25,9 +25,9 @@
                         <div class="blog-card__body">
                             <time class="blog-card__time"
                                 datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
-                            <h2 class="blog-card__title"><?php the_title(); ?></h2>
+                            <h2 class="blog-card__title"><?php echo wp_trim_words(get_the_title(), 35, '...'); ?></h2>
                             <p class="blog-card__text">
-                                <?php the_excerpt(); ?>
+                                <?php echo wp_trim_words(get_the_content(), 100, '...'); ?>
                             </p>
                         </div>
                     </a>
