@@ -22,7 +22,7 @@
                     <span>dive</span>&nbsp;into<br>the&nbsp;<span>ocean</span>
                 </h3>
                 <p class="about-us-content__text about-us-content__text--about-us">
-                    ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                    <?php echo CFS()->get('about_us_text'); ?>
                 </p>
                 <!-- <div class="about-us-content__body about-us-content__body-about--us">
                     <div class="about-us-content__unit about-us-content__unit--about-us">

@@ -142,7 +142,7 @@
                     <h3 class="about-us-content__title"><span>dive</span>&nbsp;into<br>the&nbsp;<span>ocean</span></h3>
                     <div class="about-us-content__unit">
                         <p class="about-us-content__text">
-                            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+                            <?php echo CFS()->get('about_us_text', 11); ?>
                         </p>
 
                         <div class="about-us-content__button">
