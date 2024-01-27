@@ -22,7 +22,7 @@
                         <div class="information-content__item-text">
                             <h3 class="information-content__title">ライセンス講習</h3>
                             <p class="information-content__text">
-                                泳げない人も、ちょっと水が苦手な人も、ダイビングを「安全に」楽しんでいただけるよう、スタッフがサポートいたします！スキューバダイビングを楽しむためには最低限の知識とスキルが要求されます。知識やスキルと言ってもそんなに難しい事ではなく、安全に楽しむ事を目的としたものです。プロダイバーの指導のもと知識とスキルを習得しCカードを取得して、ダイバーになろう！
+                                <?php echo CFS()->get('license_course_description'); ?>
                             </p>
                         </div>
                         <div class="information-content__item-img">
@@ -36,7 +36,7 @@
                         <div class="information-content__item-text">
                             <h3 class="information-content__title">ファンダイビング</h3>
                             <p class="information-content__text">
-                                ブランクダイバー、ライセンスを取り立ての方も安心！沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意！
+                                <?php echo CFS()->get('fun_diving_description'); ?>
                             </p>
                         </div>
                         <div class="information-content__item-img">
@@ -50,7 +50,7 @@
                         <div class="information-content__item-text">
                             <h3 class="information-content__title">体験ダイビング</h3>
                             <p class="information-content__text">
-                                ブランクダイバー、ライセンスを取り立ての方も安心！沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意！
+                                <?php echo CFS()->get('trial_diving_description'); ?>
                             </p>
                         </div>
                         <div class="information-content__item-img">
