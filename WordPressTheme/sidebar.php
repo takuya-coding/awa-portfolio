@@ -28,7 +28,7 @@
                 <div class="sidebar-card__body">
                     <time class="sidebar-card__time"
                         datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
-                    <h3 class="sidebar-card__title"><?php the_title(); ?></h3>
+                    <h3 class="sidebar-card__title"><?php echo wp_trim_words(get_the_title(), 10, '...'); ?></h3>
                 </div>
             </a>
             <?php endwhile; ?>
@@ -65,7 +65,7 @@
             </div>
             <div class="sidebar-voice__body">
                 <div class="sidebar-voice__customer-info">30代&#040;カップル&#041;</div>
-                <h3 class="sidebar-voice__title"><?php the_title(); ?></h3>
+                <h3 class="sidebar-voice__title"><?php echo wp_trim_words(get_the_title(), 20, '...'); ?></h3>
             </div>
         </div>
         <?php endwhile; ?>
