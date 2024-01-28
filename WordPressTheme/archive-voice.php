@@ -82,7 +82,7 @@
                                 }
                                 ?>
                                 </div>
-                                <h3 class="voice-card__title"><?php echo wp_trim_words(get_the_title(), 35, '...'); ?>
+                                <h3 class="voice-card__title"><?php echo wp_trim_words(get_the_title(), 20, '...'); ?>
                                 </h3>
                             </div>
                             <div class="voice-card__img">
