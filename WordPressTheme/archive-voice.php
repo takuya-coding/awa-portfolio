@@ -64,7 +64,9 @@
                         <div class="voice-card__head">
                             <div class="voice-card__info">
                                 <div class="voice-card__meta">
-                                    <span class="voice-card__customer-info">20代(女性)</span>
+                                    <span class="voice-card__customer-info">
+                                        <?php echo CFS()->get('meta_info'); ?>
+                                    </span>
                                     <!-- <span class="voice-card__category">ライセンス講習</span> -->
                                     <?php
                                     $taxonomy_terms = get_the_terms($post->ID, 'voice_category');
