@@ -7,7 +7,9 @@
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- 404ページ表示されたら、5秒後にトップページにリダイレクトさせる -->
-
+    <?php if (is_404()) : ?>
+    <meta http-equiv="refresh" content=" 5; url=<?php echo esc_url(home_url("")); ?>">
+    <?php endif; ?>
     <?php wp_head(); ?>
 </head>
 
