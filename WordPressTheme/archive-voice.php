@@ -82,7 +82,8 @@
                                 }
                                 ?>
                                 </div>
-                                <h3 class="voice-card__title"><?php the_title(); ?></h3>
+                                <h3 class="voice-card__title"><?php echo wp_trim_words(get_the_title(), 35, '...'); ?>
+                                </h3>
                             </div>
                             <div class="voice-card__img">
                                 <!-- <img src="./assets/images/common/voice-post1.webp" alt="帽子を被った笑顔の女性" width="151"
@@ -96,7 +97,7 @@
                             </div>
                         </div>
                         <p class="voice-card__text">
-                            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。
+                            <?php echo wp_trim_words(get_the_content(), 150, '...'); ?>
                         </p>
                     </div>
                 </div>
