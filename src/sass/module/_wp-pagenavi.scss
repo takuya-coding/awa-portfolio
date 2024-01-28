@@ -67,9 +67,16 @@
 	transform: scaleX(-1);
 }
 
-.wp-pagenavi span {
+// WordPress化に伴い修正
+// .wp-pagenavi span {
+// 	// gapの残り差分を指定
+// 	margin-left: rem(28);
+// }
+
+// WordPress化に伴い追記
+.previouspostslink {
 	// gapの残り差分を指定
-	margin-left: rem(28);
+	margin-right: rem(28);
 }
 
 .nextpostslink {

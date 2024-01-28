@@ -3356,8 +3356,8 @@ body {
 	transform: scaleX(-1);
 }
 
-.wp-pagenavi span {
-	margin-left: 1.75rem;
+.previouspostslink {
+	margin-right: 1.75rem;
 }
 
 .nextpostslink {
