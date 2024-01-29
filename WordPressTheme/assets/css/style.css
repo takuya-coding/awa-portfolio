@@ -3364,11 +3364,6 @@ body {
 	margin-left: 1.75rem;
 }
 
-.wp-pagenavi a:nth-of-type(5),
-.wp-pagenavi a:nth-of-type(6) {
-	display: none;
-}
-
 .previouspostslink:hover img {
 	filter: brightness(0) invert(1);
 }
@@ -4748,13 +4743,6 @@ tbody {
 .wp-pagenavi a,
 .wp-pagenavi span {
 	width: 2.375rem;
-}
-
-.wp-pagenavi a:nth-of-type(5),
-.wp-pagenavi a:nth-of-type(6) {
-	align-items: center;
-	display: inline-flex;
-	justify-content: center;
 }
 
 }

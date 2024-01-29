@@ -84,16 +84,17 @@
 	margin-left: rem(28);
 }
 
-.wp-pagenavi a:nth-of-type(5),
-.wp-pagenavi a:nth-of-type(6) {
-	display: none;
-	@include mq("md") {
-		// display: inline-block;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-    }
-}
+// WordPress化に伴い変更
+// .wp-pagenavi a:nth-of-type(5),
+// .wp-pagenavi a:nth-of-type(6) {
+// 	display: none;
+// 	@include mq("md") {
+// 		// display: inline-block;
+// 		display: inline-flex;
+// 		align-items: center;
+// 		justify-content: center;
+//     }
+// }
 
 .previouspostslink:hover img {
     filter: brightness(0) invert(1);
