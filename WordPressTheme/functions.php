@@ -140,3 +140,19 @@ function Change_menulabel() {
   }
   add_action( 'init', 'Change_objectlabel' );
   add_action( 'admin_menu', 'Change_menulabel' );
+
+
+  
+// デバイスによって、WP-PageNaviの表示件数を変更する（この記述方法で768pxを境に表示件数が切り替わる）
+  function customize_pagenavi_config($wp_pagenavi_options) {
+    // モバイルデバイスをチェックする関数（単純な例）
+    if (wp_is_mobile()) {
+        // モバイルデバイスの場合、表示するページ数を4に設定
+        $wp_pagenavi_options['num_pages'] = 4;
+    } else {
+        // PCの場合、表示するページ数を6に設定（既に設定済みかもしれません）
+        $wp_pagenavi_options['num_pages'] = 6;
+    }
+    return $wp_pagenavi_options;
+}
+add_filter('wp_pagenavi_config', 'customize_pagenavi_config');
