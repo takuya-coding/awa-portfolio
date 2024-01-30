@@ -134,7 +134,9 @@
                                     <?php
                                     $campaign_period = get_field('campaign_period');
                                     ?>
-                                    <?php if($campaign_period): ?>
+                                    <!-- $campaign_period が存在するかどうかをチェックし、次に campaign_period_start と
+                                    campaign_period_endの両方が空でないことを確認 -->
+                                    <?php if ($campaign_period && !empty($campaign_period['campaign_period_start']) && !empty($campaign_period['campaign_period_end'])): ?>
                                     <time class="campaign-card__campaign-time"
                                         datetime="P122D"><?php echo $campaign_period['campaign_period_start']; ?>&#045;<?php echo $campaign_period['campaign_period_end']; ?></time>
                                     <?php else: ?>
