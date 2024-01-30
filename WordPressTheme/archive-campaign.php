@@ -90,9 +90,17 @@
                                 }
                                 ?>
                             </div>
-                            <?php if( get_field('campaign_title')): ?>
+                            <?php
+                            // 'campaign_title' の文字数制限を追加
+                            $campaign_title = get_field('campaign_title');
+                            if ($campaign_title) :
+                                if (mb_strlen($campaign_title) > 30) {
+                                    $campaign_title = mb_substr($campaign_title, 0, 30) . '...';
+                                }
+                                ?>
                             <h3 class="campaign-card__title campaign-card__title--campaign">
-                                <?php the_field('campaign_title'); ?></h3>
+                                <?php echo esc_html($campaign_title); ?>
+                            </h3>
                             <?php endif; ?>
                             <p class="campaign-card__text campaign-card__text--campaign">全部コミコミ&#040;お一人様&#041;</p>
                             <div class="campaign-card__price campaign-card__price--campaign">
@@ -108,9 +116,16 @@
                                 <?php endif; ?>
                             </div>
                             <div class="campaign-card__campaign-body">
-                                <?php if( get_field('campaign_text')): ?>
-                                <p class="campaign-card__campaign-text">
-                                    <?php the_field('campaign_text'); ?>
+                                <?php
+                                // 'campaign_text' の文字数を 50 文字に制限する
+                                $campaign_text = get_field('campaign_text');
+                                if ($campaign_text) :
+                                    if (mb_strlen($campaign_text) > 200) {
+                                        $campaign_text = mb_substr($campaign_text, 0, 200) . '...';
+                                    }
+                                    ?>
+                                <p class="campaign-card__text campaign-card__text--campaign">
+                                    <?php echo esc_html($campaign_text); ?>
                                 </p>
                                 <?php endif; ?>
                                 <div class="campaign-card__campaign-list">
