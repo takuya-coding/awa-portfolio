@@ -23,7 +23,21 @@
     }
 }
 
-.blog-detail__content > div  {
+// WordPress化に伴い修正
+// .blog-detail__content > div  {
+//     display: block;
+//     aspect-ratio: 345 / 231;
+//     // overflow: hidden;
+//     margin-top: rem(24);
+//     @include mq("md") {
+//         aspect-ratio: 700 / 468;
+//         // margin-top: rem(40);
+//         margin-top: rem(38.5);
+//     }
+// }
+
+// WordPress化に伴い追記
+.blog-detail figure {
     display: block;
     aspect-ratio: 345 / 231;
     // overflow: hidden;
@@ -34,6 +48,15 @@
         margin-top: rem(38.5);
     }
 }
+
+// WordPress化に伴い追記
+.blog-detail h2,h3 {
+    margin-top: rem(24);
+    @include mq("md") {
+        margin-top: rem(38.5);
+    }
+}
+
 
 .blog-detail__article-area img {
     width: 100%;

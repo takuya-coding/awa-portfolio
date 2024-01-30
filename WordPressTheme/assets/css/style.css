@@ -489,9 +489,14 @@ a {
 	padding-bottom: 0.25rem;
 }
 
-.blog-detail__content > div {
+.blog-detail figure {
 	aspect-ratio: 345/231;
 	display: block;
+	margin-top: 1.5rem;
+}
+
+.blog-detail h2,
+h3 {
 	margin-top: 1.5rem;
 }
 
@@ -3577,8 +3582,13 @@ html {
 	padding-bottom: 0;
 }
 
-.blog-detail__content > div {
+.blog-detail figure {
 	aspect-ratio: 700/468;
+	margin-top: 2.40625rem;
+}
+
+.blog-detail h2,
+h3 {
 	margin-top: 2.40625rem;
 }
 
