@@ -8,10 +8,39 @@
                 </div>
                 <div class="common-contact__shop-info-wrapper">
                     <div class="common-contact__shop-info-text">
-                        <p class="common-contact__address">沖縄県那覇市1&#045;1</p>
-                        <a href="tel:+81-120-000-0000" class="common-contact__tel">tel&#058;0120&#045;000&#045;0000</a>
-                        <p class="common-contact__business-hours">営業時間&#058;8&#058;30&#045;19&#058;00</p>
-                        <p class="common-contact__regular-holiday">定休日&#058;毎週火曜日</p>
+                        <?php
+                        // 表示するページまたは投稿のIDを取得し、get-field関数でカスタムフィールドの値を取得
+                        global $post;
+
+                        // 住所の表示
+                        $address = get_field('contact-address', $post->ID);
+                        if ($address) {
+                            // esc_html関数を使用して安全なHTMLとして出力
+                            echo '<p class="common-contact__address">' . esc_html($address) . '</p>';
+                        }
+
+                        // 電話番号の表示
+                        $tel = get_field('contact-tel', $post->ID);
+                        if ($tel) {
+                            echo '<a href="tel:' . esc_attr($tel) . '" class="common-contact__tel">tel&#058;' . esc_html($tel) . '</a>';
+                        }
+
+                        // 営業時間の表示
+                        $business_hours = get_field('contact-business-hours', $post->ID);
+                        if ($business_hours) {
+                            echo '<p class="common-contact__business-hours">営業時間&#058;' . esc_html($business_hours) . '</p>';
+                        }
+
+                        // 定休日の表示
+                        $regular_holiday = get_field('contact-regular-holiday', $post->ID);
+                        if ($regular_holiday) {
+                            echo '<p class="common-contact__regular-holiday">定休日&#058;' . esc_html($regular_holiday) . '</p>';
+                        }
+                        ?>
+                        <!-- <p class="common-contact__address">沖縄県那覇市1&#045;1</p> -->
+                        <!-- <a href="tel:+81-120-000-0000" class="common-contact__tel">tel&#058;0120&#045;000&#045;0000</a> -->
+                        <!-- <p class="common-contact__business-hours">営業時間&#058;8&#058;30&#045;19&#058;00</p> -->
+                        <!-- <p class="common-contact__regular-holiday">定休日&#058;毎週火曜日</p> -->
                     </div>
                     <div class="common-contact__shop-info-map">
                         <div class="common-contact__map">
