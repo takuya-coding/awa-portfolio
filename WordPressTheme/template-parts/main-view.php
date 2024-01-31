@@ -5,7 +5,14 @@ if (!is_page('404')) {
 
 <div class="main-view">
     <div class="main-view__inner">
-        <h1 class="main-view__title">
+        <h1 class="main-view__title <?php
+        // 特定のページにmodifierクラスを追加
+        if (is_page('faq')) {
+        echo ' main-view__title--uppercase';
+    } elseif (is_page('privacy-policy')) {
+        echo ' main-view__title--capitalize';
+    }
+    ?>">
             <?php
             // 条件によって異なるタイトルを表示
             if (is_page('about-us')) {
@@ -31,11 +38,11 @@ if (!is_page('404')) {
             } elseif (is_page('thanks')) {
                 echo 'contact';
             } elseif (is_page('sitemap')) {
-                echo 'sitemap';
+                echo 'site&nbsp;<span class="main-view__title-sitemap">map</span>';
             } elseif (is_page('privacy-policy')) {
                 echo 'privacy&nbsp;policy';
             } elseif (is_page('terms-of-service')) {
-                echo 'terms&nbsp;of&nbsp;service';
+                echo 'terms&nbsp;of&nbsp;<span class="main-view__title-terms">service</span>';
             } else {
                 echo 'タイトルが設定されていません';
             }
