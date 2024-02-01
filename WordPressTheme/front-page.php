@@ -84,8 +84,15 @@
                                 }
                                 ?>
                                 </div>
-                                <?php if( get_field('campaign_title')): ?>
-                                <h3 class="campaign-card__title"><?php the_field('campaign_title'); ?></h3>
+                                <?php
+                                // 'campaign_title' の文字数制限を追加
+                                $campaign_title = get_field('campaign_title');
+                                if ($campaign_title) :
+                                    if (mb_strlen($campaign_title) > 30) {
+                                    $campaign_title = mb_substr($campaign_title, 0, 30) . '...';
+                                }
+                                ?>
+                                <h3 class="campaign-card__title"><?php echo esc_html($campaign_title); ?></h3>
                                 <?php endif; ?>
                                 <p class="campaign-card__text">全部コミコミ&#040;お一人様&#041;</p>
                                 <div class="campaign-card__price">
@@ -142,6 +149,7 @@
                     <h3 class="about-us-content__title"><span>dive</span>&nbsp;into<br>the&nbsp;<span>ocean</span></h3>
                     <div class="about-us-content__unit">
                         <p class="about-us-content__text">
+                            <!-- about-usページに設定したカスタムフィールドを呼び出す -->
                             <?php echo CFS()->get('about_us_text', 11); ?>
                         </p>
 
