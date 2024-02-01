@@ -181,7 +181,15 @@
     </section>
 
     <!-- contact-section -->
-    <?php get_template_part('template-parts/section-contact'); ?>
+    <!-- 今回contactセクションにカスタムフィールドを設定（カスタムフィールドの値の入力欄自体はフロントページに設定）したため、下記のような手順で呼び出す -->
+    <?php
+    // フロントページのIDを取得（今回フロントページにcontactセクション用のカスタムフィールドを設定したため）
+    $front_page_id = get_option('page_on_front');
+    // section-contact.phpにフロントページのIDを渡す（共通パーツとしたsection-contact.phpにフロントページに設定したカスタムフィールドの値を渡す）
+    set_query_var('contact_page_id', $front_page_id);
+    // section-contact.phpにフロントページに設定したカスタムフィールドの値を渡した後、section-contact.phpを呼び出す
+    get_template_part('template-parts/section-contact');
+    ?>
 
 </main>
 <?php get_footer(); ?>

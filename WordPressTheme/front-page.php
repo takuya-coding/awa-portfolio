@@ -346,6 +346,7 @@
     </section>
 
     <!-- contact-section -->
+    <!-- フロントページについては、このページにカスタムフィールドの入力欄を設定しているため、パーツを呼び出すだけで表示される -->
     <?php get_template_part('template-parts/section-contact'); ?>
 
 </main>
