@@ -84,6 +84,7 @@
                                 }
                                 ?>
                                 </div>
+                                <!-- 文字数制限を追加 -->
                                 <h3 class="voice-card__title"><?php echo wp_trim_words(get_the_title(), 20, '...'); ?>
                                 </h3>
                             </div>
@@ -98,6 +99,7 @@
                                 <?php endif ; ?>
                             </div>
                         </div>
+                        <!-- 文字数制限を追加 -->
                         <p class="voice-card__text">
                             <?php echo wp_trim_words(get_the_content(), 150, '...'); ?>
                         </p>
