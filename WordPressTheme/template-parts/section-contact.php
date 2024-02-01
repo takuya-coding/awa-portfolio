@@ -44,10 +44,28 @@
                     </div>
                     <div class="common-contact__shop-info-map">
                         <div class="common-contact__map">
-                            <iframe
+                            <?php
+                            global $post;
+                            // Googleマップのiframeの表示
+                            $map = get_field('contact-map', $post->ID);
+                            if ($map) {
+                                // wp_kses_post関数は、投稿内容に許可されたHTMLタグのみを含めるようにフィルタリングする。→iframeタグはデフォルトで許可されていないため、カスタムフィルタリングルールを定義する必要がある。
+                                echo wp_kses($map, array(
+                                    'iframe' => array(
+                                        'src' => true,
+                                        'width' => true,
+                                        'height' => true,
+                                        'style' => true,
+                                        'frameborder' => true,
+                                        'allowfullscreen' => true
+                                    )
+                                ));
+                            }
+                            ?>
+                            <!-- <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.1927241401127!2d127.69486729999998!3d26.22292675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e5696278d6553b%3A0xcb44277c653ed00b!2z44CSOTAwLTAwMDYg5rKW57iE55yM6YKj6KaH5biC44GK44KC44KN44G-44Gh77yR5LiB55uu77yR!5e0!3m2!1sja!2sjp!4v1692299234684!5m2!1sja!2sjp"
                                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                referrerpolicy="no-referrer-when-downgrade"></iframe> -->
                         </div>
                     </div>
                 </div>
