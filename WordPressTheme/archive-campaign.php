@@ -117,7 +117,7 @@
                             </div>
                             <div class="campaign-card__campaign-body">
                                 <?php
-                                // 'campaign_text' の文字数を 50 文字に制限する
+                                // 'campaign_text' の文字数制限を追加
                                 $campaign_text = get_field('campaign_text');
                                 if ($campaign_text) :
                                     if (mb_strlen($campaign_text) > 200) {
