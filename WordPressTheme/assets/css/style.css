@@ -1622,7 +1622,12 @@ input.is-show[type=tel]::placeholder {
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 0.875rem;
 	font-weight: 400;
+	margin-bottom: 2.5rem;
 	text-align: center;
+}
+
+.wpcf7-list-item {
+	margin-left: 0;
 }
 
 .faq-accordion {

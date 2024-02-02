@@ -867,8 +867,13 @@ input.is-show[type="tel"]::placeholder {
     font-size: rem(14);
     color: $red;
     text-align: center;
+    margin-bottom: rem(40);
 }
 
+// お問い合わせ項目のチェックボックス左側の余白削除
+.wpcf7-list-item {
+    margin-left: 0;
+}
 
 
 
