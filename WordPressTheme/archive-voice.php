@@ -64,6 +64,7 @@
                         <div class="voice-card__head">
                             <div class="voice-card__info">
                                 <div class="voice-card__meta">
+                                    <!-- メタ情報はカスタムフィールド導入 -->
                                     <span class="voice-card__customer-info">
                                         <?php echo CFS()->get('meta_info'); ?>
                                     </span>
