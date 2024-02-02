@@ -607,9 +607,9 @@ textarea {
     border: solid $red;
     border-width: 0 2px 2px 0;
     position: absolute;
-    // top: 48%;
-    // top: 22%;
-    top: 45%;
+    // top: 45%;
+    // テキスト改行時にチェックがずれてしまうためrem指定
+    top: rem(10);
     left: rem(7);  /* Adjusted position */
     transform: translateY(-50%) rotate(45deg);
 }
@@ -685,6 +685,13 @@ textarea {
 // .contact__accept-check-text > a:focus {
 //     outline: 2px solid $red; /* Outline color when focused */
 //   }
+
+
+// レイアウト崩れ修正のために追記
+.wpcf7-acceptance label {
+    display: flex;
+    align-items: center;
+}
 
 
 

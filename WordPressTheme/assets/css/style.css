@@ -1450,7 +1450,7 @@ textarea {
 	height: 0.9rem;
 	left: 0.4375rem; /* Adjusted position */
 	position: absolute;
-	top: 45%;
+	top: 0.625rem;
 	transform: translateY(-50%) rotate(45deg);
 	width: 0.5rem;
 }
@@ -1478,6 +1478,11 @@ textarea {
 }
 
 /* Focus State */
+
+.wpcf7-acceptance label {
+	align-items: center;
+	display: flex;
+}
 
 .contact__button {
 	margin-top: 1.5rem;
