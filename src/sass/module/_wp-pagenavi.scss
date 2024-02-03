@@ -74,14 +74,18 @@
 // }
 
 // WordPress化に伴い追記
-.previouspostslink {
+.wp-pagenavi .previouspostslink {
 	// gapの残り差分を指定
 	margin-right: rem(28);
+	// WordPress化に伴い追記（<,>を画像ではなくテキストに変更したため）
+	padding-inline: rem(10);
 }
 
-.nextpostslink {
+.wp-pagenavi .nextpostslink {
 	// gapの残り差分を指定
 	margin-left: rem(28);
+	// WordPress化に伴い追記（<,>を画像ではなくテキストに変更したため）
+	padding-inline: rem(10);
 }
 
 // WordPress化に伴い変更

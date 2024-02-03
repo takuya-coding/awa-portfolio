@@ -3372,12 +3372,16 @@ body {
 	transform: scaleX(-1);
 }
 
-.previouspostslink {
+.wp-pagenavi .previouspostslink {
 	margin-right: 1.75rem;
+	padding-left: 0.625rem;
+	padding-right: 0.625rem;
 }
 
-.nextpostslink {
+.wp-pagenavi .nextpostslink {
 	margin-left: 1.75rem;
+	padding-left: 0.625rem;
+	padding-right: 0.625rem;
 }
 
 .previouspostslink:hover img {
