@@ -884,6 +884,12 @@ a {
 	display: none;
 }
 
+.campaign-card__campaign-list p {
+	color: #408F95;
+	font-family: "Lato", sans-serif;
+	font-weight: bold;
+}
+
 .campaign-card__img.campaign-card__img--sidebar {
 	aspect-ratio: 294/188;
 }
