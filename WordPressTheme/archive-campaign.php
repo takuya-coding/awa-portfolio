@@ -124,7 +124,7 @@
                                         $campaign_text = mb_substr($campaign_text, 0, 200) . '...';
                                     }
                                     ?>
-                                <p class="campaign-card__text campaign-card__text--campaign">
+                                <p class="campaign-card__campaign-text">
                                     <?php echo esc_html($campaign_text); ?>
                                 </p>
                                 <?php endif; ?>

@@ -154,11 +154,11 @@
     }
 }
 
-.campaign-card__text.campaign-card__text--campaign {
-    @include mq("md") {
-        margin-top: rem(24);
-    }
-}
+// .campaign-card__text.campaign-card__text--campaign {
+//     @include mq("md") {
+//         margin-top: rem(24);
+//     }
+// }
 
 .campaign-card__price.campaign-card__price--campaign {
     @include mq("md") {

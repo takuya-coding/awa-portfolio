@@ -3718,10 +3718,6 @@ html {
 	padding-bottom: 0.2rem;
 }
 
-.campaign-card__text.campaign-card__text--campaign {
-	margin-top: 1.5rem;
-}
-
 .campaign-card__price.campaign-card__price--campaign {
 	gap: 2.5rem;
 }
