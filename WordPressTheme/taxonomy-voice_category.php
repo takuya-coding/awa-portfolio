@@ -79,7 +79,10 @@
                         <div class="voice-card__head">
                             <div class="voice-card__info">
                                 <div class="voice-card__meta">
-                                    <span class="voice-card__customer-info">20代(女性)</span>
+                                    <!-- メタ情報はカスタムフィールド導入 -->
+                                    <span class="voice-card__customer-info">
+                                        <?php echo CFS()->get('meta_info'); ?>
+                                    </span>
                                     <!-- <span class="voice-card__category">ライセンス講習</span> -->
                                     <?php
                                     $taxonomy_terms = get_the_terms($post->ID, 'voice_category');
@@ -97,7 +100,9 @@
                                 }
                                 ?>
                                 </div>
-                                <h3 class="voice-card__title"><?php the_title(); ?></h3>
+                                <!-- 文字数制限を追加 -->
+                                <h3 class="voice-card__title"><?php echo wp_trim_words(get_the_title(), 20, '...'); ?>
+                                </h3>
                             </div>
                             <div class="voice-card__img">
                                 <!-- <img src="./assets/images/common/voice-post1.webp" alt="帽子を被った笑顔の女性" width="151"
@@ -110,8 +115,9 @@
                                 <?php endif ; ?>
                             </div>
                         </div>
+                        <!-- 文字数制限を追加 -->
                         <p class="voice-card__text">
-                            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。
+                            <?php echo wp_trim_words(get_the_content(), 150, '...'); ?>
                         </p>
                     </div>
                 </div>

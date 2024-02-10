@@ -48,11 +48,11 @@
 
             <!-- ページネーションが上手く機能しなかったため一部コード修正 -->
             <?php
-            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; //追記
             $args = array(
-                'post_type' => 'voice',
-                'posts_per_page' => 6,
-                'paged' => $paged
+                'post_type' => 'voice', // カスタム投稿のスラッグを指定
+                'posts_per_page' => 6, // 1ページあたりの表示数
+                'paged' => $paged // 現在のページ番号（追記）
             );
             $the_query = new WP_Query($args);
             ?>
