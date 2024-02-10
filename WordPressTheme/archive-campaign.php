@@ -46,13 +46,13 @@
             ?>
             </div>
 
-            <!-- ページネーションが上手く機能しなかったため一部コード修正 -->
+            <!-- ページネーションが上手く機能しなかったため一部コード追記 -->
             <?php
-            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; //追記
             $args = array(
-                'post_type' => 'campaign',
-                'posts_per_page' => 4,
-                'paged' => $paged
+                'post_type' => 'campaign', // カスタム投稿のスラッグを指定
+                'posts_per_page' => 4, // 1ページあたりの表示数
+                'paged' => $paged // 現在のページ番号（追記）
             );
             $the_query = new WP_Query($args);
             ?>
