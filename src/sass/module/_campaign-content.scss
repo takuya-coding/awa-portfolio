@@ -16,13 +16,13 @@
 .campaign-content__item {
     // JSタブ切り替えのためのdisplay:none;
     // display: none;
-    // flexじゃないとテキスト増減に対してcampaign-cardの高さが揃わない
-    display: flex;
 
     // max-width: rem(280);
     width: 100%;
     @include mq("md") {
         max-width: rem(520);
+        // flexじゃないとテキスト増減に対してcampaign-cardの高さが揃わない
+        display: flex;
     }
 }
 

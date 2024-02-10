@@ -923,7 +923,6 @@ a {
 }
 
 .campaign-content__item {
-	display: flex;
 	width: 100%;
 }
 
@@ -3791,6 +3790,7 @@ html {
 }
 
 .campaign-content__item {
+	display: flex;
 	max-width: 32.5rem;
 }
 
