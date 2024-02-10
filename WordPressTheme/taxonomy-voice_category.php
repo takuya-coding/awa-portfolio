@@ -54,12 +54,17 @@
                     ?>
             </div>
 
+            <!-- ページネーションが上手く機能しなかったため一部コード追記 -->
             <?php
+            // 現在のページ番号を取得
+            $paged = get_query_var('paged') ? get_query_var('paged') : 1; //追記
+            
             // タクソノミーのスラッグを指定
             $voice_category_slug = get_query_var('voice_category');
             $args = array(
-                // カスタム投稿のスラッグを指定
-                "post_type" => "voice",
+                "post_type" => "voice", // カスタム投稿のスラッグを指定
+                'posts_per_page' => 6, // 1ページあたりの表示数（追記）
+                'paged' => $paged, // 現在のページ番号（追記）
                 'tax_query' => array(
                     array(
                         // タクソノミーのスラッグを指定
@@ -122,30 +127,22 @@
                     </div>
                 </div>
                 <?php endwhile; ?>
-                <?php wp_reset_postdata(); ?>
             </div>
+            <!-- wp_reset_postdataの前にページネーションのコード記述する必要あり -->
+            <!-- これにより、カスタムクエリに基づいてページネーションが正確に生成される（記事数に合わせてページネーションが生成される） -->
+            <div class="voice__pagination">
+                <?php
+                // ページネーションの表示
+                if (function_exists('wp_pagenavi')) {
+                    wp_pagenavi(array('query' => $the_query));
+                }
+                ?>
+            </div>
+            <!-- wp_reset_postdataは、ページネーションのコードの後ろに記述 -->
+            <?php wp_reset_postdata(); ?>
             <?php else : ?>
             <p>記事が投稿されていません</p>
             <?php endif; ?>
-
-            <div class="voice__pagination">
-                <!-- pagenavi -->
-                <!-- <div class="wp-pagenavi">
-                    <a class="previouspostslink" rel="prev" href="#"><img
-                            src="./assets/images/common/pagenation-vector.svg" alt=""></a>
-                    <span class='current'>1</span>
-                    <a class="page larger" href="#">2</a>
-                    <a class="page larger" href="#">3</a>
-                    <a class="page larger" href="#">4</a>
-                    <a class="page larger" href="#">5</a>
-                    <a class="page larger" href="#">6</a>
-                    <a class="nextpostslink" rel="next" href="#"><img src="./assets/images/common/pagenation-vector.svg"
-                            alt=""></a>
-                </div> -->
-                <?php if (function_exists('wp_pagenavi')) {
-                        wp_pagenavi();
-                } ?>
-            </div>
         </div>
     </section>
 
