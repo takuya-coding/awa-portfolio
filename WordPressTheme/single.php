@@ -1,44 +1,9 @@
 <?php get_header(); ?>
 <main>
-    <!-- <div class="main-view">
-        <div class="main-view__inner">
-            <h1 class="main-view__title">blog</h1>
-            <div class="main-view__img">
-                <picture>
-                    <source srcset="./assets/images/common/blog-mv-pc.webp" media="(min-width:768px)"
-                        type="image/webp" />
-                    <img src="./assets/images/common/blog-mv-sp.webp" alt="魚のトルネード" width="375" height="460"
-                        decoding="async">
-                </picture>
-            </div>
-        </div>
-    </div> -->
     <!-- main-view -->
     <?php get_template_part('template-parts/main-view'); ?>
     <!-- breadcrumb -->
     <?php get_template_part('template-parts/breadcrumb') ?>
-
-    <div class="breadcrumbs layout-breadcrumbs">
-        <div class="breadcrumbs__inner inner">
-            <!-- Breadcrumb NavXT -->
-            <span>
-                <a href="index.html" class="home">
-                    <span>top</span>
-                </a>
-            </span>
-            <span>&gt;</span>
-            <span>
-                <a href="home.html" class="post-root post post-post">
-                    <span>ブログ一覧</span>
-                </a>
-            </span>
-            <span>&gt;</span>
-            <span>
-                <span class="post post-post current-item">ブログ詳細</span>
-            </span>
-        </div>
-    </div>
-
 
     <div class="blog layout-blog">
         <div class="blog__inner inner blog__inner--padding">
