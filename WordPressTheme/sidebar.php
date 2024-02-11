@@ -28,6 +28,7 @@
                 <div class="sidebar-card__body">
                     <time class="sidebar-card__time"
                         datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
+                    <!-- 文字数制限を追加 -->
                     <h3 class="sidebar-card__title"><?php echo wp_trim_words(get_the_title(), 10, '...'); ?></h3>
                 </div>
             </a>
@@ -64,7 +65,9 @@
                 <?php endif ; ?>
             </div>
             <div class="sidebar-voice__body">
-                <div class="sidebar-voice__customer-info">30代&#040;カップル&#041;</div>
+                <!-- メタ情報はカスタムフィールド導入 -->
+                <div class="sidebar-voice__customer-info"><?php echo CFS()->get('meta_info'); ?></div>
+                <!-- 文字数制限を追加 -->
                 <h3 class="sidebar-voice__title"><?php echo wp_trim_words(get_the_title(), 20, '...'); ?></h3>
             </div>
         </div>
@@ -106,9 +109,16 @@
                         <?php endif ; ?>
                     </div>
                     <div class="campaign-card__body campaign-card__body--sidebar">
-                        <?php if( get_field('campaign_title')): ?>
+                        <?php
+                        // 'campaign_title' の文字数制限を追加
+                        $campaign_title = get_field('campaign_title');
+                        if ($campaign_title) :
+                            if (mb_strlen($campaign_title) > 30) {
+                            $campaign_title = mb_substr($campaign_title, 0, 30) . '...';
+                        }
+                        ?>
                         <h3 class="campaign-card__title campaign-card__title--sidebar">
-                            <?php the_field('campaign_title'); ?></h3>
+                            <?php echo esc_html($campaign_title); ?></h3>
                         <?php endif; ?>
                         <p class="campaign-card__text campaign-card__text--sidebar">全部コミコミ&#040;お一人様&#041;
                         </p>
