@@ -9,7 +9,7 @@ if (!is_page('404')) {
         // 特定のページにmodifierクラスを追加
         if (is_page('faq')) {
         echo ' main-view__title--uppercase';
-    } elseif (is_page('privacy-policy')) {
+    } elseif (is_page('privacypolicy')) {
         echo ' main-view__title--capitalize';
     }
     ?>">
@@ -39,7 +39,7 @@ if (!is_page('404')) {
                 echo 'contact';
             } elseif (is_page('sitemap')) {
                 echo 'site&nbsp;<span class="main-view__title-sitemap">map</span>';
-            } elseif (is_page('privacy-policy')) {
+            } elseif (is_page('privacypolicy')) {
                 echo 'privacy&nbsp;policy';
             } elseif (is_page('terms-of-service')) {
                 echo 'terms&nbsp;of&nbsp;<span class="main-view__title-terms">service</span>';
@@ -87,7 +87,7 @@ if (!is_page('404')) {
                 } elseif (is_page('sitemap')) {
                     echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/others-mv-pc.webp" media="(min-width:768px)" type="image/webp" />';
                     echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/others-mv-sp-.webp" alt="サンゴ礁の周りをたくさんの熱帯魚が泳いでいる" width="375" height="460" decoding="async">';
-                } elseif (is_page('privacy-policy')) {
+                } elseif (is_page('privacypolicy')) {
                     echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/others-mv-pc.webp" media="(min-width:768px)" type="image/webp" />';
                     echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/others-mv-sp-.webp" alt="サンゴ礁の周りをたくさんの熱帯魚が泳いでいる" width="375" height="460" decoding="async">';
                 } elseif (is_page('terms-of-service')) {
