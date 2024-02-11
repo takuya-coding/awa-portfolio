@@ -570,6 +570,8 @@ a {
 	justify-content: center;
 	min-width: 2.375rem;
 	padding: 0.5rem 0.875rem;
+	padding-left: 0.625rem;
+	padding-right: 0.625rem;
 	text-align: center;
 	transition: 0.2s ease-in-out;
 }

@@ -145,6 +145,9 @@
     align-items: center;
     justify-content: center;
     transition: 0.2s ease-in-out;
+
+	// WordPress化に伴い追記（<,>を画像ではなくテキストに変更したため）
+	padding-inline: rem(10);
     @include mq("md") {
         width: rem(38);
     }
