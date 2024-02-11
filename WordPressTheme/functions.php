@@ -113,6 +113,38 @@ function wpcf7_autop_return_false() {
 }
 
 
+// お問い合わせフォームのキャンペーンをキャンペーンページ用のカスタム投稿ページタイトルから挿入をするための記述
+// カスタムコードを作成
+add_filter( 'wpcf7_form_tag', 'custom_post_dropdown', 10, 2 );
+function custom_post_dropdown( $tag, $unused ) {
+    if ( 'category' != $tag['name'] ) {
+        return $tag;
+    }
+
+    $args = array(
+        'posts_per_page' => -1, // すべての投稿を取得
+        'post_type' => 'campaign', // カスタム投稿タイプを指定
+    );
+
+    $custom_posts = get_posts( $args );
+    if ( ! $custom_posts ) {
+        return $tag;
+    }
+
+    $tag['raw_values'][] = ''; // 空の選択肢を追加（必須ではない場合）
+    $tag['values'][] = ''; // 空の選択肢を追加（必須ではない場合）
+    $tag['labels'][] = '- 選択してください -'; // 空の選択肢のラベル
+
+    foreach ( $custom_posts as $custom_post ) {
+        $tag['raw_values'][] = $custom_post->post_title;
+        $tag['values'][] = $custom_post->post_title;
+        $tag['labels'][] = $custom_post->post_title;
+    }
+
+    return $tag;
+}
+
+
 
 // 管理画面の「投稿」の名称変更
 function Change_menulabel() {
