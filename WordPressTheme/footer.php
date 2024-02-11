@@ -85,7 +85,8 @@
                                 <a href="<?php echo esc_url(home_url("/sitemap")) ?>">サイトマップ</a>
                             </div>
                             <div class="common-nav__item">
-                                <a href="<?php echo esc_url(home_url("/privacy-policy")) ?>">プライバシー<br>ポリシー</a>
+                                <a href="<?php echo esc_url(home_url("/privacy-policy")) ?>">プライバシー<br
+                                        class="u-mobile">ポリシー</a>
                             </div>
                             <div class="common-nav__item">
                                 <a href="<?php echo esc_url(home_url("/terms-of-service")) ?>">利用規約</a>
