@@ -25,9 +25,10 @@
                         <div class="blog-card__body">
                             <time class="blog-card__time"
                                 datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
-                            <h2 class="blog-card__title"><?php the_title(); ?></h2>
+                            <!-- 文字数制限を追加 -->
+                            <h2 class="blog-card__title"><?php echo wp_trim_words(get_the_title(), 35, '...'); ?></h2>
                             <p class="blog-card__text">
-                                <?php the_excerpt(); ?>
+                                <?php echo wp_trim_words(get_the_content(), 100, '...'); ?>
                             </p>
                         </div>
                     </a>
@@ -37,19 +38,6 @@
                 <p>記事が投稿されていません</p>
                 <?php endif; ?>
                 <div class="blog__main-pagination">
-                    <!-- pagenavi -->
-                    <!-- <div class="wp-pagenavi">
-                        <a class="previouspostslink" rel="prev" href="#"><img
-                                src="./assets/images/common/pagenation-vector.svg" alt=""></a>
-                        <span class='current'>1</span>
-                        <a class="page larger" href="#">2</a>
-                        <a class="page larger" href="#">3</a>
-                        <a class="page larger" href="#">4</a>
-                        <a class="page larger" href="#">5</a>
-                        <a class="page larger" href="#">6</a>
-                        <a class="nextpostslink" rel="next" href="#"><img
-                                src="./assets/images/common/pagenation-vector.svg" alt=""></a>
-                    </div> -->
                     <?php if (function_exists('wp_pagenavi')) {
                         wp_pagenavi();
                     } ?>
