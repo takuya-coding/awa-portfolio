@@ -111,8 +111,8 @@
                                 // 'campaign_text' の文字数制限を追加
                                 $campaign_text = get_field('campaign_text');
                                 if ($campaign_text) :
-                                    if (mb_strlen($campaign_text) > 200) {
-                                        $campaign_text = mb_substr($campaign_text, 0, 200) . '...';
+                                    if (mb_strlen($campaign_text) > 170) {
+                                        $campaign_text = mb_substr($campaign_text, 0, 170) . '...';
                                     }
                                     ?>
                                 <p class="campaign-card__campaign-text">
