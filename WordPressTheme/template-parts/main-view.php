@@ -26,6 +26,9 @@ if (!is_page('404')) {
                 echo 'blog';
             } elseif (is_single()) {
                 echo 'blog';
+            // 月別一覧ページかどうかのチェック
+            } elseif (is_month()) {
+                echo 'blog';
             // voiceページおよびサブカテゴリ（タクソノミー）のチェック
             } elseif (is_post_type_archive('voice') || is_tax('voice_category')) {
                 echo 'voice';
@@ -66,6 +69,10 @@ if (!is_page('404')) {
                     echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/blog-mv-pc.webp" media="(min-width:768px)" type="image/webp" />';
                     echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/blog-mv-sp.webp" alt="魚のトルネード" width="375" height="460" decoding="async">';
                 } elseif (is_single()) {
+                    echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/blog-mv-pc.webp" media="(min-width:768px)" type="image/webp" />';
+                    echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/blog-mv-sp.webp" alt="魚のトルネード" width="375" height="460" decoding="async">';
+                // 月別一覧ページかどうかのチェック
+                } elseif (is_month()) {
                     echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/blog-mv-pc.webp" media="(min-width:768px)" type="image/webp" />';
                     echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/blog-mv-sp.webp" alt="魚のトルネード" width="375" height="460" decoding="async">';
                 // voiceページおよびサブカテゴリ（タクソノミー）のチェック
