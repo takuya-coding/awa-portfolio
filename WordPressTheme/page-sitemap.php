@@ -58,10 +58,14 @@
                             <div class="common-nav__item common-nav__item--color">
                                 <a href="<?php echo esc_url(home_url("/price")) ?>">料金一覧</a>
                                 <ul class="common-nav__lv2-items">
-                                    <li class="common-nav__lv2-item"><a href="page-price.html">ライセンス講習</a></li>
-                                    <li class="common-nav__lv2-item"><a href="page-price.html">体験ダイビング</a></li>
-                                    <li class="common-nav__lv2-item"><a href="page-price.html">ファンダイビング</a></li>
-                                    <li class="common-nav__lv2-item"><a href="page-price.html">スペシャルダイビング</a></li>
+                                    <li class="common-nav__lv2-item"><a
+                                            href="<?php echo esc_url(home_url("/price")) ?>">ライセンス講習</a></li>
+                                    <li class="common-nav__lv2-item"><a
+                                            href="<?php echo esc_url(home_url("/price")) ?>">体験ダイビング</a></li>
+                                    <li class="common-nav__lv2-item"><a
+                                            href="<?php echo esc_url(home_url("/price")) ?>">ファンダイビング</a></li>
+                                    <li class="common-nav__lv2-item"><a
+                                            href="<?php echo esc_url(home_url("/price")) ?>">スペシャルダイビング</a></li>
                                 </ul>
                             </div>
                         </div>
