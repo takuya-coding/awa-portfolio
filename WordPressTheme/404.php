@@ -1,21 +1,6 @@
 <?php get_header(); ?>
 <main>
     <!-- breadcrumb -->
-    <!-- <div class="breadcrumbs layout-breadcrumbs breadcrumbs--color layout-breadcrumbs--padding">
-        <div class="breadcrumbs__inner inner">
-            <span>
-                <a href="index.html" class="home">
-                    <span>top</span>
-                </a>
-            </span>
-            <span>&gt;</span>
-            <span>
-                <span class="post post-page current-item">404</span>
-            </span>
-        </div>
-    </div> -->
-
-    <!-- breadcrumb -->
     <?php get_template_part('template-parts/breadcrumb'); ?>
 
     <div class="page-404">
