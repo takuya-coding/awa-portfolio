@@ -106,6 +106,10 @@
 
 <button class="to-top js-to-top"></button>
 <?php wp_footer(); ?>
+<!-- 404ページの場合のみ、div閉じタグ挿入（コンテンツ量が少なく短いページでもfooterを最下部に表示するため）→開始タグはheader.phpの方に記述 -->
+<?php if (is_404()) : ?>
+</div>
+<?php endif; ?>
 </body>
 
 </html>
