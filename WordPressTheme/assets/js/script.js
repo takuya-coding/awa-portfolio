@@ -439,7 +439,7 @@ jQuery(function ($) {
   });
 
 
-
+// 別ページのリンクからpriceページの該当箇所へのスムーススクロール
   $(function() {
     let pageHash = window.location.hash;
     if (pageHash) {
@@ -449,7 +449,7 @@ jQuery(function ($) {
             history.replaceState('', '', './');
             let locationOffset = scrollToElement.offset().top;
             let navigationBarHeight = $('.header').innerHeight();
-            locationOffset = locationOffset - navigationBarHeight - 65;
+            locationOffset = locationOffset - navigationBarHeight - 105;
             $('html, body').animate({
                 scrollTop: locationOffset
             }, 300, 'swing');
@@ -457,6 +457,7 @@ jQuery(function ($) {
     }
 });
 
+// 内部リンクからpriceページの該当箇所へのスムーススクロール
 $(function() {
     $('a[href*="#"]').on('click', function() {
         const scrollSpeed = 400;

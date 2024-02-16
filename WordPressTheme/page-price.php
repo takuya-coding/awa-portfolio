@@ -23,6 +23,7 @@
                     <tr class="price-table__tr">
                         <?php if($index == 0): // 配列の最初の要素のみthタグを挿入 ?>
                         <th rowspan="<?php echo $rowCount; ?>" class="price-table__th">
+                            <!-- spanタグにページ内及び別ページからのスムーススクロールを実装するために、idとdata-id属性を追加 -->
                             <span data-id="<?php echo $field['category_data_id']; ?>"
                                 id="<?php echo $field['category_id']; ?>"><?php echo $field['category_title']; ?></span>
                         </th>
