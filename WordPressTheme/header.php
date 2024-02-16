@@ -85,13 +85,17 @@
                                     <a href="<?php echo esc_url(home_url("/price")) ?>">料金一覧</a>
                                     <ul class="sp-nav__lv2-items">
                                         <li class="sp-nav__lv2-item"><a
-                                                href="<?php echo esc_url(home_url("/price")) ?>">ライセンス講習</a></li>
+                                                href="<?php echo esc_url(home_url("/price")) . '#license-course'; ?>">ライセンス講習</a>
+                                        </li>
                                         <li class="sp-nav__lv2-item"><a
-                                                href="<?php echo esc_url(home_url("/price")) ?>">体験ダイビング</a></li>
+                                                href="<?php echo esc_url(home_url("/price")) . '#trial-diving'; ?>">体験ダイビング</a>
+                                        </li>
                                         <li class="sp-nav__lv2-item"><a
-                                                href="<?php echo esc_url(home_url("/price")) ?>">ファンダイビング</a></li>
+                                                href="<?php echo esc_url(home_url("/price")) . '#fun-diving'; ?>">ファンダイビング</a>
+                                        </li>
                                         <li class="sp-nav__lv2-item"><a
-                                                href="<?php echo esc_url(home_url("/price")) ?>">スペシャルダイビング</a></li>
+                                                href="<?php echo esc_url(home_url("/price")) . '#special-diving'; ?>">スペシャルダイビング</a>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div class="sp-nav__item">
