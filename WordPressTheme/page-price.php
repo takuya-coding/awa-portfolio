@@ -23,7 +23,8 @@
                     <tr class="price-table__tr">
                         <?php if($index == 0): // 配列の最初の要素のみthタグを挿入 ?>
                         <th rowspan="<?php echo $rowCount; ?>" class="price-table__th">
-                            <span><?php echo $field['category_title']; ?></span>
+                            <span data-id="<?php echo $field['category_data_id']; ?>"
+                                id="<?php echo $field['category_id']; ?>"><?php echo $field['category_title']; ?></span>
                         </th>
                         <?php endif; ?>
                         <td class="price-table__td-content"><?php echo $field_child['course_title']; ?></td>

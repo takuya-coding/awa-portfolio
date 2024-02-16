@@ -73,7 +73,8 @@
                                     <li class="common-nav__lv2-item"><a
                                             href="<?php echo esc_url(home_url("/price")) ?>">ファンダイビング</a></li>
                                     <li class="common-nav__lv2-item"><a
-                                            href="<?php echo esc_url(home_url("/price")) ?>">スペシャルダイビング</a></li>
+                                            href="<?php echo esc_url(home_url("/price")) . '#special-diving'; ?>">スペシャルダイビング</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
