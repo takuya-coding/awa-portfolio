@@ -73,35 +73,21 @@ function getPostViews($postID) {
   
 
 
-
-  
-// campaignページに表示する最大投稿数を変更するための記述
-  // function custom_posts_per_page($query)
-  // {
-  //     if (!is_admin() && $query->is_main_query()) {
-  //         // カスタム投稿のスラッグを記述
-  //         if (is_post_type_archive('campaign')) {
-  //             // 表示件数を指定
-  //             $query->set('posts_per_page', 4);
-  //         }
-  //     }
-  // }
-  // add_action('pre_get_posts', 'custom_posts_per_page');
-
-
   // campaignページとvoiceページに表示する最大投稿数を変更するための記述
-  // 上記コメントアウトのコードを別個に記述すると、同じ関数名を使うことになりエラーになってしまうため、まとめて記述する必要あり
-  function custom_posts_per_page_for_multiple_types($query)
-  {
-    if (!is_admin() && $query->is_main_query()) {
-        if (is_post_type_archive('campaign')) {
-            $query->set('posts_per_page', 4);
-        } elseif (is_post_type_archive('voice')) {
-            $query->set('posts_per_page', 6);
-        }
-      }
+  function change_posts_per_page($query) {
+    if ( is_admin() || ! $query->is_main_query() )
+        return;
+
+    // カスタム投稿タイプ「campaign」またはタクソノミー「campaign_category」の場合
+    if ( $query->is_post_type_archive('campaign') || $query->is_tax('campaign_category') ) {
+        $query->set( 'posts_per_page', '4' );
     }
-    add_action('pre_get_posts', 'custom_posts_per_page_for_multiple_types');
+    // カスタム投稿タイプ「voice」またはタクソノミー「campaign_voice」の場合
+    else if ( $query->is_post_type_archive('voice') || $query->is_tax('voice_category') ) {
+        $query->set( 'posts_per_page', '6' );
+    }
+}
+add_action( 'pre_get_posts', 'change_posts_per_page' );
 
 
 
