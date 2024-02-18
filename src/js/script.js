@@ -458,9 +458,15 @@ $(function() {
       const scrollToTarget = $(this.hash === '#' || '' ? 'html' : this.hash)
       if (!scrollToTarget.length) return;
       const scrollPosition = scrollToTarget.offset().top - navigationHeight - 150;
-      $('html, body').animate({
+
+        // スムーススクロールを実行
+        $('html, body').animate({
           scrollTop: scrollPosition
-      }, scrollSpeed, 'swing');
+      }, scrollSpeed, 'swing', function() {
+          // スクロール完了後にドロワーメニューを閉じる
+          // 33-37行目で定義されているcloseDrawwer()関数を利用しているので、追加の関数定義は不要
+          closeDrawer();
+      });
       return false;
   });
 });
