@@ -7,10 +7,10 @@
                         alt="CodeUps"></a>
             </div>
             <div class="footer__icon">
-                <a href="#" class="footer__icon-facebook"><img
+                <a href="https://www.facebook.com/login" target="_blank" class="footer__icon-facebook"><img
                         src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/facebook.svg"
                         alt="facebookアイコン"></a>
-                <a href="#" class="footer__icon-instagram"><img
+                <a href="https://www.instagram.com/accounts/login/" target="_blank" class="footer__icon-instagram"><img
                         src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/instagram.svg"
                         alt="instagramアイコン"></a>
             </div>
