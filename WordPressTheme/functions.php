@@ -158,3 +158,14 @@ function Change_menulabel() {
   }
   add_action( 'init', 'Change_objectlabel' );
   add_action( 'admin_menu', 'Change_menulabel' );
+
+
+  
+// All-in-One WP Migrationで特定のフォルダやファイルを除外するための記述
+add_filter(
+	'ai1wm_exclude_themes_from_export',
+	function ( $exclude_filters ) {
+		$exclude_filters[] = '_gulp/node_modules';
+		return $exclude_filters;
+	}
+);
