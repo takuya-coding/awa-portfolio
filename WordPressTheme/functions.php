@@ -169,6 +169,8 @@ add_filter(
 			'_gulp/node_modules',
       '_gulp/package-lock.json',
 			'src/images',
+			'src/js',
+			'src/sass',
 		);
 		return $exclude_filters;
 	}
