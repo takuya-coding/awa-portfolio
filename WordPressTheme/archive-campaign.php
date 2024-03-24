@@ -92,7 +92,7 @@
                             </div>
                             <!-- 文字数制限を追加 -->
                             <h3 class="campaign-card__title campaign-card__title--campaign">
-                                <?php echo wp_trim_words(get_the_title(), 30, '...'); ?></h3>
+                                <?php echo wp_trim_words(get_the_title(), 20, '...'); ?></h3>
                             <p class="campaign-card__text campaign-card__text--campaign">全部コミコミ&#040;お一人様&#041;</p>
                             <div class="campaign-card__price campaign-card__price--campaign">
                                 <!-- <p class="campaign-card__price-before"><del>&#165;56&#044;000</del></p> -->

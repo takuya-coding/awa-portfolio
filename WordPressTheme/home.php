@@ -26,10 +26,10 @@
                             <time class="blog-card__time"
                                 datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
                             <!-- 文字数制限を追加 -->
-                            <h2 class="blog-card__title"><?php echo wp_trim_words(get_the_title(), 35, '...'); ?></h2>
+                            <h2 class="blog-card__title"><?php echo wp_trim_words(get_the_title(), 20, '...'); ?></h2>
                             <!-- 文字数制限を追加 -->
                             <p class="blog-card__text">
-                                <?php echo wp_trim_words(get_the_content(), 100, '...'); ?>
+                                <?php echo wp_trim_words(get_the_content(), 85, '...'); ?>
                             </p>
                         </div>
                     </a>

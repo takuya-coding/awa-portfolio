@@ -122,7 +122,7 @@
                         </div>
                         <!-- 文字数制限を追加 -->
                         <p class="voice-card__text">
-                            <?php echo wp_trim_words(get_the_content(), 150, '...'); ?>
+                            <?php echo wp_trim_words(get_the_content(), 169, '...'); ?>
                         </p>
                     </div>
                 </div>

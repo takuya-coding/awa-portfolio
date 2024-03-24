@@ -86,7 +86,7 @@
                                 </div>
                                 <!-- 文字数制限を追加 -->
                                 <h3 class="campaign-card__title">
-                                    <?php echo wp_trim_words(get_the_title(), 30, '...'); ?></h3>
+                                    <?php echo wp_trim_words(get_the_title(), 20, '...'); ?></h3>
                                 <p class="campaign-card__text">全部コミコミ&#040;お一人様&#041;</p>
                                 <div class="campaign-card__price">
                                     <!-- <p class="campaign-card__price-before"><del>&#165;56&#044;000</del></p> -->
@@ -212,10 +212,10 @@
                         <time class="blog-card__time"
                             datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
                         <!-- 文字数制限を追加 -->
-                        <h3 class="blog-card__title"><?php echo wp_trim_words(get_the_title(), 35, '...'); ?></h3>
+                        <h3 class="blog-card__title"><?php echo wp_trim_words(get_the_title(), 20, '...'); ?></h3>
                         <!-- 文字数制限を追加 -->
                         <p class="blog-card__text">
-                            <?php echo wp_trim_words(get_the_content(), 100, '...'); ?>
+                            <?php echo wp_trim_words(get_the_content(), 85, '...'); ?>
                         </p>
                     </div>
                 </a>
@@ -289,7 +289,7 @@
                         </div>
                         <!-- 文字数制限を追加 -->
                         <p class="voice-card__text">
-                            <?php echo wp_trim_words(get_the_content(), 150, '...'); ?>
+                            <?php echo wp_trim_words(get_the_content(), 169, '...'); ?>
                         </p>
                     </div>
                 </div>
