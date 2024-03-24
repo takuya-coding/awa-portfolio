@@ -36,7 +36,7 @@
             <?php wp_reset_postdata(); ?>
         </div>
         <?php else : ?>
-        <p>記事が投稿されていません</p>
+        <p class="blog-sidebar__content-none content-none">記事が投稿されていません</p>
         <?php endif; ?>
     </div>
 
@@ -74,7 +74,7 @@
         <?php endwhile; ?>
         <?php wp_reset_postdata(); ?>
         <?php else : ?>
-        <p>記事が投稿されていません</p>
+        <p class="blog-sidebar__content-none content-none">記事が投稿されていません</p>
         <?php endif; ?>
         <div class="blog-sidebar__item-button">
             <a href="<?php echo esc_url(home_url("/voice")) ?>" class="button">view&nbsp;more<span
@@ -145,7 +145,7 @@
             <?php wp_reset_postdata(); ?>
         </div>
         <?php else : ?>
-        <p>記事が投稿されていません</p>
+        <p class="blog-sidebar__content-none content-none">記事が投稿されていません</p>
         <?php endif; ?>
         <div class="blog-sidebar__item-button">
             <a href="<?php echo esc_url(home_url("/campaign")) ?>" class="button">view&nbsp;more<span

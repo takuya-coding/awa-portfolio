@@ -36,7 +36,7 @@
                     <?php endwhile; ?>
                 </div>
                 <?php else : ?>
-                <p>記事が投稿されていません</p>
+                <p class="blog__content-none content-none">記事が投稿されていません</p>
                 <?php endif; ?>
                 <div class="blog__main-pagination">
                     <?php if (function_exists('wp_pagenavi')) {

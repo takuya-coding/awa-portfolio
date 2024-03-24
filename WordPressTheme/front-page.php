@@ -109,10 +109,10 @@
                 </div>
             </div>
             <?php else : ?>
-            <p>記事が投稿されていません</p>
+            <p class="top-campaign__content-none content-none">記事が投稿されていません</p>
             <?php endif; ?>
 
-            <div class="top-campaign__button">
+            <div class=" top-campaign__button">
                 <a href="<?php echo esc_url(home_url("/campaign")) ?>" class="button">view&nbsp;more<span
                         class="button__arrow"></span></a>
             </div>
@@ -223,7 +223,7 @@
                 <?php wp_reset_postdata(); ?>
             </div>
             <?php else : ?>
-            <p>記事が投稿されていません</p>
+            <p class="top-campaign__content-none content-none content-none--color">記事が投稿されていません</p>
             <?php endif; ?>
 
             <div class="top-blog__button">
@@ -297,7 +297,7 @@
                 <?php wp_reset_postdata(); ?>
             </div>
             <?php else : ?>
-            <p>記事が投稿されていません</p>
+            <p class="top-voice__content-none content-none">記事が投稿されていません</p>
             <?php endif; ?>
             <div class="top-voice__button">
                 <a href="<?php echo esc_url(home_url("/voice")) ?>" class="button">view&nbsp;more<span

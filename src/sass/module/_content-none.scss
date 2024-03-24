@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.content-none {
+   font-size: rem(16);
+   color: $green;
+   text-align: center;
+   margin-top: rem(40);
+}
+
+
+.content-none--color {
+   color: $white;
+}

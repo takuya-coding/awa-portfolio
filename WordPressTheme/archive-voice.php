@@ -110,7 +110,7 @@
                 <?php wp_reset_postdata(); ?>
             </div>
             <?php else : ?>
-            <p>記事が投稿されていません</p>
+            <p class="voice__content-none content-none">記事が投稿されていません</p>
             <?php endif; ?>
 
             <div class="voice__pagination">

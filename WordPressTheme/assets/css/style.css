@@ -1643,6 +1643,17 @@ input.is-show[type=tel]::placeholder {
 	margin-left: 0;
 }
 
+.content-none {
+	color: #408F95;
+	font-size: 1rem;
+	margin-top: 2.5rem;
+	text-align: center;
+}
+
+.content-none--color {
+	color: #fff;
+}
+
 .faq-accordion {
 	position: relative;
 }
