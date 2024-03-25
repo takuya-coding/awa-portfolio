@@ -10,21 +10,17 @@
             <div class="blog__main">
                 <section class="blog-detail">
                     <div class="blog-detail__article-area">
+                        <!-- the_content()はメインループで囲む -->
+                        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                         <time class="blog-detail__time"
                             datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
                         <h2 class="blog-detail__title"><?php the_title(); ?></h2>
                         <div class="blog-detail__content">
                             <?php the_content(); ?>
                         </div>
+                        <?php endwhile; endif; ?>
                     </div>
                     <ul class="blog-detail__button-area">
-                        <!-- ここはWordPress化を意識したクラス名でなくて良い -->
-                        <!-- <li class="blog-detail__button-prev">
-                            <a href="#"><img src="./assets/images/common/pagenation-vector.svg" alt=""></a>
-                        </li>
-                        <li class="blog-detail__button-next">
-                            <a href="#"><img src="./assets/images/common/pagenation-vector.svg" alt=""></a>
-                        </li> -->
                         <li class="blog-detail__button-prev">
                             <?php
                             // 前の記事へのリンク
