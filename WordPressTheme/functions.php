@@ -117,9 +117,10 @@ function custom_post_dropdown( $tag, $unused ) {
         return $tag;
     }
 
-    $tag['raw_values'][] = ''; // 空の選択肢を追加（必須ではない場合）
-    $tag['values'][] = ''; // 空の選択肢を追加（必須ではない場合）
-    $tag['labels'][] = '- 選択してください -'; // 空の選択肢のラベル
+    // 選択してくださいという選択肢は不要なので、コメントアウト
+    // $tag['raw_values'][] = ''; // 空の選択肢を追加（必須ではない場合）
+    // $tag['values'][] = ''; // 空の選択肢を追加（必須ではない場合）
+    // $tag['labels'][] = '- 選択してください -'; // 空の選択肢のラベル
 
     foreach ( $custom_posts as $custom_post ) {
         $tag['raw_values'][] = $custom_post->post_title;
