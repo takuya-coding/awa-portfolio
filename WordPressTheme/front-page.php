@@ -31,6 +31,42 @@
         </div>
     </div>
 
+    <section class="top-about-us layout-top-about-us" id="about-us">
+        <div class="top-about-us__inner inner">
+            <div class="top-about-us__title section-title">
+                <p class="section-title__en">about&nbsp;us</p>
+                <h2 class="section-title__ja">私たちについて</h2>
+            </div>
+
+            <div class="top-about-us__content about-us-content">
+                <div class="about-us-content__img">
+                    <div class="about-us-content__img-sub">
+                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about-us1.webp"
+                            alt="青い空と屋根の上のシーサー" width="128" height="194" decoding="async">
+                    </div>
+                    <div class="about-us-content__img-main">
+                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about-us2.webp"
+                            alt="二匹のチョウチョウウオが海の中を泳いでいる" width="281" height="186" decoding="async">
+                    </div>
+                </div>
+                <div class="about-us-content__body">
+                    <h3 class="about-us-content__title"><span>dive</span>&nbsp;into<br>the&nbsp;<span>ocean</span></h3>
+                    <div class="about-us-content__unit">
+                        <p class="about-us-content__text">
+                            <!-- about-usページに設定したカスタムフィールドを呼び出す -->
+                            <?php echo CFS()->get('about_us_text', 11); ?>
+                        </p>
+
+                        <div class="about-us-content__button">
+                            <a href="<?php echo esc_url(home_url("/about-us")) ?>" class="button">view&nbsp;more<span
+                                    class="button__arrow"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="top-campaign layout-top-campaign" id="campaign">
         <div class="top-campaign__inner inner">
 
@@ -117,42 +153,6 @@
                         class="button__arrow"></span></a>
             </div>
 
-        </div>
-    </section>
-
-    <section class="top-about-us layout-top-about-us" id="about-us">
-        <div class="top-about-us__inner inner">
-            <div class="top-about-us__title section-title">
-                <p class="section-title__en">about&nbsp;us</p>
-                <h2 class="section-title__ja">私たちについて</h2>
-            </div>
-
-            <div class="top-about-us__content about-us-content">
-                <div class="about-us-content__img">
-                    <div class="about-us-content__img-sub">
-                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about-us1.webp"
-                            alt="青い空と屋根の上のシーサー" width="128" height="194" decoding="async">
-                    </div>
-                    <div class="about-us-content__img-main">
-                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about-us2.webp"
-                            alt="二匹のチョウチョウウオが海の中を泳いでいる" width="281" height="186" decoding="async">
-                    </div>
-                </div>
-                <div class="about-us-content__body">
-                    <h3 class="about-us-content__title"><span>dive</span>&nbsp;into<br>the&nbsp;<span>ocean</span></h3>
-                    <div class="about-us-content__unit">
-                        <p class="about-us-content__text">
-                            <!-- about-usページに設定したカスタムフィールドを呼び出す -->
-                            <?php echo CFS()->get('about_us_text', 11); ?>
-                        </p>
-
-                        <div class="about-us-content__button">
-                            <a href="<?php echo esc_url(home_url("/about-us")) ?>" class="button">view&nbsp;more<span
-                                    class="button__arrow"></span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
