@@ -98,40 +98,94 @@
    z-index: -1;
  }
 
+// contactセクションのみ適用
+.button.button--common-contact {
+   border: 1px solid $red;
+   // ホバー時スライド用のコード
+   background-color: $red;
+}
 
+.button.button--common-contact:hover {
+   color: $red;
+}
+
+.button.button--common-contact:hover .button__arrow {
+   background-color: $red;
+}
+
+//  後ろ側の重なり部分
+.button.button--common-contact::before {
+   border: 1px solid $red;
+ }
+
+
+
+// top-priceセクションのみ適用
+.button.button--top-price {
+   border: 1px solid $white;
+   background-color: $white;
+   color: $blue;
+   // transition: opacity 0.3s;
+}
+
+.button__arrow.button__arrow--top-price {
+   background-color: $dark-blue;
+}
+
+
+.button.button--top-price::after {
+   // background-color: $white;
+   background-color: $dark-blue;
+}
+
+.button.button--top-price:hover {
+   color: $white;
+}
+
+.button:hover .button__arrow.button__arrow--top-price {
+   background-color: $white;
+}
+
+.button.button--top-price::before {
+   border: 1px solid $white;
+}
+
+.button.button--top-price span {
+   text-transform: uppercase;
+}
 
 
 // 404ページのみ適用
-.button.button--color {
+.button.button--404 {
    border: 1px solid $white;
    background-color: $white;
    color: $green;
    // transition: opacity 0.3s;
 }
 
-.button__arrow.button__arrow--color {
+.button__arrow.button__arrow--404 {
    background-color: $green;
 }
 
 
-.button.button--color::after {
+.button.button--404::after {
    // background-color: $white;
    background-color: $green;
 }
 
-.button.button--color:hover {
+.button.button--404:hover {
    color: $white;
 }
 
-.button:hover .button__arrow.button__arrow--color {
+.button:hover .button__arrow.button__arrow--404 {
    background-color: $white;
 }
 
-.button.button--color::before {
+.button.button--404::before {
    border: 1px solid $white;
 }
 
-.button.button--color span {
+.button.button--404 span {
    text-transform: uppercase;
 }
 

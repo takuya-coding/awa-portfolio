@@ -2,12 +2,13 @@
 
 .top-price-list__title {
     padding-bottom: rem(4);
-    border-bottom: 1px solid $green;
+    border-bottom: 1px solid $white-green;
     width: 100%;
     font-weight: $bold;
     font-size: rem(16);
     line-height: 1.5;
     text-align: left;
+    color: $white;
 }
 
 .top-price-list__content {
@@ -28,10 +29,13 @@
 .top-price-list__course {
     max-width: calc(calc(275 / 345) * 100%);
     width: 100%;
+    color: $white;
 }
 
 .top-price-list__price {
     max-width: calc(calc(70 / 345) * 100%);
     width: 100%;
     text-align: right;
+    color: $white;
+
 }

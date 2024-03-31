@@ -309,8 +309,8 @@
     <section class="top-price layout-top-price" id="price">
         <div class="top-price__inner inner">
             <div class="top-price__title section-title">
-                <p class="section-title__en">price</p>
-                <h2 class="section-title__ja">料金一覧</h2>
+                <p class="section-title__en section-title__en--color">price</p>
+                <h2 class="section-title__ja section-title__ja--color">料金一覧</h2>
             </div>
             <div class="top-price__wrapper">
                 <div class="top-price__img">
@@ -347,8 +347,8 @@
                 </div>
             </div>
             <div class="top-price__button">
-                <a href="<?php echo esc_url(home_url("/price")) ?>" class="button">view&nbsp;more<span
-                        class="button__arrow"></span></a>
+                <a href="<?php echo esc_url(home_url("/price")) ?>" class="button button--top-price">view&nbsp;more<span
+                        class="button__arrow button__arrow--top-price"></span></a>
             </div>
         </div>
     </section>

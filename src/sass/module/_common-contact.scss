@@ -57,7 +57,7 @@
         bottom: 0;
         width: rem(1);
         height: 100%;
-        background-color: $green;
+        background-color: $blue;
     }
 }
 
@@ -80,7 +80,7 @@
 }
 
 .common-contact__shop-info-wrapper {
-    border-top: 1px solid $green;
+    border-top: 1px solid $blue;
     // padding: 0 rem(10);
     padding-top: rem(16);
     @include mq("md") {
@@ -169,7 +169,7 @@
     margin-top: rem(7);
     font-size: rem(14);
     line-height: 1.286;
-    color: $green;
+    color: $blue;
     // filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     text-align: center;
 }

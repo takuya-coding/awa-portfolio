@@ -80,8 +80,9 @@
                 </div>
                 <p class="common-contact__text">ご予約・お問い合わせはコチラ</p>
                 <div class="common-contact__button">
-                    <a href="<?php echo esc_url(home_url("/contact")) ?>" class="button">contact&nbsp;us<span
-                            class="button__arrow"></span></a>
+                    <a href="<?php echo esc_url(home_url("/contact")) ?>"
+                        class="button button--common-contact">contact&nbsp;us<span
+                            class="button__arrow button__arrow--common-contact"></span></a>
                 </div>
             </div>
         </div>
