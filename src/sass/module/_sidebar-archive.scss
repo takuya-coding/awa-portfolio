@@ -4,7 +4,7 @@
     font-family: $base-font-family;
     font-weight: $regular;
     font-size: rem(24);
-    color: $green;
+    color: $blue;
     line-height: 1.5;
 }
 
@@ -30,7 +30,7 @@
     transform: translateY(-50%);
     display: inline-block;
     clip-path: polygon(0 0, 0 100%, 100% 50%);
-    background-color: $green;
+    background-color: $blue;
     width: rem(19.4);
     height: rem(22.4);
     transition: 0.4s;
@@ -93,7 +93,7 @@
     transform: translateY(-50%);
     display: inline-block;
     clip-path: polygon(0 0, 0 100%, 100% 50%);
-    background-color: $green;
+    background-color: $blue;
     width: rem(19.4);
     height: rem(22.4);
 

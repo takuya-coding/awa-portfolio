@@ -2608,7 +2608,7 @@ tbody {
 }
 
 .sidebar-archive {
-	color: #7BCFDA;
+	color: #29518E;
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1.5rem;
 	font-weight: 400;
@@ -2627,7 +2627,7 @@ tbody {
 
 .sidebar-archive__year::before {
 	-webkit-clip-path: polygon(0 0, 0 100%, 100% 50%);
-	background-color: #7BCFDA;
+	background-color: #29518E;
 	clip-path: polygon(0 0, 0 100%, 100% 50%);
 	content: "";
 	display: inline-block;
@@ -2663,7 +2663,7 @@ tbody {
 
 .sidebar-archive__list a::before {
 	-webkit-clip-path: polygon(0 0, 0 100%, 100% 50%);
-	background-color: #7BCFDA;
+	background-color: #29518E;
 	clip-path: polygon(0 0, 0 100%, 100% 50%);
 	content: "";
 	display: inline-block;
@@ -2755,7 +2755,7 @@ tbody {
 }
 
 .sidebar-title {
-	border-left: 8px solid #7BCFDA;
+	border-left: 8px solid #29518E;
 	color: #0D2936;
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1.5rem;
