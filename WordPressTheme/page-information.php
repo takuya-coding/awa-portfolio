@@ -26,7 +26,7 @@
                             </p>
                         </div>
                         <div class="information-content__item-img">
-                            <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/information-tab-content1.webp"
+                            <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/PF-informaiton.webp"
                                 alt="きれいな海面に5人のダイバーが浮いている" width="297" height="189" decoding="async">
                         </div>
                     </div>
@@ -40,8 +40,8 @@
                             </p>
                         </div>
                         <div class="information-content__item-img">
-                            <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/gallery5.webp"
-                                alt="無数の魚がきれいな海の中を泳いでいる" width="297" height="189" decoding="async">
+                            <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/PF-campaign6.webp"
+                                alt="白とオレンジ色のカエルアンコウ" width="297" height="189" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -54,8 +54,8 @@
                             </p>
                         </div>
                         <div class="information-content__item-img">
-                            <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/gallery3.webp"
-                                alt="二匹のチョウチョウウオが海底付近を泳いでいる" width="297" height="189" decoding="async">
+                            <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/PF-campaign4.webp"
+                                alt="エメラルドブルーの海の中を優雅に泳ぐウミガメ" width="297" height="189" decoding="async">
                         </div>
                     </div>
                 </div>
