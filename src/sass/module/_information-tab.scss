@@ -14,7 +14,7 @@
     display: inline-block;
     font-family: $base-font-family;
     font-size: rem(14);
-    color: $green;
+    color: $blue;
     // padding: 0.642857em 1.142857em;
     padding: 0.642857em;
     width: calc(calc(102 / 345) * 100%);
@@ -57,7 +57,7 @@
         mask-size: contain;
         mask-repeat: no-repeat;
         mask-position: center;
-        background-color: $green;
+        background-color: $blue;
         top: 0;
         // left: 0;
         left: rem(18);
@@ -81,7 +81,7 @@
 
 .information-tab__button.is-active {
     color: $white;
-    background-color: $green;
+    background-color: $blue;
 }
 
 .information-tab__button.is-active::before {

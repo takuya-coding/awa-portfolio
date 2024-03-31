@@ -3,7 +3,7 @@
 .information-content__item {
     display: none;
     padding: rem(24);
-    border: 1px solid $green;
+    border: 1px solid $blue;
 }
 
 .information-content__item.is-active {
@@ -44,7 +44,7 @@
     line-height: 1;
     // padding-bottom: rem(8);
     padding-bottom: rem(6.4);
-    border-bottom: 1px solid $green;
+    border-bottom: 1px solid $blue;
 }
 
 .information-content__text {

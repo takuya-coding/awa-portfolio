@@ -2054,7 +2054,7 @@ input.is-show[type=tel]::placeholder {
 }
 
 .information-content__item {
-	border: 1px solid #7BCFDA;
+	border: 1px solid #29518E;
 	display: none;
 	padding: 1.5rem;
 }
@@ -2065,7 +2065,7 @@ input.is-show[type=tel]::placeholder {
 }
 
 .information-content__title {
-	border-bottom: 1px solid #7BCFDA;
+	border-bottom: 1px solid #29518E;
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1.5rem;
 	font-weight: bold;
@@ -2104,7 +2104,7 @@ input.is-show[type=tel]::placeholder {
 .information-tab__button {
 	background-color: #E9EEF4;
 	box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.25);
-	color: #7BCFDA;
+	color: #29518E;
 	display: inline-block;
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 0.875rem;
@@ -2134,7 +2134,7 @@ input.is-show[type=tel]::placeholder {
 }
 
 .information-tab__button.is-active {
-	background-color: #7BCFDA;
+	background-color: #29518E;
 	color: #fff;
 }
 
@@ -4263,7 +4263,7 @@ html {
 	-webkit-mask-size: contain;
 	-webkit-mask-repeat: no-repeat;
 	-webkit-mask-position: center;
-	background-color: #7BCFDA;
+	background-color: #29518E;
 	content: "";
 	height: 100%;
 	left: 1.125rem;
