@@ -16,14 +16,14 @@
     display: inline-block;
     font-family: $base-font-family;
     font-size: rem(14);
-    color: $green;
+    color: $blue;
     line-height: 1;
     padding: 0.714286em 1em;
     max-width: rem(162);
     width: 46.95%;
     // width: 100%;
     text-align: center;
-    border: 1px solid $green;
+    border: 1px solid $blue;
     text-transform: uppercase;
     background-color: $white;
     // hover指定がない場合のaタグの透過処理
@@ -34,11 +34,11 @@
 .category__button:hover {
     // opacity: 0.8;
     color: $white;
-	background-color: $green;
-	border-color: $green;
+	background-color: $blue;
+	border-color: $blue;
 }
 
 .category__button.is-active {
     color: $white;
-    background-color: $green;
+    background-color: $blue;
 }

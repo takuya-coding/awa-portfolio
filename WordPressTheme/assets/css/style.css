@@ -1017,8 +1017,8 @@ a {
 
 .category__button {
 	background-color: #fff;
-	border: 1px solid #7BCFDA;
-	color: #7BCFDA;
+	border: 1px solid #29518E;
+	color: #29518E;
 	display: inline-block;
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 0.875rem;
@@ -1032,13 +1032,13 @@ a {
 }
 
 .category__button:hover {
-	background-color: #7BCFDA;
-	border-color: #7BCFDA;
+	background-color: #29518E;
+	border-color: #29518E;
 	color: #fff;
 }
 
 .category__button.is-active {
-	background-color: #7BCFDA;
+	background-color: #29518E;
 	color: #fff;
 }
 
@@ -3399,8 +3399,8 @@ body {
 .wp-pagenavi span {
 	-webkit-text-decoration: none;
 	align-items: center;
-	border: 1px solid #7BCFDA;
-	color: #7BCFDA;
+	border: 1px solid #29518E;
+	color: #29518E;
 	display: inline-flex;
 	font-family: "Lato", sans-serif;
 	font-size: 1rem;
@@ -3416,14 +3416,14 @@ body {
 }
 
 .wp-pagenavi a:hover {
-	background-color: #7BCFDA;
-	border-color: #7BCFDA;
+	background-color: #29518E;
+	border-color: #29518E;
 	color: #fff;
 }
 
 .wp-pagenavi span.current {
-	background-color: #7BCFDA;
-	border-color: #7BCFDA;
+	background-color: #29518E;
+	border-color: #29518E;
 	color: #fff;
 	font-weight: bold;
 }

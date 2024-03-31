@@ -11,8 +11,8 @@
 }
 
 .wp-pagenavi a, .wp-pagenavi span {
-	color: $green;
-	border: 1px solid $green;
+	color: $blue;
+	border: 1px solid $blue;
 	padding: rem(8) rem(14);
 	// margin: 0 rem(6);
 	white-space: nowrap;
@@ -44,14 +44,14 @@
 
 .wp-pagenavi a:hover{
 	color: $white;
-	background-color: $green;
-	border-color: $green;
+	background-color: $blue;
+	border-color: $blue;
     }
 
 .wp-pagenavi span.current{
 	color: $white;
-	background-color: $green;
-	border-color: $green;
+	background-color: $blue;
+	border-color: $blue;
 	font-weight: bold;
     }
 

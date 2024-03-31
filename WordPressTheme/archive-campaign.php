@@ -8,10 +8,6 @@
     <section class="campaign layout-campaign">
         <div class="campaign__inner inner">
             <div class="campaign__category category">
-                <!-- <a href="" class="category__button is-active">all</a>
-                <a href="" class="category__button">ライセンス講習</a>
-                <a href="" class="category__button">ファンダイビング</a>
-                <a href="" class="category__button">体験ダイビング</a> -->
                 <?php
                 $current_term_id = get_queried_object_id();
                 $terms = get_terms(array(
