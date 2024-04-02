@@ -2469,9 +2469,9 @@ input.is-show[type=tel]::placeholder {
 }
 
 .price-table__table {
-	border-bottom: 1px solid #7BCFDA;
+	border-bottom: 1px solid #29518E;
 	border-collapse: collapse;
-	border-right: 1px solid #7BCFDA;
+	border-right: 1px solid #29518E;
 	border-spacing: 0;
 	display: block;
 	width: 100%;
@@ -2487,9 +2487,9 @@ tbody {
 }
 
 .price-table__th {
-	background-color: #7BCFDA;
-	border-left: 1px solid #7BCFDA;
-	border-top: 1px solid #7BCFDA;
+	background-color: #29518E;
+	border-left: 1px solid #29518E;
+	border-top: 1px solid #29518E;
 	color: #fff;
 	display: block;
 	font-family: "Noto Sans JP", sans-serif;
@@ -2503,8 +2503,8 @@ tbody {
 
 .price-table__td-content {
 	align-items: center;
-	border-left: 1px solid #7BCFDA;
-	border-top: 1px solid #7BCFDA;
+	border-left: 1px solid #29518E;
+	border-top: 1px solid #29518E;
 	color: #0D2936;
 	display: flex;
 	flex: 0.77;
@@ -2520,8 +2520,8 @@ tbody {
 
 .price-table__td-price {
 	align-items: center;
-	border-left: 1px solid #7BCFDA;
-	border-top: 1px solid #7BCFDA;
+	border-left: 1px solid #29518E;
+	border-top: 1px solid #29518E;
 	color: #0D2936;
 	display: flex;
 	flex: 0.28;

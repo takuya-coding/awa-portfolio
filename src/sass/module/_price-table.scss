@@ -8,8 +8,8 @@
     border-collapse: collapse;
 
     // 隣接するセル同士のborderが重ならないようにするため
-    border-right: 1px solid $green;
-    border-bottom: 1px solid $green;
+    border-right: 1px solid $blue;
+    border-bottom: 1px solid $blue;
     border-spacing: 0;
 
     // PC→SPへのレスポンシブ対応
@@ -45,7 +45,7 @@ tbody {
 
 
 .price-table__th {
-    background-color: $green;
+    background-color: $blue;
     font-family: $base-font-family;
     font-weight: $bold;
     font-size: rem(16);
@@ -53,8 +53,8 @@ tbody {
     color: $white;
 
     // 隣接するセル同士のborderが重ならないようにするため
-    border-top: 1px solid $green;
-    border-left: 1px solid $green;
+    border-top: 1px solid $blue;
+    border-left: 1px solid $blue;
 
     // PC→SPへのレスポンシブ対応
     display: block;
@@ -80,8 +80,8 @@ tbody {
     color: $black;
 
     // 隣接するセル同士のborderが重ならないようにするため
-    border-top: 1px solid $green;
-    border-left: 1px solid $green;
+    border-top: 1px solid $blue;
+    border-left: 1px solid $blue;
 
     // flexアイテムとして、割合を記述（240+106=346px）
     // flex: calc(240 / 346);
@@ -118,8 +118,8 @@ tbody {
     text-align: right;
 
     // 隣接するセル同士のborderが重ならないようにするため
-    border-top: 1px solid $green;
-    border-left: 1px solid $green;
+    border-top: 1px solid $blue;
+    border-left: 1px solid $blue;
 
     // flexアイテムとして、割合を記述（240+106=346px）
     // flex: calc(106 / 346);
