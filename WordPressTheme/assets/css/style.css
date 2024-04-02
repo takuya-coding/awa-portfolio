@@ -1735,7 +1735,7 @@ input.is-show[type=tel]::placeholder {
 }
 
 .faq-accordion__title {
-	background-color: #7BCFDA;
+	background-color: #29518E;
 	color: #fff;
 	cursor: pointer;
 	font-family: "Noto Sans JP", sans-serif;
@@ -1781,7 +1781,7 @@ input.is-show[type=tel]::placeholder {
 }
 
 .faq-accordion__content {
-	border: 1px solid #7BCFDA;
+	border: 1px solid #29518E;
 	display: none;
 	padding: 1.5rem 1rem;
 }
