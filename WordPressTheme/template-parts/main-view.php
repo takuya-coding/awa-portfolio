@@ -60,8 +60,8 @@ if (!is_page('404')) {
                     echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/aboutus-mv-sp.webp" alt="青空とシーサー" width="375" height="460" decoding="async">';
                 // campaignページおよびサブカテゴリ（タクソノミー）のチェック
                 } elseif (is_post_type_archive('campaign') || is_tax('campaign_category')) {
-                    echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/campaign-mv-pc.webp" media="(min-width:768px)" type="image/webp" />';
-                    echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/campaign-mv-sp.webp" alt="二匹のチョウチョウウオが海の中を泳いでいる" width="375" height="460" decoding="async">';
+                    echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv5-pc.webp" media="(min-width:768px)" type="image/webp" />';
+                    echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv5-sp.webp" alt="イソギンチャクの中から顔を出すカクレクマノミ" width="375" height="460" decoding="async">';
                 } elseif (is_page('information')) {
                     echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/information-mv-pc.webp" media="(min-width:768px)" type="image/webp" />';
                     echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/information-mv-sp.webp" alt="岸壁付近を泳ぐダイバーと無数の黄色い熱帯魚" width="375" height="460" decoding="async">';
