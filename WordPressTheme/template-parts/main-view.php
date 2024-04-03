@@ -69,16 +69,16 @@ if (!is_page('404')) {
                     echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv6-pc.webp" media="(min-width:768px)" type="image/webp" />';
                     echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv6-sp.webp" alt="海の中を優雅に泳ぐサメ" width="375" height="460" decoding="async">';
                 } elseif (is_single()) {
-                    echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/blog-mv-pc.webp" media="(min-width:768px)" type="image/webp" />';
-                    echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/blog-mv-sp.webp" alt="魚のトルネード" width="375" height="460" decoding="async">';
+                    echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv6-pc.webp" media="(min-width:768px)" type="image/webp" />';
+                    echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv6-sp.webp" alt="海の中を優雅に泳ぐサメ" width="375" height="460" decoding="async">';
                 // 月別一覧ページかどうかのチェック
                 } elseif (is_month()) {
-                    echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/blog-mv-pc.webp" media="(min-width:768px)" type="image/webp" />';
-                    echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/blog-mv-sp.webp" alt="魚のトルネード" width="375" height="460" decoding="async">';
+                    echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv6-pc.webp" media="(min-width:768px)" type="image/webp" />';
+                    echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv6-sp.webp" alt="海の中を優雅に泳ぐサメ" width="375" height="460" decoding="async">';
                 // voiceページおよびサブカテゴリ（タクソノミー）のチェック
                 } elseif (is_post_type_archive('voice') || is_tax('voice_category')) {
-                    echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/voice-mv-pc.webp" media="(min-width:768px)" type="image/webp" />';
-                    echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/voice-mv-sp.webp" alt="きれいな海面に5人のダイバーが浮いている" width="375" height="460" decoding="async">';
+                    echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv1-pc.webp" media="(min-width:768px)" type="image/webp" />';
+                    echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv1-sp.webp" alt="きれいな海面に5人のダイバーが浮いている" width="375" height="460" decoding="async">';
                 } elseif (is_page('price')) {
                     echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/price-mv-pc.webp" media="(min-width:768px)" type="image/webp" />';
                     echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/price-mv-sp.webp" alt="水面から頭だけ出した一人のダイバー" width="375" height="460" decoding="async">';
