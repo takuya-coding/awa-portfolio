@@ -66,8 +66,8 @@ if (!is_page('404')) {
                     echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv4-pc.webp" media="(min-width:768px)" type="image/webp" />';
                     echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv4-sp.webp" alt="たくさんのサンゴ礁と周辺を泳ぐ熱帯魚" width="375" height="460" decoding="async">';
                 } elseif (is_home('blog')) {
-                    echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/blog-mv-pc.webp" media="(min-width:768px)" type="image/webp" />';
-                    echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/blog-mv-sp.webp" alt="魚のトルネード" width="375" height="460" decoding="async">';
+                    echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv6-pc.webp" media="(min-width:768px)" type="image/webp" />';
+                    echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv6-sp.webp" alt="海の中を優雅に泳ぐサメ" width="375" height="460" decoding="async">';
                 } elseif (is_single()) {
                     echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/blog-mv-pc.webp" media="(min-width:768px)" type="image/webp" />';
                     echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/blog-mv-sp.webp" alt="魚のトルネード" width="375" height="460" decoding="async">';
