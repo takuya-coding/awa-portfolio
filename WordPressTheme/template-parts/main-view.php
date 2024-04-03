@@ -57,14 +57,14 @@ if (!is_page('404')) {
                 // 条件によって異なる画像を表示
                 if (is_page('about-us')) {
                     echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv2-pc.webp" media="(min-width:768px)" type="image/webp" />';
-                    echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv2-sp.webp" alt="青空とシーサー" width="375" height="460" decoding="async">';
+                    echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv2-sp.webp" alt="優雅に水面を飛び跳ねる2頭のイルカ" width="375" height="460" decoding="async">';
                 // campaignページおよびサブカテゴリ（タクソノミー）のチェック
                 } elseif (is_post_type_archive('campaign') || is_tax('campaign_category')) {
                     echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv5-pc.webp" media="(min-width:768px)" type="image/webp" />';
                     echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv5-sp.webp" alt="イソギンチャクの中から顔を出すカクレクマノミ" width="375" height="460" decoding="async">';
                 } elseif (is_page('information')) {
-                    echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/information-mv-pc.webp" media="(min-width:768px)" type="image/webp" />';
-                    echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/information-mv-sp.webp" alt="岸壁付近を泳ぐダイバーと無数の黄色い熱帯魚" width="375" height="460" decoding="async">';
+                    echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv4-pc.webp" media="(min-width:768px)" type="image/webp" />';
+                    echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv4-sp.webp" alt="たくさんのサンゴ礁と周辺を泳ぐ熱帯魚" width="375" height="460" decoding="async">';
                 } elseif (is_home('blog')) {
                     echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/blog-mv-pc.webp" media="(min-width:768px)" type="image/webp" />';
                     echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/blog-mv-sp.webp" alt="魚のトルネード" width="375" height="460" decoding="async">';
