@@ -35,22 +35,45 @@
 
 
 // blogタイトルの色違い
-.section-title__en.section-title__en--color {
+.section-title__en.section-title__en--blog {
     color: $black;
     @include mq("md") {
         color: $white;
     }
 }
 
-.section-title__en.section-title__en--color::first-letter {
+.section-title__en.section-title__en--blog::first-letter {
     color: $blue;
     @include mq("md") {
         color: $white-green;
     }
 }
 
-.section-title__ja.section-title__ja--color {
+.section-title__ja.section-title__ja--blog {
     color: $blue;
+    @include mq("md") {
+        color: $white-green;
+    }
+}
+
+
+// priceタイトルの色違い
+.section-title__en.section-title__en--price {
+    color: $white;
+    @include mq("md") {
+        color: $white;
+    }
+}
+
+.section-title__en.section-title__en--price::first-letter {
+    color: $white-green;
+    @include mq("md") {
+        color: $white-green;
+    }
+}
+
+.section-title__ja.section-title__ja--price {
+    color: $white-green;
     @include mq("md") {
         color: $white-green;
     }

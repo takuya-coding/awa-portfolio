@@ -262,7 +262,7 @@ a {
 }
 
 .layout-top-campaign {
-	margin-top: 2.5rem;
+	margin-top: 5rem;
 	padding-bottom: 0.25rem;
 }
 
@@ -325,7 +325,7 @@ a {
 }
 
 .about-us-content__title {
-	color: #7BCFDA;
+	color: #29518E;
 	font-family: "Gotu", sans-serif;
 	font-size: 2.5rem;
 	font-weight: 400;
@@ -2585,16 +2585,28 @@ tbody {
 	margin-top: 0.25rem;
 }
 
-.section-title__en.section-title__en--color {
+.section-title__en.section-title__en--blog {
 	color: #0D2936;
 }
 
-.section-title__en.section-title__en--color::first-letter {
+.section-title__en.section-title__en--blog::first-letter {
 	color: #29518E;
 }
 
-.section-title__ja.section-title__ja--color {
+.section-title__ja.section-title__ja--blog {
 	color: #29518E;
+}
+
+.section-title__en.section-title__en--price {
+	color: #fff;
+}
+
+.section-title__en.section-title__en--price::first-letter {
+	color: #C8EEF1;
+}
+
+.section-title__ja.section-title__ja--price {
+	color: #C8EEF1;
 }
 
 .section-title__en.section-title__en--size {
@@ -4419,15 +4431,27 @@ tbody {
 	margin-top: 0.5rem;
 }
 
-.section-title__en.section-title__en--color {
+.section-title__en.section-title__en--blog {
 	color: #fff;
 }
 
-.section-title__en.section-title__en--color::first-letter {
+.section-title__en.section-title__en--blog::first-letter {
 	color: #C8EEF1;
 }
 
-.section-title__ja.section-title__ja--color {
+.section-title__ja.section-title__ja--blog {
+	color: #C8EEF1;
+}
+
+.section-title__en.section-title__en--price {
+	color: #fff;
+}
+
+.section-title__en.section-title__en--price::first-letter {
+	color: #C8EEF1;
+}
+
+.section-title__ja.section-title__ja--price {
 	color: #C8EEF1;
 }
 

@@ -185,8 +185,8 @@
         <div class="top-blog__background-img"></div>
         <div class="top-blog__inner inner">
             <div class="top-blog__title section-title">
-                <p class="section-title__en section-title__en--color">blog</p>
-                <h2 class="section-title__ja section-title__ja--color">ブログ</h2>
+                <p class="section-title__en section-title__en--blog">blog</p>
+                <h2 class="section-title__ja section-title__ja--blog">ブログ</h2>
             </div>
 
             <?php
@@ -309,8 +309,8 @@
     <section class="top-price layout-top-price" id="price">
         <div class="top-price__inner inner">
             <div class="top-price__title section-title">
-                <p class="section-title__en section-title__en--color">price</p>
-                <h2 class="section-title__ja section-title__ja--color">料金一覧</h2>
+                <p class="section-title__en section-title__en--price">price</p>
+                <h2 class="section-title__ja section-title__ja--price">料金一覧</h2>
             </div>
             <div class="top-price__wrapper">
                 <div class="top-price__img">
