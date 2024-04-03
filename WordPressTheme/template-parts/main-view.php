@@ -56,8 +56,8 @@ if (!is_page('404')) {
                 <?php
                 // 条件によって異なる画像を表示
                 if (is_page('about-us')) {
-                    echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/aboutus-mv-pc.webp" media="(min-width:768px)" type="image/webp" />';
-                    echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/aboutus-mv-sp.webp" alt="青空とシーサー" width="375" height="460" decoding="async">';
+                    echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv2-pc.webp" media="(min-width:768px)" type="image/webp" />';
+                    echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv2-sp.webp" alt="青空とシーサー" width="375" height="460" decoding="async">';
                 // campaignページおよびサブカテゴリ（タクソノミー）のチェック
                 } elseif (is_post_type_archive('campaign') || is_tax('campaign_category')) {
                     echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv5-pc.webp" media="(min-width:768px)" type="image/webp" />';
