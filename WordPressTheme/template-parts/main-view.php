@@ -78,10 +78,10 @@ if (!is_page('404')) {
                 // voiceページおよびサブカテゴリ（タクソノミー）のチェック
                 } elseif (is_post_type_archive('voice') || is_tax('voice_category')) {
                     echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv7-pc.webp" media="(min-width:768px)" type="image/webp" />';
-                    echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv7-sp.webp" alt="きれいな海面に5人のダイバーが浮いている" width="375" height="460" decoding="async">';
+                    echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv7-sp.webp" alt="2匹の黄色いチョウチョウオが優雅に泳いでいる" width="375" height="460" decoding="async">';
                 } elseif (is_page('price')) {
-                    echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/price-mv-pc.webp" media="(min-width:768px)" type="image/webp" />';
-                    echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/price-mv-sp.webp" alt="水面から頭だけ出した一人のダイバー" width="375" height="460" decoding="async">';
+                    echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv10-pc.webp" media="(min-width:768px)" type="image/webp" />';
+                    echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv10-sp.webp" alt="きれいな海面に5人のダイバーが浮いている" width="375" height="460" decoding="async">';
                 } elseif (is_page('faq')) {
                     echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/faq-mv-pc.webp" media="(min-width:768px)" type="image/webp" />';
                     echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/faq-mv-sp.webp" alt="透き通るコバルトブルーの海と白い砂浜" width="375" height="460" decoding="async">';
