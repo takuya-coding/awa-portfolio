@@ -41,16 +41,16 @@
             <div class="top-about-us__content about-us-content">
                 <div class="about-us-content__img">
                     <div class="about-us-content__img-sub">
-                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about-us1.webp"
+                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/shisa.webp"
                             alt="青い空と屋根の上のシーサー" width="128" height="194" decoding="async">
                     </div>
                     <div class="about-us-content__img-main">
-                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/PF-clownfish.webp"
+                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/PF-clownfish2.webp"
                             alt="二匹のチョウチョウウオが海の中を泳いでいる" width="281" height="186" decoding="async">
                     </div>
                 </div>
                 <div class="about-us-content__body">
-                    <h3 class="about-us-content__title"><span>dive</span>&nbsp;into<br>the&nbsp;<span>ocean</span></h3>
+                    <h3 class="about-us-content__title"><span>dive</span>&nbsp;into<br>the&nbsp;<span>blue</span></h3>
                     <div class="about-us-content__unit">
                         <p class="about-us-content__text">
                             <!-- about-usページに設定したカスタムフィールドを呼び出す -->
