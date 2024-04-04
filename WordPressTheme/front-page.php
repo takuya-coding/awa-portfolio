@@ -170,7 +170,7 @@
                 <div class="top-information__body">
                     <h3 class="top-information__body-title">ライセンス講習</h3>
                     <p class="top-information__text">
-                        当店はダイビングライセンス（Cカード）世界最大の教育機関PADIの「正規店」として店舗登録されています。<br>正規登録店として、安心安全に初めての方でも安心安全にライセンス取得をサポート致します。
+                        当店はダイビングライセンス（Cカード）世界最大の教育機関PADIの「正規店」として店舗登録されています。<br>正規登録店として、初めての方でも安心安全にライセンス取得をサポート致します。
                     </p>
                     <div class="top-information__button">
                         <a href="<?php echo esc_url(home_url("/information")) ?>" class="button">view&nbsp;more<span

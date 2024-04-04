@@ -104,7 +104,7 @@
             </div>
         </div>
         <small
-            class="footer__copyright">copyright&nbsp;&copy;&nbsp;2021&nbsp;&#045;&nbsp;2023&nbsp;codeups&nbsp;LLC&#046;&nbsp;all&nbsp;rights&nbsp;reserved&#046;</small>
+            class="footer__copyright">copyright&nbsp;&copy;&nbsp;2021&nbsp;&#045;&nbsp;2024&nbsp;codeups&nbsp;LLC&#046;&nbsp;all&nbsp;rights&nbsp;reserved&#046;</small>
     </div>
 </footer>
 
