@@ -83,8 +83,8 @@ if (!is_page('404')) {
                     echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv10-pc.webp" media="(min-width:768px)" type="image/webp" />';
                     echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv10-sp.webp" alt="きれいな海面に5人のダイバーが浮いている" width="375" height="460" decoding="async">';
                 } elseif (is_page('faq')) {
-                    echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/faq-mv-pc.webp" media="(min-width:768px)" type="image/webp" />';
-                    echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/faq-mv-sp.webp" alt="透き通るコバルトブルーの海と白い砂浜" width="375" height="460" decoding="async">';
+                    echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv8-pc.webp" media="(min-width:768px)" type="image/webp" />';
+                    echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv8-sp.webp" alt="シーサーと青い空" width="375" height="460" decoding="async">';
                 } elseif (is_page('contact')) {
                     echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/contact-mv-pc.webp" media="(min-width:768px)" type="image/webp" />';
                     echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/contact-mv-sp.webp" alt="真上から眺めた激しく波が打ち寄せるコバルトブルーの海岸" width="375" height="460" decoding="async">';
