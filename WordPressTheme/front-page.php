@@ -2,8 +2,8 @@
 <main>
     <div class="top-main-view swiper js-top-main-view-swiper">
         <div class="top-main-view__inner">
-            <h2 class="top-main-view__main-title">diving</h2>
-            <p class="top-main-view__sub-title">into&nbsp;the&nbsp;ocean</p>
+            <h2 class="top-main-view__main-title">into&nbsp;the&nbsp;blue</h2>
+            <p class="top-main-view__sub-title">okinawa&nbsp;diving&nbsp;service</p>
         </div>
         <div class="top-main-view__wrapper swiper-wrapper">
             <?php if (CFS()->get('mv_slider')): ?>
