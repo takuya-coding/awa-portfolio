@@ -316,7 +316,7 @@
                 <div class="top-price__img">
                     <picture>
                         <source
-                            srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/PF-vertical-goldfishes.webp"
+                            srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/school-of-fish.webp"
                             media="(min-width:768px)" type="image/webp" />
                         <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/price-sp.webp"
                             alt="悠然と泳ぐウミガメ" width="345" height="227" decoding="async" loading="lazy">
