@@ -25,7 +25,7 @@ body.is-active {
 }
 
 .wrap.wrap--404 {
-	background-color: #7BCFDA;
+	background-color: #29518E;
 }
 
 main {
@@ -682,7 +682,7 @@ a {
 }
 
 .breadcrumbs.breadcrumbs--color {
-	background-color: #7BCFDA;
+	background-color: #29518E;
 	color: #fff;
 }
 
@@ -2326,7 +2326,7 @@ input.is-show[type=tel]::placeholder {
 }
 
 .page-404 {
-	background-color: #7BCFDA;
+	background-color: #29518E;
 	padding-top: 3.475rem;
 	position: relative;
 }
