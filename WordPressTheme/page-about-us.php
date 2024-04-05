@@ -10,12 +10,12 @@
             <div class="about-us__content about-us-content">
                 <div class="about-us-content__img">
                     <div class="about-us-content__img-sub about-us-content__img-sub--about-us">
-                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about-us1.webp"
+                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/shisa.webp"
                             alt="青い空と屋根の上のシーサー" width="400" height="606" decoding="async">
                     </div>
                     <div class="about-us-content__img-main about-us-content__img-main--about-us">
-                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about-us2.webp"
-                            alt="二匹のチョウチョウウオが海の中を泳いでいる" width="345" height="228" decoding="async">
+                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/PF-clownfish2.webp"
+                            alt="イソギンチャクの中に顔を出すカクレクマノミ" width="345" height="228" decoding="async">
                     </div>
                 </div>
                 <h3 class="about-us-content__title about-us-content__title--about-us">
