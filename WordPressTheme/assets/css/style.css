@@ -811,15 +811,15 @@ a {
 .button.button--404 {
 	background-color: #fff;
 	border: 1px solid #fff;
-	color: #7BCFDA;
+	color: #29518E;
 }
 
 .button__arrow.button__arrow--404 {
-	background-color: #7BCFDA;
+	background-color: #29518E;
 }
 
 .button.button--404::after {
-	background-color: #7BCFDA;
+	background-color: #29518E;
 }
 
 .button.button--404:hover {

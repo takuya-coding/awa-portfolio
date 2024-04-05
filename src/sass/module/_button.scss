@@ -159,18 +159,18 @@
 .button.button--404 {
    border: 1px solid $white;
    background-color: $white;
-   color: $green;
+   color: $blue;
    // transition: opacity 0.3s;
 }
 
 .button__arrow.button__arrow--404 {
-   background-color: $green;
+   background-color: $blue;
 }
 
 
 .button.button--404::after {
    // background-color: $white;
-   background-color: $green;
+   background-color: $blue;
 }
 
 .button.button--404:hover {
