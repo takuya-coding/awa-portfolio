@@ -21,6 +21,9 @@
                     <li class="common-nav__item-wrap">
                         <div class="common-nav__item-wrap-for-pc">
                             <div class="common-nav__item">
+                                <a href="<?php echo esc_url(home_url("/about-us")) ?>">私たちについて</a>
+                            </div>
+                            <div class="common-nav__item">
                                 <a href="<?php echo esc_url(home_url("/campaign")) ?>">キャンペーン</a>
                                 <ul class="common-nav__lv2-items">
                                     <li class="common-nav__lv2-item"><a
@@ -33,9 +36,6 @@
                                             href="<?php echo esc_url(home_url("/campaign_category/trial-diving")) ?>">体験ダイビング</a>
                                     </li>
                                 </ul>
-                            </div>
-                            <div class="common-nav__item">
-                                <a href="<?php echo esc_url(home_url("/about-us")) ?>">私たちについて</a>
                             </div>
                         </div>
                         <div class="common-nav__item-wrap-for-pc">
