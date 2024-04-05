@@ -3,8 +3,8 @@
         <div class="footer__head">
             <div class="footer__logo">
                 <a href="<?php echo esc_url(home_url("/")) ?>"><img
-                        src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/logo.svg"
-                        alt="CodeUps"></a>
+                        src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/PF-shop-logo-black.png"
+                        alt="blue wave"></a>
             </div>
             <div class="footer__icon">
                 <a href="https://www.facebook.com/login" target="_blank" class="footer__icon-facebook"><img

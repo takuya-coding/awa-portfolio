@@ -1801,7 +1801,7 @@ input.is-show[type=tel]::placeholder {
 }
 
 .footer__logo {
-	filter: invert(100%) sepia(0%) saturate(244%) hue-rotate(320deg) brightness(107%) contrast(103%);
+	filter: invert(99%) sepia(95%) saturate(0%) hue-rotate(203deg) brightness(106%) contrast(100%);
 	max-width: 7.5rem;
 	width: 100%;
 }
