@@ -45,6 +45,9 @@
                         <ul class="sp-nav__items">
                             <li class="sp-nav__item-wrap">
                                 <div class="sp-nav__item">
+                                    <a href="<?php echo esc_url(home_url("/about-us")) ?>">私たちについて</a>
+                                </div>
+                                <div class="sp-nav__item">
                                     <a href="<?php echo esc_url(home_url("/campaign")) ?>">キャンペーン</a>
                                     <ul class="sp-nav__lv2-items">
                                         <li class="sp-nav__lv2-item"><a
@@ -57,9 +60,6 @@
                                                 href="<?php echo esc_url(home_url("/campaign_category/trial-diving")) ?>">体験ダイビング</a>
                                         </li>
                                     </ul>
-                                </div>
-                                <div class="sp-nav__item">
-                                    <a href="<?php echo esc_url(home_url("/about-us")) ?>">私たちについて</a>
                                 </div>
                                 <div class="sp-nav__item">
                                     <a href="<?php echo esc_url(home_url("/information")) ?>">ダイビング情報</a>
@@ -122,13 +122,13 @@
                 <nav class="header__pc-nav pc-nav">
                     <ul class="pc-nav__items">
                         <li class="pc-nav__item">
-                            <a href="<?php echo esc_url(home_url("/campaign")) ?>">
-                                <p>campaign</p><span>キャンペーン</span>
+                            <a href="<?php echo esc_url(home_url("/about-us")) ?>">
+                                <p>about&nbsp;us</p><span>私たちについて</span>
                             </a>
                         </li>
                         <li class="pc-nav__item">
-                            <a href="<?php echo esc_url(home_url("/about-us")) ?>">
-                                <p>about&nbsp;us</p><span>私たちについて</span>
+                            <a href="<?php echo esc_url(home_url("/campaign")) ?>">
+                                <p>campaign</p><span>キャンペーン</span>
                             </a>
                         </li>
                         <li class="pc-nav__item">

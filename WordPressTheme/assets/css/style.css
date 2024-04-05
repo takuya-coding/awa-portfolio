@@ -1998,7 +1998,7 @@ input.is-show[type=tel]::placeholder {
 }
 
 .header.is-active {
-	background-color: #7BCFDA;
+	background-color: #29518E;
 }
 
 .header__inner {
@@ -2857,7 +2857,7 @@ tbody {
 
 .sp-nav { /*IE(Internet Explorer)・Microsoft Edgeへの対応*/
 	-ms-overflow-style: none;
-	background-color: #7BCFDA;
+	background-color: #29518E;
 	height: 100vh;
 	margin-top: 5rem;
 	overflow-y: scroll; /*Firefoxへの対応*/

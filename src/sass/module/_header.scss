@@ -9,7 +9,7 @@
 }
 
 .header.is-active {
-    background-color: $green;
+    background-color: $blue;
     @include mq("md") {
     background-color: rgba(13,41,54,0.68);
     }
