@@ -1057,10 +1057,9 @@ a {
 }
 
 .common-contact__logo {
-	filter: invert(51%) sepia(10%) saturate(1991%) hue-rotate(136deg) brightness(94%) contrast(89%);
 	height: 4.375rem;
 	margin: 0 auto;
-	max-width: 10.8125rem;
+	max-width: 8.75rem;
 	width: 100%;
 }
 
@@ -3915,7 +3914,7 @@ html {
 
 .common-contact__logo {
 	height: 5.175rem;
-	max-width: 12.5rem;
+	max-width: 10.5rem;
 }
 
 .common-contact__shop-info-wrapper {

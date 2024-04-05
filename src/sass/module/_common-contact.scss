@@ -62,14 +62,16 @@
 }
 
 .common-contact__logo {
-    max-width: rem(173);
+    // max-width: rem(173);
+    max-width: rem(140);
     width: 100%;
-    filter: invert(51%) sepia(10%) saturate(1991%) hue-rotate(136deg) brightness(94%) contrast(89%);
+    // filter: invert(51%) sepia(10%) saturate(1991%) hue-rotate(136deg) brightness(94%) contrast(89%);
     margin: 0 auto;
     // ロゴサイズを調整後、下線の位置が合わせられないため、heightを指定して調整
     height: rem(70);
     @include mq("md") {
-        max-width: rem(200);
+        // max-width: rem(200);
+        max-width: rem(168);
         height: rem(82.8);
     }
 }

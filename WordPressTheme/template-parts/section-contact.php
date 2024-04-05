@@ -3,8 +3,8 @@
         <div class="common-contact__wrapper">
             <div class="common-contact__shop-info">
                 <div class="common-contact__logo">
-                    <img src="<?php echo esc_url(get_theme_file_uri( "/assets/images/common/logo.svg" )); ?>"
-                        alt="CodeUps">
+                    <img src="<?php echo esc_url(get_theme_file_uri( "/assets/images/common/PF-shop-logo.webp" )); ?>"
+                        alt="blue wave">
                 </div>
                 <div class="common-contact__shop-info-wrapper">
                     <div class="common-contact__shop-info-text">
