@@ -25,7 +25,7 @@
     font-family: $third-font-family;
     font-weight: $regular;
     font-size: rem(40);
-    letter-spacing: 0.54em;
+    letter-spacing: 0.1em;
     // 最後の一文字の右側スペース分をpadding-leftで調整するのではなく、text-indent使う
     // padding-left: 0.54em;
     text-indent: 0.54em;
@@ -35,6 +35,8 @@
     @include mq("md") {
         font-size: rem(80);
         line-height: 1.25;
+        letter-spacing: 0.54em;
+
     }
 }
 

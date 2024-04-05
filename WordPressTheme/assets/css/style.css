@@ -3153,7 +3153,7 @@ body {
 	font-family: "Lato", sans-serif;
 	font-size: 2.5rem;
 	font-weight: 400;
-	letter-spacing: 0.54em;
+	letter-spacing: 0.1em;
 	line-height: 1.2;
 	text-indent: 0.54em;
 	text-transform: uppercase;
@@ -4686,6 +4686,7 @@ tbody {
 
 .top-main-view__main-title {
 	font-size: 5rem;
+	letter-spacing: 0.54em;
 	line-height: 1.25;
 }
 
