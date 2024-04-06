@@ -83,14 +83,14 @@ if (!is_page('404')) {
                     echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv11-pc.webp" media="(min-width:768px)" type="image/webp" />';
                     echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv11-sp.webp" alt="海の中を飛ぶように泳ぐウミガメとそれを眺めるダイバー" width="375" height="460" decoding="async">';
                 } elseif (is_page('faq')) {
-                    echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv8-pc.webp" media="(min-width:768px)" type="image/webp" />';
-                    echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv8-sp.webp" alt="シーサーと青い空" width="375" height="460" decoding="async">';
+                    echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv13-pc.webp" media="(min-width:768px)" type="image/webp" />';
+                    echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv13-sp.webp" alt="透き通る美しさのビーチの波打ち際" width="375" height="460" decoding="async">';
                 } elseif (is_page('contact')) {
                     echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv12-pc.webp" media="(min-width:768px)" type="image/webp" />';
-                    echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv12-sp.webp" alt="ギンガメアジの魚群サンゴ礁" width="375" height="460" decoding="async">';
+                    echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv12-sp.webp" alt="ギンガメアジの魚群とサンゴ礁" width="375" height="460" decoding="async">';
                 } elseif (is_page('thanks')) {
                     echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv12-pc.webp" media="(min-width:768px)" type="image/webp" />';
-                    echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv12-sp.webp" alt="ギンガメアジの魚群サンゴ礁" width="375" height="460" decoding="async">';
+                    echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv12-sp.webp" alt="ギンガメアジの魚群とサンゴ礁" width="375" height="460" decoding="async">';
                 } elseif (is_page('sitemap')) {
                     echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv10-pc.webp" media="(min-width:768px)" type="image/webp" />';
                     echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv10-sp.webp" alt="きれいな海面に5人のダイバーが浮いている" width="375" height="460" decoding="async">';
