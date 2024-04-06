@@ -92,14 +92,14 @@ if (!is_page('404')) {
                     echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv12-pc.webp" media="(min-width:768px)" type="image/webp" />';
                     echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv12-sp.webp" alt="ギンガメアジの魚群サンゴ礁" width="375" height="460" decoding="async">';
                 } elseif (is_page('sitemap')) {
-                    echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv9-pc.webp" media="(min-width:768px)" type="image/webp" />';
-                    echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/others-mv9-sp.webp" alt="サンゴ礁の周りをたくさんの熱帯魚が泳いでいる" width="375" height="460" decoding="async">';
+                    echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv10-pc.webp" media="(min-width:768px)" type="image/webp" />';
+                    echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv10-sp.webp" alt="きれいな海面に5人のダイバーが浮いている" width="375" height="460" decoding="async">';
                 } elseif (is_page('privacypolicy')) {
-                    echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/others-mv-pc.webp" media="(min-width:768px)" type="image/webp" />';
-                    echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/others-mv-sp-.webp" alt="サンゴ礁の周りをたくさんの熱帯魚が泳いでいる" width="375" height="460" decoding="async">';
+                    echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv10-pc.webp" media="(min-width:768px)" type="image/webp" />';
+                    echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv10-sp.webp" alt="きれいな海面に5人のダイバーが浮いている" width="375" height="460" decoding="async">';
                 } elseif (is_page('terms-of-service')) {
-                    echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/others-mv-pc.webp" media="(min-width:768px)" type="image/webp" />';
-                    echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/others-mv-sp-.webp" alt="サンゴ礁の周りをたくさんの熱帯魚が泳いでいる" width="375" height="460" decoding="async">';
+                    echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv10-pc.webp" media="(min-width:768px)" type="image/webp" />';
+                    echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv10-sp.webp" alt="きれいな海面に5人のダイバーが浮いている" width="375" height="460" decoding="async">';
                 } else {
                     echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/noimage.webp" media="(min-width:768px)" type="image/webp" />';
                     echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/noimage.webp" alt="NoImage画像" width="375" height="460" decoding="async">';
