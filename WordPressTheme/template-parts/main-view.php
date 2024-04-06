@@ -77,8 +77,8 @@ if (!is_page('404')) {
                     echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv6-sp.webp" alt="海の中を優雅に泳ぐサメ" width="375" height="460" decoding="async">';
                 // voiceページおよびサブカテゴリ（タクソノミー）のチェック
                 } elseif (is_post_type_archive('voice') || is_tax('voice_category')) {
-                    echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv7-pc.webp" media="(min-width:768px)" type="image/webp" />';
-                    echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv7-sp.webp" alt="2匹の黄色いチョウチョウオが優雅に泳いでいる" width="375" height="460" decoding="async">';
+                    echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv9-pc.webp" media="(min-width:768px)" type="image/webp" />';
+                    echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv9-sp.webp" alt="海の中を飛ぶように泳ぐマンタと数匹の魚たち" width="375" height="460" decoding="async">';
                 } elseif (is_page('price')) {
                     echo '<source srcset="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv10-pc.webp" media="(min-width:768px)" type="image/webp" />';
                     echo '<img src="' . esc_url(get_theme_file_uri()) . '/assets/images/common/PF-mv10-sp.webp" alt="きれいな海面に5人のダイバーが浮いている" width="375" height="460" decoding="async">';
