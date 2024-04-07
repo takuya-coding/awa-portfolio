@@ -3619,6 +3619,7 @@ html {
 
 .about-us-content__text {
 	color: #fff;
+	text-shadow: 0 0 8px #000;
 }
 
 .about-us-content__button {
