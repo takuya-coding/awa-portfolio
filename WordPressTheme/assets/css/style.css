@@ -1690,14 +1690,14 @@ input.is-show[type=tel]::placeholder {
 }
 
 .content-none {
-	color: #7BCFDA;
+	color: #29518E;
 	font-size: 1rem;
 	margin-top: 2.5rem;
 	text-align: center;
 }
 
 .content-none--color {
-	color: #fff;
+	color: #29518E;
 }
 
 .faq-accordion {
@@ -4086,6 +4086,10 @@ html {
 
 .contact__button {
 	margin-top: 2.5rem;
+}
+
+.content-none--color {
+	color: #fff;
 }
 
 .faq-accordion::before {

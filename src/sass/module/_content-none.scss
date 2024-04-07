@@ -2,12 +2,15 @@
 
 .content-none {
    font-size: rem(16);
-   color: $green;
+   color: $blue;
    text-align: center;
    margin-top: rem(40);
 }
 
 
 .content-none--color {
-   color: $white;
+   color: $blue;
+   @include mq("md") {
+      color: $white;
+   }
 }
