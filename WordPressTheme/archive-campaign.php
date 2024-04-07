@@ -42,7 +42,7 @@
             ?>
             </div>
 
-            <!-- ページネーションが上手く機能しなかったため一部コード追記 -->
+            <!-- ページネーション一部コード追記 -->
             <?php
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; //追記
             $args = array(
@@ -58,18 +58,14 @@
                 <div class="campaign-content__item">
                     <div class="campaign-card">
                         <div class="campaign-card__img">
-                            <!-- <img src="./assets/images/common/campaign-panel1.webp" alt="カラフルな熱帯魚が無数に泳いでいる" width="280"
-                                height="188" decoding="async"> -->
                             <?php if (has_post_thumbnail()) : ?>
                             <?php the_post_thumbnail( 'full', array( 'width' => 280, 'height' => 188, 'decoding' => 'async', 'class' => '' ) ); ?>
                             <?php else : ?>
-                            <img src="<?php echo esc_url(get_theme_file_uri( "/assets/images/common/noimage.webp" )); ?>"
-                                alt="NoImage画像" />
+                            <img src="<?php echo esc_url(get_theme_file_uri( "/assets/images/common/noimage.webp" )); ?>" alt="NoImage画像" />
                             <?php endif ; ?>
                         </div>
                         <div class="campaign-card__body campaign-card__body--campaign">
                             <div class="campaign-card__category-wrap">
-                                <!-- <span class="campaign-card__category">ライセンス講習</span> -->
                                 <?php
                                 $taxonomy_terms = get_the_terms($post->ID, 'campaign_category');
                                 if (!empty($taxonomy_terms)) {
@@ -91,13 +87,11 @@
                                 <?php echo wp_trim_words(get_the_title(), 20, '...'); ?></h3>
                             <p class="campaign-card__text campaign-card__text--campaign">全部コミコミ&#040;お一人様&#041;</p>
                             <div class="campaign-card__price campaign-card__price--campaign">
-                                <!-- <p class="campaign-card__price-before"><del>&#165;56&#044;000</del></p> -->
                                 <?php if( get_field('campaign_regular-price')): ?>
                                 <p class="campaign-card__price-before">
                                     <del><?php the_field('campaign_regular-price'); ?></del>
                                 </p>
                                 <?php endif; ?>
-                                <!-- <p class="campaign-card__price-after">&#165;46&#044;000</p> -->
                                 <?php if( get_field('campaign_campaign-price')): ?>
                                 <p class="campaign-card__price-after"><?php the_field('campaign_campaign-price'); ?></p>
                                 <?php endif; ?>
@@ -116,23 +110,18 @@
                                 </p>
                                 <?php endif; ?>
                                 <div class="campaign-card__campaign-list">
-                                    <!-- <time class="campaign-card__campaign-time"
-                                        datetime="P122D">2023&#047;6&#047;1&#045;9&#047;30</time> -->
                                     <?php
                                     $campaign_period = get_field('campaign_period');
                                     ?>
-                                    <!-- $campaign_period が存在するかどうかをチェックし、次に campaign_period_start と
-                                    campaign_period_endの両方が空でないことを確認 -->
+                                    <!-- $campaign_period が存在するかどうかをチェックし、次に campaign_period_startとcampaign_period_endの両方が空でないことを確認 -->
                                     <?php if ($campaign_period && !empty($campaign_period['campaign_period_start']) && !empty($campaign_period['campaign_period_end'])): ?>
-                                    <time class="campaign-card__campaign-time"
-                                        datetime="P122D"><?php echo $campaign_period['campaign_period_start']; ?>&#045;<?php echo $campaign_period['campaign_period_end']; ?></time>
+                                    <time class="campaign-card__campaign-time" datetime="P122D"><?php echo $campaign_period['campaign_period_start']; ?>&#045;<?php echo $campaign_period['campaign_period_end']; ?></time>
                                     <?php else: ?>
                                     <p>期間未定</p>
                                     <?php endif; ?>
                                     <p class="campaign-card__campaign-message">ご予約&#0183;お問い合わせはコチラ</p>
                                     <div class="campaign-card__campaign-button">
-                                        <a href="<?php echo esc_url(home_url("/contact")) ?>"
-                                            class="button">contact&nbsp;us<span class="button__arrow"></span></a>
+                                        <a href="<?php echo esc_url(home_url("/contact")) ?>" class="button">contact&nbsp;us<span class="button__arrow"></span></a>
                                     </div>
                                 </div>
                             </div>
@@ -147,19 +136,6 @@
             <?php endif; ?>
 
             <div class="campaign__pagination">
-                <!-- pagenavi -->
-                <!-- <div class="wp-pagenavi">
-                    <a class="previouspostslink" rel="prev" href="#"><img
-                            src="./assets/images/common/pagenation-vector.svg" alt=""></a>
-                    <span class='current'>1</span>
-                    <a class="page larger" href="#">2</a>
-                    <a class="page larger" href="#">3</a>
-                    <a class="page larger" href="#">4</a>
-                    <a class="page larger" href="#">5</a>
-                    <a class="page larger" href="#">6</a>
-                    <a class="nextpostslink" rel="next" href="#"><img src="./assets/images/common/pagenation-vector.svg"
-                            alt=""></a>
-                </div> -->
                 <?php if (function_exists('wp_pagenavi')) {
                         wp_pagenavi();
                 } ?>
