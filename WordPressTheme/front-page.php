@@ -21,8 +21,7 @@
                 <div class="top-main-view__img">
                     <picture>
                         <source srcset="<?php echo $pc_url; ?>" media="(min-width:768px)" type="image/webp" />
-                        <img src="<?php echo $sp_url; ?>" alt="<?php echo esc_attr($pc_image_alt); ?>" width="375"
-                            height="667" decoding="async">
+                        <img src="<?php echo $sp_url; ?>" alt="<?php echo esc_attr($pc_image_alt); ?>" width="375" height="667" decoding="async">
                     </picture>
                 </div>
             </div>
@@ -41,12 +40,10 @@
             <div class="top-about-us__content about-us-content">
                 <div class="about-us-content__img">
                     <div class="about-us-content__img-sub">
-                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/shisa.webp"
-                            alt="青い空と屋根の上のシーサー" width="128" height="194" decoding="async">
+                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/shisa.webp" alt="青い空と屋根の上のシーサー" width="128" height="194" decoding="async">
                     </div>
                     <div class="about-us-content__img-main">
-                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/PF-clownfish2.webp"
-                            alt="イソギンチャクの中に顔を出すカクレクマノミ" width="281" height="186" decoding="async">
+                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/PF-clownfish2.webp" alt="イソギンチャクの中に顔を出すカクレクマノミ" width="281" height="186" decoding="async">
                     </div>
                 </div>
                 <div class="about-us-content__body">
@@ -58,8 +55,7 @@
                         </p>
 
                         <div class="about-us-content__button">
-                            <a href="<?php echo esc_url(home_url("/about-us")) ?>" class="button">view&nbsp;more<span
-                                    class="button__arrow"></span></a>
+                            <a href="<?php echo esc_url(home_url("/about-us")) ?>" class="button">view&nbsp;more<span class="button__arrow"></span></a>
                         </div>
                     </div>
                 </div>
@@ -97,13 +93,11 @@
                                 <?php if (has_post_thumbnail()) : ?>
                                 <?php the_post_thumbnail( 'full', array( 'width' => 280, 'height' => 188, 'decoding' => 'async', 'class' => '' ) ); ?>
                                 <?php else : ?>
-                                <img src="<?php echo esc_url(get_theme_file_uri( "/assets/images/common/noimage.webp" )); ?>"
-                                    alt="NoImage画像" />
+                                <img src="<?php echo esc_url(get_theme_file_uri( "/assets/images/common/noimage.webp" )); ?>" alt="NoImage画像" />
                                 <?php endif ; ?>
                             </div>
                             <div class="campaign-card__body">
                                 <div class="campaign-card__category-wrap">
-                                    <!-- <span class="campaign-card__category">ライセンス講習</span> -->
                                     <?php
                                     $taxonomy_terms = get_the_terms($post->ID, 'campaign_category');
                                     if (!empty($taxonomy_terms)) {
@@ -125,13 +119,11 @@
                                     <?php echo wp_trim_words(get_the_title(), 20, '...'); ?></h3>
                                 <p class="campaign-card__text">全部コミコミ&#040;お一人様&#041;</p>
                                 <div class="campaign-card__price">
-                                    <!-- <p class="campaign-card__price-before"><del>&#165;56&#044;000</del></p> -->
                                     <?php if( get_field('campaign_regular-price')): ?>
                                     <p class="campaign-card__price-before">
                                         <del><?php the_field('campaign_regular-price'); ?></del>
                                     </p>
                                     <?php endif; ?>
-                                    <!-- <p class="campaign-card__price-after">&#165;46&#044;000</p> -->
                                     <?php if( get_field('campaign_campaign-price')): ?>
                                     <p class="campaign-card__price-after"><?php the_field('campaign_campaign-price'); ?>
                                     </p>
@@ -149,8 +141,7 @@
             <?php endif; ?>
 
             <div class=" top-campaign__button">
-                <a href="<?php echo esc_url(home_url("/campaign")) ?>" class="button">view&nbsp;more<span
-                        class="button__arrow"></span></a>
+                <a href="<?php echo esc_url(home_url("/campaign")) ?>" class="button">view&nbsp;more<span class="button__arrow"></span></a>
             </div>
 
         </div>
@@ -164,8 +155,7 @@
             </div>
             <div class="top-information__flex">
                 <div class="top-information__img">
-                    <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/PF-goldfish-coral-reef.webp"
-                        alt="魚がサンゴ礁の周りを泳いでいる" width="345" height="227" decoding="async" loading="lazy">
+                    <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/PF-goldfish-coral-reef.webp" alt="魚がサンゴ礁の周りを泳いでいる" width="345" height="227" decoding="async" loading="lazy">
                 </div>
                 <div class="top-information__body">
                     <h3 class="top-information__body-title">ライセンス講習</h3>
@@ -173,8 +163,7 @@
                         当店はダイビングライセンス（Cカード）世界最大の教育機関PADIの「正規店」として店舗登録されています。<br>正規登録店として、初めての方でも安心安全にライセンス取得をサポート致します。
                     </p>
                     <div class="top-information__button">
-                        <a href="<?php echo esc_url(home_url("/information")) ?>" class="button">view&nbsp;more<span
-                                class="button__arrow"></span></a>
+                        <a href="<?php echo esc_url(home_url("/information")) ?>" class="button">view&nbsp;more<span class="button__arrow"></span></a>
                     </div>
                 </div>
             </div>
@@ -204,13 +193,11 @@
                         <?php if (has_post_thumbnail()) : ?>
                         <?php the_post_thumbnail( 'full', array( 'width' => 301, 'height' => 201, 'decoding' => 'async', 'loading' => 'lazy', 'class' => '' ) ); ?>
                         <?php else : ?>
-                        <img src="<?php echo esc_url(get_theme_file_uri( "/assets/images/common/noimage.webp" )); ?>"
-                            alt="NoImage画像" />
+                        <img src="<?php echo esc_url(get_theme_file_uri( "/assets/images/common/noimage.webp" )); ?>" alt="NoImage画像" />
                         <?php endif ; ?>
                     </div>
                     <div class="blog-card__body">
-                        <time class="blog-card__time"
-                            datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
+                        <time class="blog-card__time" datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
                         <!-- 文字数制限を追加 -->
                         <h3 class="blog-card__title"><?php echo wp_trim_words(get_the_title(), 20, '...'); ?></h3>
                         <!-- 文字数制限を追加 -->
@@ -227,8 +214,7 @@
             <?php endif; ?>
 
             <div class="top-blog__button">
-                <a href="<?php echo esc_url(home_url("/blog")) ?>" class="button">view&nbsp;more<span
-                        class="button__arrow"></span></a>
+                <a href="<?php echo esc_url(home_url("/blog")) ?>" class="button">view&nbsp;more<span class="button__arrow"></span></a>
             </div>
         </div>
     </section>
@@ -255,9 +241,7 @@
                             <div class="voice-card__info">
                                 <div class="voice-card__meta">
                                     <!-- メタ情報はカスタムフィールド導入 -->
-                                    <span
-                                        class="voice-card__customer-info"><?php echo CFS()->get('meta_info'); ?></span>
-                                    <!-- <span class="voice-card__category">ライセンス講習</span> -->
+                                    <span class="voice-card__customer-info"><?php echo CFS()->get('meta_info'); ?></span>
                                     <?php
                                     $taxonomy_terms = get_the_terms($post->ID, 'voice_category');
                                     if (!empty($taxonomy_terms)) {
@@ -282,8 +266,7 @@
                                 <?php if (has_post_thumbnail()) : ?>
                                 <?php the_post_thumbnail( 'full', array( 'width' => 151, 'height' => 117, 'decoding' => 'async', 'loading' => 'lazy', 'class' => '' ) ); ?>
                                 <?php else : ?>
-                                <img src="<?php echo esc_url(get_theme_file_uri( "/assets/images/common/noimage.webp" )); ?>"
-                                    alt="NoImage画像" />
+                                <img src="<?php echo esc_url(get_theme_file_uri( "/assets/images/common/noimage.webp" )); ?>" alt="NoImage画像" />
                                 <?php endif ; ?>
                             </div>
                         </div>
@@ -300,8 +283,7 @@
             <p class="top-voice__content-none content-none">記事が投稿されていません</p>
             <?php endif; ?>
             <div class="top-voice__button">
-                <a href="<?php echo esc_url(home_url("/voice")) ?>" class="button">view&nbsp;more<span
-                        class="button__arrow"></span></a>
+                <a href="<?php echo esc_url(home_url("/voice")) ?>" class="button">view&nbsp;more<span class="button__arrow"></span></a>
             </div>
         </div>
     </section>
@@ -315,11 +297,8 @@
             <div class="top-price__wrapper">
                 <div class="top-price__img">
                     <picture>
-                        <source
-                            srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/school-of-fish.webp"
-                            media="(min-width:768px)" type="image/webp" />
-                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/price-sp.webp"
-                            alt="悠然と泳ぐウミガメ" width="345" height="227" decoding="async" loading="lazy">
+                        <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/school-of-fish.webp" media="(min-width:768px)" type="image/webp" />
+                        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/price-sp.webp" alt="悠然と泳ぐウミガメ" width="345" height="227" decoding="async" loading="lazy">
                     </picture>
                 </div>
                 <div class="top-price__lists top-price-lists">
@@ -348,8 +327,7 @@
                 </div>
             </div>
             <div class="top-price__button">
-                <a href="<?php echo esc_url(home_url("/price")) ?>" class="button button--top-price">view&nbsp;more<span
-                        class="button__arrow button__arrow--top-price"></span></a>
+                <a href="<?php echo esc_url(home_url("/price")) ?>" class="button button--top-price">view&nbsp;more<span class="button__arrow button__arrow--top-price"></span></a>
             </div>
         </div>
     </section>
