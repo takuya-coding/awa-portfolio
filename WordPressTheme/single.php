@@ -12,8 +12,7 @@
                     <div class="blog-detail__article-area">
                         <!-- the_content()はメインループで囲む -->
                         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                        <time class="blog-detail__time"
-                            datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
+                        <time class="blog-detail__time" datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
                         <h2 class="blog-detail__title"><?php the_title(); ?></h2>
                         <div class="blog-detail__content">
                             <?php the_content(); ?>

@@ -18,13 +18,11 @@
                             <?php if (has_post_thumbnail()) : ?>
                             <?php the_post_thumbnail( 'full', array( 'width' => 301, 'height' => 201, 'decoding' => 'async', 'class' => '' ) ); ?>
                             <?php else : ?>
-                            <img src="<?php echo esc_url(get_theme_file_uri( "/assets/images/common/noimage.webp" )); ?>"
-                                alt="NoImage画像" />
+                            <img src="<?php echo esc_url(get_theme_file_uri( "/assets/images/common/noimage.webp" )); ?>" alt="NoImage画像" />
                             <?php endif ; ?>
                         </div>
                         <div class="blog-card__body">
-                            <time class="blog-card__time"
-                                datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
+                            <time class="blog-card__time" datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
                             <!-- 文字数制限を追加 -->
                             <h2 class="blog-card__title"><?php echo wp_trim_words(get_the_title(), 20, '...'); ?></h2>
                             <!-- 文字数制限を追加 -->
