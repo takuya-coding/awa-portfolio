@@ -51,7 +51,7 @@
 
 // WordPress化に伴い追記
 .blog-detail h2,
-.blg-detail h3 {
+.blog-detail h3 {
     margin-top: rem(24);
     @include mq("md") {
         margin-top: rem(38.5);
