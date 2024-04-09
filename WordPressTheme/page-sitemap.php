@@ -5,7 +5,6 @@
     <!-- breadcrumb -->
     <?php get_template_part('template-parts/breadcrumb') ?>
 
-
     <div class="sitemap layout-sitemap">
         <div class="sitemap__content common-nav common-nav--color">
             <div class="common-nav__inner inner">
@@ -18,14 +17,11 @@
                             <div class="common-nav__item common-nav__item--color">
                                 <a href="<?php echo esc_url(home_url("/campaign")) ?>">キャンペーン</a>
                                 <ul class="common-nav__lv2-items">
-                                    <li class="common-nav__lv2-item"><a
-                                            href="<?php echo esc_url(home_url("/campaign_category/license-course")) ?>">ライセンス講習</a>
+                                    <li class="common-nav__lv2-item"><a href="<?php echo esc_url(home_url("/campaign_category/license-course")) ?>">ライセンス講習</a>
                                     </li>
-                                    <li class="common-nav__lv2-item"><a
-                                            href="<?php echo esc_url(home_url("/campaign_category/fun-diving")) ?>">ファンダイビング</a>
+                                    <li class="common-nav__lv2-item"><a href="<?php echo esc_url(home_url("/campaign_category/fun-diving")) ?>">ファンダイビング</a>
                                     </li>
-                                    <li class="common-nav__lv2-item"><a
-                                            href="<?php echo esc_url(home_url("/campaign_category/trial-diving")) ?>">体験ダイビング</a>
+                                    <li class="common-nav__lv2-item"><a href="<?php echo esc_url(home_url("/campaign_category/trial-diving")) ?>">体験ダイビング</a>
                                     </li>
                                 </ul>
                             </div>
@@ -34,14 +30,11 @@
                             <div class="common-nav__item common-nav__item--color">
                                 <a href="<?php echo esc_url(home_url("/information")) ?>">ダイビング情報</a>
                                 <ul class="common-nav__lv2-items">
-                                    <li class="common-nav__lv2-item"><a
-                                            href="<?php echo esc_url(add_query_arg('active-tab', 'tab-1', home_url('/information'))); ?>">ライセンス講習</a>
+                                    <li class="common-nav__lv2-item"><a href="<?php echo esc_url(add_query_arg('active-tab', 'tab-1', home_url('/information'))); ?>">ライセンス講習</a>
                                     </li>
-                                    <li class="common-nav__lv2-item"><a
-                                            href="<?php echo esc_url(add_query_arg('active-tab', 'tab-2', home_url('/information'))); ?>">ファンダイビング</a>
+                                    <li class="common-nav__lv2-item"><a href="<?php echo esc_url(add_query_arg('active-tab', 'tab-2', home_url('/information'))); ?>">ファンダイビング</a>
                                     </li>
-                                    <li class="common-nav__lv2-item"><a
-                                            href="<?php echo esc_url(add_query_arg('active-tab', 'tab-3', home_url('/information'))); ?>">体験ダイビング</a>
+                                    <li class="common-nav__lv2-item"><a href="<?php echo esc_url(add_query_arg('active-tab', 'tab-3', home_url('/information'))); ?>">体験ダイビング</a>
                                     </li>
                                 </ul>
                             </div>
@@ -58,17 +51,13 @@
                             <div class="common-nav__item common-nav__item--color">
                                 <a href="<?php echo esc_url(home_url("/price")) ?>">料金一覧</a>
                                 <ul class="common-nav__lv2-items">
-                                    <li class="common-nav__lv2-item"><a
-                                            href="<?php echo esc_url(home_url("/price")) . '#license-course'; ?>">ライセンス講習</a>
+                                    <li class="common-nav__lv2-item"><a href="<?php echo esc_url(home_url("/price")) . '#license-course'; ?>">ライセンス講習</a>
                                     </li>
-                                    <li class="common-nav__lv2-item"><a
-                                            href="<?php echo esc_url(home_url("/price")) . '#trial-diving'; ?>">体験ダイビング</a>
+                                    <li class="common-nav__lv2-item"><a href="<?php echo esc_url(home_url("/price")) . '#trial-diving'; ?>">体験ダイビング</a>
                                     </li>
-                                    <li class="common-nav__lv2-item"><a
-                                            href="<?php echo esc_url(home_url("/price")) . '#fun-diving'; ?>">ファンダイビング</a>
+                                    <li class="common-nav__lv2-item"><a href="<?php echo esc_url(home_url("/price")) . '#fun-diving'; ?>">ファンダイビング</a>
                                     </li>
-                                    <li class="common-nav__lv2-item"><a
-                                            href="<?php echo esc_url(home_url("/price")) . '#special-diving'; ?>">スペシャルダイビング</a>
+                                    <li class="common-nav__lv2-item"><a href="<?php echo esc_url(home_url("/price")) . '#special-diving'; ?>">スペシャルダイビング</a>
                                     </li>
                                 </ul>
                             </div>
@@ -81,8 +70,7 @@
                                 <a href="<?php echo esc_url(home_url("/sitemap")) ?>">サイトマップ</a>
                             </div>
                             <div class="common-nav__item common-nav__item--color">
-                                <a href="<?php echo esc_url(home_url("/privacypolicy")) ?>">プライバシー<br
-                                        class="u-mobile">ポリシー</a>
+                                <a href="<?php echo esc_url(home_url("/privacypolicy")) ?>">プライバシー<br class="u-mobile">ポリシー</a>
                             </div>
                             <div class="common-nav__item common-nav__item--color">
                                 <a href="<?php echo esc_url(home_url("/terms-of-service")) ?>">利用規約</a>

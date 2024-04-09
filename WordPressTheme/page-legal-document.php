@@ -13,7 +13,6 @@ Template Name: Legal Pages
     <!-- breadcrumb -->
     <?php get_template_part('template-parts/breadcrumb'); ?>
 
-
     <!-- プライバシーポリシーページと利用規約ページのパーツ共通化 -->
     <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>

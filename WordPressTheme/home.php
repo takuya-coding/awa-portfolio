@@ -5,7 +5,6 @@
     <!-- breadcrumb -->
     <?php get_template_part('template-parts/breadcrumb'); ?>
 
-
     <!-- blogページ（blog一覧ページ、blog詳細ページ）としてのレイアウトを共通化する -->
     <div class="blog layout-blog">
         <div class="blog__inner inner">
