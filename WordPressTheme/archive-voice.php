@@ -8,10 +8,6 @@
     <section class="voice layout-voice">
         <div class="voice__inner inner">
             <div class="voice__category category">
-                <!-- <a href="" class="category__button is-active">all</a>
-                <a href="" class="category__button">ライセンス講習</a>
-                <a href="" class="category__button">ファンダイビング</a>
-                <a href="" class="category__button">体験ダイビング</a> -->
                 <?php
                 $current_term_id = get_queried_object_id(); // 現在のタームIDを取得
                 $terms = get_terms(array(
@@ -46,7 +42,7 @@
                 ?>
             </div>
 
-            <!-- ページネーションが上手く機能しなかったため一部コード修正 -->
+            <!-- ページネーション一部コード追記 -->
             <?php
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; //追記
             $args = array(
@@ -68,7 +64,6 @@
                                     <span class="voice-card__customer-info">
                                         <?php echo CFS()->get('meta_info'); ?>
                                     </span>
-                                    <!-- <span class="voice-card__category">ライセンス講習</span> -->
                                     <?php
                                     $taxonomy_terms = get_the_terms($post->ID, 'voice_category');
                                     if (!empty($taxonomy_terms)) {
@@ -90,13 +85,10 @@
                                 </h3>
                             </div>
                             <div class="voice-card__img">
-                                <!-- <img src="./assets/images/common/voice-post1.webp" alt="帽子を被った笑顔の女性" width="151"
-                                    height="117" decoding="async"> -->
                                 <?php if (has_post_thumbnail()) : ?>
                                 <?php the_post_thumbnail( 'full', array( 'width' => 151, 'height' => 117, 'decoding' => 'async', 'class' => '' ) ); ?>
                                 <?php else : ?>
-                                <img src="<?php echo esc_url(get_theme_file_uri( "/assets/images/common/noimage.webp" )); ?>"
-                                    alt="NoImage画像" />
+                                <img src="<?php echo esc_url(get_theme_file_uri( "/assets/images/common/noimage.webp" )); ?>" alt="NoImage画像" />
                                 <?php endif ; ?>
                             </div>
                         </div>
@@ -114,19 +106,6 @@
             <?php endif; ?>
 
             <div class="voice__pagination">
-                <!-- pagenavi -->
-                <!-- <div class="wp-pagenavi">
-                    <a class="previouspostslink" rel="prev" href="#"><img
-                            src="./assets/images/common/pagenation-vector.svg" alt=""></a>
-                    <span class='current'>1</span>
-                    <a class="page larger" href="#">2</a>
-                    <a class="page larger" href="#">3</a>
-                    <a class="page larger" href="#">4</a>
-                    <a class="page larger" href="#">5</a>
-                    <a class="page larger" href="#">6</a>
-                    <a class="nextpostslink" rel="next" href="#"><img src="./assets/images/common/pagenation-vector.svg"
-                            alt=""></a>
-                </div> -->
                 <?php if (function_exists('wp_pagenavi')) {
                         wp_pagenavi();
                 } ?>

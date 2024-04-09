@@ -8,10 +8,6 @@
     <section class="voice layout-voice">
         <div class="voice__inner inner">
             <div class="voice__category category">
-                <!-- <a href="" class="category__button is-active">all</a>
-                <a href="" class="category__button">ライセンス講習</a>
-                <a href="" class="category__button">ファンダイビング</a>
-                <a href="" class="category__button">体験ダイビング</a> -->
                 <?php
                     $current_term_id = get_queried_object()->term_id;
                     $terms = get_terms(array(
@@ -22,7 +18,7 @@
                         // 表示するタームの数を指定
                         'number'  => 5
                     ));
-                    
+
                     // カスタム投稿一覧ページへのURL
                     $home_class = (is_post_type_archive()) ? 'is-active' : '';
                     $home_link = sprintf(
@@ -34,7 +30,7 @@
                         esc_attr(__('View all posts', 'textdomain'))
                     );
                     echo sprintf(esc_html__('%s', 'textdomain'), $home_link);
-                    
+
                     // タームのリンク
                     if ($terms) {
                         foreach ($terms as $term) {
@@ -54,7 +50,7 @@
                     ?>
             </div>
 
-            <!-- ページネーションが上手く機能しなかったため一部コード追記 -->
+            <!-- ページネーション一部コード追記 -->
             <?php
             // 現在のページ番号を取得
             $paged = get_query_var('paged') ? get_query_var('paged') : 1; //追記
@@ -88,7 +84,6 @@
                                     <span class="voice-card__customer-info">
                                         <?php echo CFS()->get('meta_info'); ?>
                                     </span>
-                                    <!-- <span class="voice-card__category">ライセンス講習</span> -->
                                     <?php
                                     $taxonomy_terms = get_the_terms($post->ID, 'voice_category');
                                     if (!empty($taxonomy_terms)) {
@@ -110,13 +105,10 @@
                                 </h3>
                             </div>
                             <div class="voice-card__img">
-                                <!-- <img src="./assets/images/common/voice-post1.webp" alt="帽子を被った笑顔の女性" width="151"
-                                    height="117" decoding="async"> -->
                                 <?php if (has_post_thumbnail()) : ?>
                                 <?php the_post_thumbnail( 'full', array( 'width' => 151, 'height' => 117, 'decoding' => 'async', 'class' => '' ) ); ?>
                                 <?php else : ?>
-                                <img src="<?php echo esc_url(get_theme_file_uri( "/assets/images/common/noimage.webp" )); ?>"
-                                    alt="NoImage画像" />
+                                <img src="<?php echo esc_url(get_theme_file_uri( "/assets/images/common/noimage.webp" )); ?>" alt="NoImage画像" />
                                 <?php endif ; ?>
                             </div>
                         </div>
