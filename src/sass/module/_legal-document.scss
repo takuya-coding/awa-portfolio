@@ -43,15 +43,7 @@
     }
 }
 
-// .legal-document__title {
-//     font-family: $base-font-family;
-//     font-weight: $medium;
-//     font-size: rem(24);
-//     color: $black;
-//     @include mq("md") {
-//         font-size: rem(32);
-//     }
-// }
+
 
 // WordPress化に伴い、セレクタ当て直し
 .legal-document h2 {
@@ -64,14 +56,6 @@
     }
 }
 
-// .legal-document__text {
-//     font-family: $base-font-family;
-//     font-weight: $regular;
-//     font-size: rem(16);
-//     line-height: calc(32 / 16);
-//     color: $black;
-//     // margin-top: rem(40);
-// }
 
 // WordPress化に伴い、セレクタ当て直し
 .legal-document p {
@@ -83,21 +67,12 @@
     // margin-top: rem(40);
 }
 
-// .legal-document__text:nth-of-type(1){
-//     margin-top: rem(40);
-// }
 
 // WordPress化に伴い、セレクタ当て直し
 .legal-document p:nth-of-type(1){
     margin-top: rem(40);
 }
 
-// .legal-document__text:nth-of-type(2){
-//     margin-top: rem(33.5);
-//     @include mq("md") {
-//         margin-top: rem(32);
-//     }
-// }
 
 // WordPress化に伴い、セレクタ当て直し
 .legal-document p:nth-of-type(2){
@@ -107,12 +82,6 @@
     }
 }
 
-// .legal-document__text:nth-of-type(3){
-//     margin-top: rem(33.5);
-//     @include mq("md") {
-//         margin-top: rem(32);
-//     }
-// }
 
 // WordPress化に伴い、セレクタ当て直し
 .legal-document p:nth-of-type(3){
@@ -122,17 +91,6 @@
     }
 }
 
-// .legal-document__list-ol {
-//     font-family: $base-font-family;
-//     font-weight: $regular;
-//     font-size: rem(16);
-//     line-height: calc(32 / 16);
-//     color: $black;
-//     // margin-top: rem(32);
-//     list-style-type: decimal;
-//     // text-indent: 1.4em;
-//     padding-left: 1.4em;
-// }
 
 // WordPress化に伴い、セレクタ当て直し
 .legal-document ol {
@@ -147,9 +105,6 @@
     padding-left: 1.4em;
 }
 
-// .legal-document__list-ol:nth-of-type(1) {
-//     margin-top: rem(32);
-// }
 
 // WordPress化に伴い、セレクタ当て直し
 .legal-document ol:nth-of-type(1) {
@@ -159,9 +114,6 @@
 
 
 // 利用規約ページのみ適用
-// .legal-document__list-ol.legal-document__list-ol--margin {
-//     margin-top: rem(32);
-// }
 
 // WordPress化のタイミングで追記
 .legal-document ol {
@@ -170,18 +122,6 @@
 }
 
 
-
-// .legal-document__list-ul {
-//     font-family: $base-font-family;
-//     font-weight: $regular;
-//     font-size: rem(16);
-//     line-height: calc(32 / 16);
-//     color: $black;
-//     // list-style-type: disc;
-//     text-indent: 0.8em;
-//     // padding-left: 0.8em;
-//     margin-top: rem(32);
-// }
 
 // WordPress化に伴い、セレクタ当て直し
 .legal-document ul {
@@ -206,17 +146,6 @@
 
 
 // デフォルトの中黒ではなく、オリジナルで作成
-// .legal-document__list-ul > .legal-document__item::before {
-//     position: relative;
-//     content:"";
-//     display: inline-block;
-//     top: rem(-5);
-//     left: rem(-6.3);
-//     width: rem(4);
-//     height: rem(4);
-//     background-color: $black;
-//     border-radius: 100%;
-// }
 
 // WordPress化に伴い、セレクタ当て直し
 .legal-document ul li::before {

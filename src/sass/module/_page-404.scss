@@ -13,30 +13,6 @@
 }
 
 .page-404::before {
-    // display: inline-block;
-    // // width: calc(calc(328.84 / 375) * 100%);
-    // width: clamp(rem(300), 87.7vw, rem(540));
-    // width: 100%;
-    // height: 100%;
-    // // -webkit-mask-image: url(../images/common/whale-404-pc.svg);
-    // -webkit-mask-image: url(../images/common/whale-404-pc2.png);
-    // -webkit-mask-size: contain;
-    // -webkit-mask-repeat: no-repeat;
-    // -webkit-mask-position: center;
-    // // mask-image: url(../images/common/whale-404-pc.svg);
-    // mask-image: url(../images/common/whale-404-pc2.png);
-    // mask-size: contain;
-    // mask-repeat: no-repeat;
-    // mask-position: center;
-    // background-color: $black;
-
-    // position: absolute;
-    // content: "";
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
-    // // z-index: 10;
-
     position: absolute;
     content: "";
     top: 50%;

@@ -50,14 +50,6 @@
     display: none;
 }
 
-// .sidebar-archive__month a {
-//     display: inline-block;
-//     width: 100%;
-//     padding-left: rem(8);
-//     position: relative;
-//     // hover指定がない場合のaタグの透過処理
-//     transition: opacity 0.3s;
-// }
 
 // WordPress化に伴い、CSS当て直し
 .sidebar-archive__list a {
@@ -69,19 +61,6 @@
     transition: opacity 0.3s;
 }
 
-// .sidebar-archive__month a::before {
-//     content: "";
-//     margin: auto;
-//     position: absolute;
-//     top: 50%;
-//     left: rem(5);
-//     transform: translateY(-50%);
-//     display: inline-block;
-//     clip-path: polygon(0 0, 0 100%, 100% 50%);
-//     background-color: $green;
-//     width: rem(19.4);
-//     height: rem(22.4);
-// }
 
 // WordPress化に伴い、CSS当て直し
 .sidebar-archive__list a::before {
@@ -99,11 +78,6 @@
 
 }
 
-// .sidebar-archive__month a:hover {
-//     @include mq("md") {
-//         opacity: 0.8;
-//     }
-// }
 
 // WordPress化に伴い、CSS当て直し
 .sidebar-archive__list a:hover {
