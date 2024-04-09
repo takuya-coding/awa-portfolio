@@ -105,13 +105,6 @@
     margin-left: rem(8);
 }
 
-// .contact__item-input {
-//     width: 100%;
-//     @include mq("md") {
-//         width: calc(480 / 700 * 100%);
-//     }
-// }
-
 // Contact Form 7導入に伴うクラス名変更
 .wpcf7-form-control-wrap[data-name="name1"],
 .wpcf7-form-control-wrap[data-name="email"],
@@ -143,15 +136,6 @@
         }
     }
 
-    // アクセシビリティの観点で、選択されている部分に色を付ける場合は有効にする
-    // [type="text"]:focus,
-    // [type="email"]:focus,
-    // [type="tel"]:focus {
-    //     outline: 2px solid $red;
-    //     /* 自由な色に変更可能 */
-    //     outline-offset: 0;
-    // }
-
     [type="text"]::placeholder,
     [type="email"]::placeholder,
     [type="tel"]::placeholder {
@@ -163,11 +147,6 @@
 
 
 // お問い合わせ項目
-// .contact__item-check {
-//     @include mq("md") {
-//         width: calc(480 / 700 * 100%);
-//     }
-// }
 
 // Contact Form 7導入に伴うクラス名変更
 .wpcf7-form-control-wrap[data-name="check"] {
@@ -175,15 +154,6 @@
         width: calc(480 / 700 * 100%);
     }
 }
-
-// .contact__item-checkbox {
-//     display: flex;
-//     flex-direction: column;
-//     margin-top: rem(16);
-//     @include mq("md") {
-//         margin-top: 0;
-//     }
-// }
 
 // Contact Form 7導入に伴うクラス名変更
 .wpcf7-checkbox {
@@ -201,18 +171,6 @@
         z-index: -1;
     }
 
-// .contact__item-check-label {
-//     position: relative;
-//     display: inline-block;
-//     padding: rem(1.9) 0;
-//     padding-left: rem(22); /* カスタムチェックボックスにスペースを確保 */
-//     cursor: pointer;
-//     @include mq("md") {
-//         padding: rem(1.5) 0;
-//         padding-left: rem(22);
-//     }
-// }
-
 // Contact Form 7導入に伴うクラス名変更
 // 補足：同意確認のチェックボックスとクラス名が同じのため先頭にIDを付与
 #your-check .wpcf7-list-item > label {
@@ -227,13 +185,6 @@
     }
 }
 
-// .contact__item-check-text {
-//     font-family: $base-font-family;
-//     font-weight: $regular;
-//     font-size: rem(16);
-//     color: $black2;
-// }
-
 // Contact Form 7導入に伴うクラス名変更
 .wpcf7-form-control-wrap[data-name="check"] .wpcf7-list-item-label {
     font-family: $base-font-family;
@@ -241,19 +192,6 @@
     font-size: rem(16);
     color: $black2;
 }
-
-/* Custom Checkbox Design */
-// .contact__item-check-text::before {
-//     content:"";
-//     display: inline-block;
-//     width: rem(14);
-//     height: rem(14);
-//     border: 1px solid $green;
-//     position: absolute;
-//     left: 0;
-//     top: 50%;
-//     transform: translateY(-50%);
-// }
 
 // Contact Form 7導入に伴うクラス名変更
 .wpcf7-form-control-wrap[data-name="check"] .wpcf7-list-item-label::before {
@@ -267,26 +205,6 @@
     top: 50%;
     transform: translateY(-50%);
 }
-
-/* Custom Checkbox Checked State */
-// [type="checkbox"]:checked + .contact__item-check-text::before {
-//     border-color: #3498db; /* Border color when checked */
-//   }
-
-// [type="checkbox"]:checked + .contact__item-check-text::after {
-//   content: "";
-//   display: block;
-//   //width: 5px;
-//   width: rem(5);
-//   //height: 10px;
-//   height: rem(10);
-//   border: solid $red;
-//   border-width: 0 2px 2px 0;
-//   position: absolute;
-//   top: 50%;
-//   left: rem(4.5);  /* Adjusted position */
-//   transform: translateY(-50%) rotate(45deg);
-// }
 
 // Contact Form 7導入に伴うクラス名変更
 // 補足：同意確認のチェックボックスとクラス名が同じのため先頭にIDを付与
@@ -305,16 +223,6 @@
   transform: translateY(-50%) rotate(45deg);
 }
 
-// アクセシビリティの観点で、選択されている部分に色を付ける場合は有効にする
-/* Focus State */
-// [type="checkbox"]:focus + .contact__item-check-text::before {
-//     outline: 2px solid $red; /* Outline color when focused */
-//   }
-
-// [type="checkbox"]:focus + .contact__item-check-text::before {
-//     outline: 1px solid $green; /* Outline color when focused */
-//   }
-
 // Contact Form 7導入に伴うクラス名変更
 // 補足：同意確認のチェックボックスとクラス名が同じのため先頭にIDを付与
 #your-check [type="checkbox"]:focus + .wpcf7-list-item-label::before {
@@ -324,18 +232,6 @@
 
 
 // キャンペーン
-/* Style for the select box container */
-// .contact__item-select-container {
-//     position: relative;
-//     display: inline-block;
-//     width: 100%; /* Set a width */
-//     // margin-bottom: 20px;
-//     margin-top: rem(16);
-//     @include mq("md") {
-//         width: calc(480 / 700 * 100%);
-//         margin-top: 0;
-//     }
-//   }
 
 // Contact Form 7導入に伴うクラス名変更
 .wpcf7-form-control-wrap[data-name="category"] {
@@ -349,22 +245,6 @@
         margin-top: 0;
     }
   }
-
-/* Style for the select box */
-// .contact__item-select-box {
-//     // padding: rem(12) rem(8);
-//     padding: rem(10.4) rem(8);
-//     border: 1px solid $green;
-//     outline: none;
-//     -webkit-appearance: none;
-//     -moz-appearance: none;
-//     appearance: none;
-//     width: 100%; /* Make it fill the container */
-//     font-family: $base-font-family;
-//     font-weight: $regular;
-//     font-size: rem(12);
-//     color: $black2;
-//   }
 
 // Contact Form 7導入に伴うクラス名変更
 .wpcf7-select {
@@ -381,28 +261,6 @@
     font-size: rem(12);
     color: $black2;
   }
-
-/* Arrow icon using a pseudo-element */
-// .contact__item-select-container::after {
-//     content: "";
-//     position: absolute;
-//     top: 50%;
-//     right: rem(8);
-//     width: 0;
-//     height: 0;
-//     transform: translateY(-50%);
-//     // border使った三角形
-//     // border-left: 5px solid transparent;
-//     // border-right: 5px solid transparent;
-//     // border-top: 5px solid #000;
-    
-//     // clip-path使った三角形
-//     background-color: $green;
-//     width: rem(12);
-//     // height: rem(12);
-//     height: calc(rem(12) / 2 * tan(60deg));
-//     clip-path: polygon(0 0, 100% 0%, 50% 100%);
-//   }
 
 // Contact Form 7導入に伴うクラス名変更
 .wpcf7-form-control-wrap[data-name="category"]::after {
@@ -426,22 +284,6 @@
     clip-path: polygon(0 0, 100% 0%, 50% 100%);
   }
 
-// アクセシビリティの観点で、選択されている部分に色を付ける場合は有効にする
-/* Focus State */
-// .contact__item-select-box:focus {
-//     // border-color: #3498db; /* Border color when focused */
-//     outline: 2px solid $red;
-//     /* 自由な色に変更可能 */
-//     outline-offset: 0;
-//   }
-
-// .contact__item-select-box:focus {
-//     // border-color: #3498db; /* Border color when focused */
-//     outline: 1px solid $green;
-//     /* 自由な色に変更可能 */
-//     outline-offset: 0;
-//   }
-
 // Contact Form 7導入に伴うクラス名変更
 .wpcf7-select:focus {
     // border-color: #3498db; /* Border color when focused */
@@ -453,15 +295,6 @@
 
 
 // お問い合わせ内容
-// .contact__item-textarea {
-//     width: 100%;
-//     // margin-top: rem(16);
-//     margin-top: rem(17.6);
-//     @include mq("md") {
-//         width: calc(480 / 700 * 100%);
-//         margin-top: 0;
-//     }
-// }
 
 // Contact Form 7導入に伴うクラス名変更
 .wpcf7-form-control-wrap[data-name="textarea"] {
@@ -506,16 +339,6 @@ textarea {
     }
 }
 
-// .contact__accept-check {
-//     display: inline-block;
-//     width: calc(282 / 345 * 100%);
-//     text-align: left;
-//     @include mq("md") {
-//         width: 100%;
-//         text-align: center;
-//     }
-// }
-
 // Contact Form 7導入に伴うクラス名変更
 .wpcf7-form-control-wrap[data-name="accept"] {
     display: inline-block;
@@ -533,13 +356,6 @@ textarea {
         z-index: -1;
     }
 
-// .contact__accept-check-label {
-//     position: relative;
-//     display: inline-block;
-//     padding-left: rem(22); /* カスタムチェックボックスにスペースを確保 */
-//     cursor: pointer;
-// }
-
 // Contact Form 7導入に伴うクラス名変更
 .wpcf7-acceptance label {
     position: relative;
@@ -547,21 +363,6 @@ textarea {
     padding-left: rem(22); /* カスタムチェックボックスにスペースを確保 */
     cursor: pointer;
 }
-
-/* Custom Checkbox Design */
-// .contact__accept-check-text::before {
-//     content:"";
-//     display: inline-block;
-//     width: rem(22);
-//     height: rem(22);
-//     border: 1px solid $green;
-//     position: absolute;
-//     left: 0;
-//     top: 0;
-//     @include mq("md") {
-//         top: rem(2);
-//     }
-// }
 
 // Contact Form 7導入に伴うクラス名変更
 .wpcf7-form-control-wrap[data-name="accept"] .wpcf7-list-item-label::before {
@@ -577,26 +378,6 @@ textarea {
         top: rem(2);
     }
 }
-
-/* Custom Checkbox Checked State */
-// [type="checkbox"]:checked + .contact__accept-check-text::before {
-//     border-color: #3498db; /* Border color when checked */
-//   }
-
-// [type="checkbox"]:checked + .contact__accept-check-text::after {
-//     content: "";
-//     display: block;
-//     width: rem(8);
-//     height: rem(14.4);
-//     border: solid $red;
-//     border-width: 0 2px 2px 0;
-//     position: absolute;
-//     // top: 48%;
-//     // top: 22%;
-//     top: 45%;
-//     left: rem(7);  /* Adjusted position */
-//     transform: translateY(-50%) rotate(45deg);
-// }
 
 // Contact Form 7導入に伴うクラス名変更
 [type="checkbox"]:checked + .wpcf7-list-item-label::after {
@@ -614,32 +395,10 @@ textarea {
     transform: translateY(-50%) rotate(45deg);
 }
 
-// アクセシビリティの観点で、選択されている部分に色を付ける場合は有効にする
-/* Focus State */
-// [type="checkbox"]:focus + .contact__accept-check-text::before {
-//     outline: 2px solid $red; /* Outline color when focused */
-//   }
-// [type="checkbox"]:focus + .contact__accept-check-text::before {
-//     outline: 1px solid $green; /* Outline color when focused */
-//   }
-
 // Contact Form 7導入に伴うクラス名変更
 [type="checkbox"]:focus + .wpcf7-list-item-label::before {
     outline: 1px solid $blue; /* Outline color when focused */
   }
-
-// .contact__accept-check-text {
-//     display: inline-block;
-//     margin-left: rem(8);
-//     font-family: $base-font-family;
-//     font-weight: $regular;
-//     font-size: rem(14);
-//     line-height: 1.5714;
-//     color: $black2;
-//     @include mq("md") {
-//         margin-left: rem(16);
-//     }
-// }
 
 // Contact Form 7導入に伴うクラス名変更
 .wpcf7-form-control-wrap[data-name="accept"] .wpcf7-list-item-label {
@@ -667,24 +426,12 @@ textarea {
     text-decoration: underline;
 }
 
-// .contact__accept-check-text > a:hover {
-//     @include mq("md") {
-//         opacity: 0.8;
-//     }
-// }
-
 // Contact Form 7導入に伴うクラス名変更
 .wpcf7-form-control-wrap[data-name="accept"] .wpcf7-list-item-label > a:hover {
     @include mq("md") {
         opacity: 0.8;
     }
 }
-
-// アクセシビリティの観点で、選択されている部分に色を付ける場合は有効にする
-/* Focus State */
-// .contact__accept-check-text > a:focus {
-//     outline: 2px solid $red; /* Outline color when focused */
-//   }
 
 
 // レイアウト崩れ修正のために追記
@@ -764,11 +511,6 @@ textarea {
     color: $blue;
 }
 
-// アクセシビリティの観点で、選択されている部分に色を付ける場合は有効にする
-/* Focus State */
-// [type="submit"]:focus {
-//     outline: 2px solid $red; /* Outline color when focused */
-//   }
 [type="submit"]:focus {
     outline: 1px solid $red; /* Outline color when focused */
   }

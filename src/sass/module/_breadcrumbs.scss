@@ -6,12 +6,6 @@
     text-transform: uppercase;
 }
 
-// .breadcrumbs span:not(:first-child) {
-//     // margin-left: rem(8);
-//     margin-left: rem(3.2);
-
-// }
-
 // 改行した際、先頭にも余白がついてズレてしまうのを防ぐ（_layout-breadcrumbs.scssにも関連記述あり）
 .breadcrumbs__inner > span {
     margin-left: rem(3.2);

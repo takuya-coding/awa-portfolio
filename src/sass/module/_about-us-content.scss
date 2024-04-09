@@ -61,19 +61,6 @@
     }
 }
 
-// .about-us-content__body-wrapper {
-//     @include mq("md") {
-//         position: absolute;
-//         top: rem(-460);
-//         left: 18.5%;
-//         z-index: 2;
-//         display: flex;
-//         gap: rem(40);
-//         // 画面幅縮小時に右側の余白確保
-//         padding-right: rem(40);
-//     }
-// }
-
 .about-us-content__title {
     font-family: $second-font-family;
     font-weight: $regular;
@@ -144,22 +131,6 @@
     }
 }
 
-// .about-us-content__body-about--us {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     z-index: 2;
-//     @include mq("md") {
-//         top: rem(121);
-//         // left: 18.5%;
-//         left: rem(200);
-//         display: flex;
-//         gap: rem(40);
-//         // 画面幅縮小時に右側の余白確保
-//         padding-right: rem(40);
-//     }
-// }
-
 .about-us-content__title.about-us-content__title--about-us {
     position: absolute;
     top: rem(23);
@@ -173,17 +144,6 @@
         font-size: clamp(rem(70), 80 / 1440 * 100vw, rem(80));
     }
 }
-
-// .about-us-content__unit--about-us {
-//     // margin-top: rem(16);
-//     // margin-top: rem(164);
-//     margin-top: 45%;
-//     @include mq("md") {
-//         max-width: rem(400);
-//         width: 100%;
-//         margin-top: 0;
-//     }
-// }
 
 .about-us-content__text.about-us-content__text--about-us {
     margin-top: rem(40);

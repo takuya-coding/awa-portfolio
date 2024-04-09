@@ -1353,8 +1353,6 @@ a {
 	font-weight: 400;
 }
 
-/* Custom Checkbox Design */
-
 .wpcf7-form-control-wrap[data-name=check] .wpcf7-list-item-label::before {
 	border: 1px solid #29518E;
 	content: "";
@@ -1366,8 +1364,6 @@ a {
 	transform: translateY(-50%);
 	width: 0.875rem;
 }
-
-/* Custom Checkbox Checked State */
 
 #your-check [type=checkbox]:checked + .wpcf7-list-item-label::after {
 	border: solid #CE5A5A;
@@ -1382,13 +1378,9 @@ a {
 	width: 0.3125rem;
 }
 
-/* Focus State */
-
 #your-check [type=checkbox]:focus + .wpcf7-list-item-label::before {
 	outline: 1px solid #29518E; /* Outline color when focused */
 }
-
-/* Style for the select box container */
 
 .wpcf7-form-control-wrap[data-name=category] {
 	display: inline-block;
@@ -1396,8 +1388,6 @@ a {
 	position: relative;
 	width: 100%; /* Set a width */
 }
-
-/* Style for the select box */
 
 .wpcf7-select {
 	-webkit-appearance: none;
@@ -1413,8 +1403,6 @@ a {
 	width: 100%; /* Make it fill the container */
 }
 
-/* Arrow icon using a pseudo-element */
-
 .wpcf7-form-control-wrap[data-name=category]::after {
 	-webkit-clip-path: polygon(0 0, 100% 0%, 50% 100%);
 	background-color: #29518E;
@@ -1429,8 +1417,6 @@ a {
 	width: 0;
 	width: 0.75rem;
 }
-
-/* Focus State */
 
 .wpcf7-select:focus {
 	outline: 1px solid #29518E; /* 自由な色に変更可能 */
@@ -1481,8 +1467,6 @@ textarea {
 	position: relative;
 }
 
-/* Custom Checkbox Design */
-
 .wpcf7-form-control-wrap[data-name=accept] .wpcf7-list-item-label::before {
 	border: 1px solid #29518E;
 	content: "";
@@ -1493,8 +1477,6 @@ textarea {
 	top: 0;
 	width: 1.375rem;
 }
-
-/* Custom Checkbox Checked State */
 
 [type=checkbox]:checked + .wpcf7-list-item-label::after {
 	border: solid #CE5A5A;
@@ -1508,8 +1490,6 @@ textarea {
 	transform: translateY(-50%) rotate(45deg);
 	width: 0.5rem;
 }
-
-/* Focus State */
 
 [type=checkbox]:focus + .wpcf7-list-item-label::before {
 	outline: 1px solid #29518E; /* Outline color when focused */
@@ -1530,8 +1510,6 @@ textarea {
 	color: #29518E;
 	text-decoration: underline;
 }
-
-/* Focus State */
 
 .wpcf7-acceptance label {
 	align-items: center;
@@ -1592,8 +1570,6 @@ textarea {
 .contact__button-container:hover [type=submit] {
 	color: #29518E;
 }
-
-/* Focus State */
 
 [type=submit]:focus {
 	outline: 1px solid #CE5A5A; /* Outline color when focused */

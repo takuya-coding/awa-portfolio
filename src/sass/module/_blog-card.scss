@@ -14,13 +14,6 @@
     flex-direction: column;
 }
 
-// 透過処理不要（hover時に画像拡大の処理を入れているので）
-// .blog-card:hover {
-//     @include mq("md") {
-//         opacity: 0.8;
-//     }
-// }
-
 .blog-card__img {
     // aspect-ratio: 301 / 201;
     aspect-ratio: 302 / 201;
