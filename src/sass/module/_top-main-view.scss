@@ -35,7 +35,9 @@
     @include mq("md") {
         font-size: rem(80);
         line-height: 1.25;
-        letter-spacing: 0.54em;
+        // letter-spacing: 0.54em;
+        // 画面幅によっては、文字がはみ出るので、letter-spacingを調整
+        letter-spacing: 0.34em;
 
     }
 }
