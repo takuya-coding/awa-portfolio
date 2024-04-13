@@ -167,11 +167,10 @@ add_filter(
 	'ai1wm_exclude_themes_from_export',
 	function ( $exclude_filters ) {
 		$exclude_filters = array(
-			'_gulp/node_modules',
-      '_gulp/package-lock.json',
-			'src/images',
-			'src/js',
-			'src/sass',
+			'_gulp',
+      'dist',
+			'index.php',
+			'src',
 		);
 		return $exclude_filters;
 	}
